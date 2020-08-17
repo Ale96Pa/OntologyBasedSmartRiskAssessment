@@ -1,0 +1,14 @@
+{
+  "environment": "Panacea Emulation Environment",
+  "fileType": "Human Policies Inventory",
+  "snapshotTime": "2020-03-20T08:04:44.035",
+  "snapshotId": "cidhs-847363s-8376",
+  "humanPolicies": [
+    {
+      "sourceId": "doctor1",
+      "targetId": "resident1",
+      "relationType": "supervise",
+      "directed": true
+    }
+  ]
+}

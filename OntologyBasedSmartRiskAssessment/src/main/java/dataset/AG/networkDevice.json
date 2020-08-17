@@ -1,0 +1,666 @@
+{
+    "environment": "Panacea Emulation Environment - DRMP User Scenario X",
+    "fileType": "Device Inventory",
+    "snapshotId": "cidhs-847363s-8376",
+    "snapshotTime": "123456789",
+    "devices": [
+      {
+        "hostName": "POCT1",
+        "type": "Medical Device",
+        "id": "n7",
+        "networkInterfaces": [
+          {
+            "name": "eth0",
+            "macAddress": "02-00-97-0F-00-17",
+            "ipAddress": "10.100.27.4",
+            "version": "IPv4",
+            "mask": "255.255.255.0",
+            "ports": [
+              {
+                "number": 5555,
+                "state": "open",
+                "transportProtocol": "TCP",
+                "service": {
+                  "description": "halia-client",
+                  "runningState": "Running",
+                  "vulnerabilities": [
+                    "CVE-2018-4846"
+                  ],
+                  "cpe": ["halia-client-1.0"],
+                  "version": "1.0"
+                }
+              },
+              {
+                "number": 5556,
+                "state": "open",
+                "transportProtocol": "TCP",
+                "service": {
+                  "description": "dnlab-client",
+                  "runningState": "Running",
+                  "vulnerabilities": [
+                    "CVE-2018-4846"
+                  ],
+                  "cpe": ["dnlab-client-1.0"],
+                  "version": "1.0"
+                }
+              },
+              {
+                "number": 5557,
+                "state": "open",
+                "transportProtocol": "TCP",
+                "service": {
+                  "description": "themis-client",
+                  "runningState": "Running",
+                  "vulnerabilities": [
+                    "CVE-2018-4846"
+                  ],
+                  "cpe": ["themis-client-1.0"],
+                  "version": "1.0"
+                }
+              }
+            ]
+          }
+        ],
+        "operatingSystem": {
+          "family": "Android",
+          "generation": "8",
+          "vendor": "Linux",
+          "localServices": [
+          ],
+          "osUsers": [],
+          "osVulnerabilities": []
+        }
+      },
+      {
+        "hostName": "noemasrv01",
+        "type": "Server",
+        "id": "n1",
+        "networkInterfaces": [
+          {
+            "name": "eth0",
+            "macAddress": "02-00-AA-AA-00-0B",
+            "ipAddress": "192.168.1.203",
+            "version": "IPV4",
+            "mask": "255.255.255.0",
+            "ports": [
+              {
+                "number": 7778,
+                "state": "open",
+                "transportProtocol": "TCP",
+                "service": {
+                  "description": "database_server",
+                  "runningState": "Running",
+                  "vulnerabilities": [
+                    "CVE-2018-3110"
+                        ],
+                        "cpe": ["database_server_11.2.0.4"],
+                        "version": "11.2.0.4"
+                      }
+                    }
+                  ]
+                },
+                {
+                    "name": "eth1",
+                    "macAddress": "02-00-BB-BB-00-0B",
+                    "ipAddress": "10.152.20.203",
+                    "version": "IPV4",
+                    "mask": "255.255.255.0",
+                    "ports": []
+                }
+            ],
+            "operatingSystem": {
+              "family": "Centos",
+              "generation": "7",
+              "vendor": "Linux",
+              "localServices": [],
+              "osUsers": [
+                {
+                  "username": "mysqladmin",
+                  "group": "mysqladmin",
+                  "role": "User"
+                },
+                {
+                  "username": "root",
+                  "group": "wheel",
+                  "role": "Root"
+                    }
+                ],
+                "osVulnerabilities": []
+            }
+
+        },
+        {
+            "hostName": "noemagw",
+            "type": "Server",
+            "id": "n2",
+            "networkInterfaces": [
+                {
+                    "name": "eth0",
+                    "macAddress": "02-00-AC-15-64-83",
+                    "ipAddress": "192.168.1.204",
+                    "version": "IPV4",
+                    "mask": "255.255.255.0",
+                    "ports": [
+                      {
+                        "number": 443,
+                        "state": "open",
+                        "transportProtocol": "TCP",
+                        "service": {
+                          "description": "dnlab-server-web",
+                          "runningState": "Running",
+                          "vulnerabilities": [],
+                          "cpe": ["dnlab-server-web-1.0"],
+                          "version": "1.0"
+                        }
+                      },
+                      {
+                        "number": 31337,
+                        "state": "open",
+                        "transportProtocol": "TCP",
+                        "service": {
+                          "description": "dnlab-referti",
+                          "runningState": "Running",
+                          "vulnerabilities": [],
+                          "cpe": ["dnlab-referti-1.0"],
+                          "version": "1.0"
+                        }
+                      },
+                      {
+                        "number": 5556,
+                        "state": "open",
+                        "transportProtocol": "TCP",
+                        "service": {
+                          "description": "halia-server",
+                          "runningState": "Running",
+                          "vulnerabilities": [
+                            "CVE-2009-2412"
+                          ],
+                          "cpe": ["halia-server-1.0"],
+                          "version": "1.0"
+                        }
+                      }
+                    ]
+
+                },
+                {
+                    "name": "eth1",
+                    "macAddress": "02-00-AC-15-64-84",
+                    "ipAddress": "10.152.20.204",
+                    "version": "IPv4",
+                    "mask": "255.255.255.0",
+                    "ports": []
+
+                }
+            ],
+            "operatingSystem": {
+                "family": "Windows Server",
+                "generation": "2008 R2 Enterprise",
+                "vendor": "Microsoft",
+                "localServices": [
+                ],
+                "osUsers": [],
+                "osVulnerabilities": []
+            }
+        },
+        {
+            "hostName": "noemaiish1",
+            "type": "Server",
+            "id": "n3",
+            "networkInterfaces": [
+              {
+                "name": "eth0",
+                "macAddress": "02-00-97-0F-00-31",
+                "ipAddress": "192.168.1.205",
+                "version": "IPv4",
+                "mask": "255.255.255.0",
+                "ports": [
+                  {
+                    "number": 31337,
+                    "state": "open",
+                    "transportProtocol": "TCP",
+                    "service": {
+                      "description": "dnlab-referti",
+                      "runningState": "Running",
+                      "vulnerabilities": [],
+                      "cpe": ["dnlab-referti-1.0"],
+                      "version": "1.0"
+                    }
+                  },
+                  {
+                    "number": 443,
+                    "state": "open",
+                    "transportProtocol": "TCP",
+                    "service": {
+                      "description": "halia-iis",
+                      "runningState": "Running",
+                      "vulnerabilities": [],
+                      "cpe": ["halia-iis-1.0"],
+                      "version": "1.0"
+                    }
+                  }
+                ]
+              },
+                {
+                    "name": "eth1",
+                    "macAddress": "02-00-AC-15-64-C4",
+                    "ipAddress": "10.152.20.205",
+                    "version": "IPv4",
+                    "mask": "255.255.255.0",
+                    "ports": []
+
+                }
+            ],
+            "operatingSystem": {
+              "family": "Windows Server",
+              "generation": "2008 R2 Enterprise",
+              "vendor": "Microsoft",
+              "localServices": [],
+              "osUsers": [],
+              "osVulnerabilities": []
+            }
+        },
+        {
+            "hostName": "noemagw2",
+            "type": "Server",
+            "id": "n4",
+            "networkInterfaces": [
+              {
+                "name": "eth0",
+                "macAddress": "02-00-97-0F-00-B7",
+                "ipAddress": "192.168.1.206",
+                "version": "IPv4",
+                "mask": "255.255.255.0",
+                "ports": [
+                  {
+                    "number": 443,
+                    "state": "open",
+                    "transportProtocol": "TCP",
+                    "service": {
+                      "description": "dnlab-server-web",
+                      "runningState": "Running",
+                      "vulnerabilities": [],
+                      "cpe": ["dnlab-server-web-1.0"],
+                      "version": "1.0"
+                    }
+                  },
+                  {
+                    "number": 31337,
+                    "state": "open",
+                    "transportProtocol": "TCP",
+                    "service": {
+                      "description": "dnlab-referti",
+                      "runningState": "Running",
+                      "vulnerabilities": [],
+                      "cpe": ["dnlab-referti-1.0"],
+                      "version": "1.0"
+                    }
+                  },
+                  {
+                    "number": 4443,
+                    "state": "open",
+                    "transportProtocol": "TCP",
+                    "service": {
+                      "description": "halia-iis",
+                      "runningState": "Running",
+                      "vulnerabilities": [],
+                      "cpe": ["halia-iis-1.0"],
+                      "version": "1.0"
+                    }
+                  },
+                  {
+                    "number": 8443,
+                    "state": "open",
+                    "transportProtocol": "TCP",
+                    "service": {
+                      "description": "halia-tomcat",
+                      "runningState": "Running",
+                      "vulnerabilities": [],
+                      "cpe": ["halia-tomcat-1.0"],
+                      "version": "1.0"
+                    }
+                  }
+                ]
+              },
+                {
+                    "name": "eth1",
+                    "macAddress": "02-00-AC-15-64-73",
+                    "ipAddress": "10.152.20.206",
+                    "version": "IPv4",
+                    "mask": "255.255.255.0",
+                    "ports": []
+
+                }
+            ],
+            "operatingSystem": {
+                "family": "Windows Server",
+                "generation": "2008 R2 Enterprise",
+                "vendor": "Microsoft",
+                "localServices": [
+                    {
+                        "name": "dnlab",
+                        "users": [],
+                        "cpe": [""],
+                        "version": "",
+                        "vulnerabilities": []
+                    },
+                    {
+                        "name": "apache2",
+                        "users": [],
+                        "cpe": [""],
+                        "version": "",
+                        "vulnerabilities": []
+                    }
+                ],
+                "osUsers": [],
+                "osVulnerabilities": []
+            }
+        },
+        {
+            "hostName": "noemaiish1x",
+            "type": "Server",
+            "id": "n5",
+            "networkInterfaces": [
+              {
+                "name": "eth0",
+                "macAddress": "02-00-97-0F-00-98",
+                "ipAddress": "192.168.1.207",
+                "version": "IPv4",
+                "mask": "255.255.255.0",
+                "ports": [
+                  {
+                    "number": 8443,
+                    "state": "open",
+                    "transportProtocol": "TCP",
+                    "service": {
+                      "description": "halia-jboss",
+                      "runningState": "Running",
+                      "vulnerabilities": [],
+                      "cpe": ["halia-jboss-1.0"],
+                      "version": "1.0"
+                    }
+                  }
+                ]
+              },
+                {
+                    "name": "eth1",
+                    "macAddress": "02-00-AC-15-64-01",
+                    "ipAddress": "10.152.20.207",
+                    "version": "IPv4",
+                    "mask": "255.255.255.0",
+                    "ports": []
+
+                }
+            ],
+            "operatingSystem": {
+                "family": "Debian",
+                "generation": "7",
+                "vendor": "Linux",
+                "localServices": [
+                    {
+                        "name": "dnlab",
+                        "users": [],
+                        "cpe": [""],
+                        "version": "",
+                        "vulnerabilities": []
+                    },
+                    {
+                        "name": "apache2",
+                        "users": [],
+                        "cpe": [""],
+                        "version": "",
+                        "vulnerabilities": []
+                    }
+                ],
+                "osUsers": [],
+                "osVulnerabilities": []
+            }
+        },
+        {
+            "hostName": "noematomcathal",
+            "type": "Server",
+            "id": "n6",
+            "networkInterfaces": [
+              {
+                "name": "eth0",
+                "macAddress": "02-00-97-0F-00-17",
+                "ipAddress": "192.168.1.208",
+                "version": "IPv4",
+                "mask": "255.255.255.0",
+                "ports": [
+                  {
+                    "number": 4443,
+                    "state": "open",
+                    "transportProtocol": "TCP",
+                    "service": {
+                      "description": "halia-tomcat",
+                      "runningState": "Running",
+                      "vulnerabilities": [],
+                      "cpe": ["halia-tomcat-1.0"],
+                      "version": "1.0"
+                    }
+                  },
+                  {
+                    "number": 443,
+                    "state": "open",
+                    "transportProtocol": "TCP",
+                    "service": {
+                      "description": "apache",
+                      "runningState": "Running",
+                      "vulnerabilities": [
+                        "CVE-2009-2412"
+                      ],
+                      "cpe": ["apache-1.0"],
+                      "version": "1.0"
+                    }
+                  }
+                ]
+              },
+                {
+                    "name": "eth1",
+                    "macAddress": "02-00-AC-15-64-77",
+                    "ipAddress": "10.152.20.208",
+                    "version": "IPv4",
+                    "mask": "255.255.255.0",
+                    "ports": []
+
+                }
+            ],
+            "operatingSystem": {
+                "family": "Ubuntu Server",
+                "generation": "18.04",
+                "vendor": "Linux",
+                "localServices": [
+                    {
+                        "name": "dnlab",
+                        "users": [],
+                        "cpe": [""],
+                        "version": "",
+                        "vulnerabilities": []
+                    },
+                    {
+                        "name": "apache2",
+                        "users": [],
+                        "cpe": [""],
+                        "version": "",
+                        "vulnerabilities": []
+                    }
+                ],
+                "osUsers": [],
+                "osVulnerabilities": []
+            }
+        },
+        {
+            "hostName": "PC1",
+            "type": "Terminal",
+            "id": "n8",
+            "networkInterfaces": [
+              {
+                "name": "eth0",
+                "macAddress": "02-00-97-0F-01-45",
+                "ipAddress": "10.100.27.2",
+                "version": "IPv4",
+                "mask": "255.255.255.0",
+                "ports": [
+                  {
+                    "number": 5555,
+                    "state": "open",
+                    "transportProtocol": "TCP",
+                    "service": {
+                      "description": "halia-client",
+                      "runningState": "Running",
+                      "vulnerabilities": [
+                      ],
+                      "cpe": ["halia-client-1.0"],
+                      "version": "1.0"
+                    }
+                  }
+                ]
+              }
+            ],
+            "operatingSystem": {
+              "family": "Windows",
+              "generation": "7",
+              "vendor": "Microsoft",
+              "localServices": [],
+              "osUsers": [],
+              "osVulnerabilities": [
+                "CVE-2010-1883"
+              ]
+            }
+        },
+        {
+            "hostName": "PC2",
+            "type": "Terminal",
+            "id": "n9",
+            "networkInterfaces": [
+              {
+                "name": "eth0",
+                "macAddress": "02-00-97-0F-00-B2",
+                "ipAddress": "10.100.27.3",
+                "version": "IPv4",
+                "mask": "255.255.255.0",
+                "ports": [
+                  {
+                    "number": 5555,
+                    "state": "open",
+                    "transportProtocol": "TCP",
+                    "service": {
+                      "description": "halia-client",
+                      "runningState": "Running",
+                      "vulnerabilities": [
+                      ],
+                      "cpe": ["halia-client-1.0"],
+                      "version": "1.0"
+                    }
+                  }
+                ]
+              }
+            ],
+            "operatingSystem": {
+                "family": "Windows",
+                "generation": "10",
+                "vendor": "Microsoft",
+                "localServices": [],
+                "osUsers": [],
+                "osVulnerabilities": []
+            }
+        },
+
+        {
+            "hostName": "SwitchL3ServerFarm",
+            "type": "Switch",
+            "id": "n10",
+            "networkInterfaces": [
+                {
+                    "name": "eth0",
+                    "macAddress": "02-00-97-0F-00-17",
+                    "ipAddress": "192.168.1.1",
+                    "version": "IPv4",
+                    "mask": "255.255.255.0",
+                    "ports": []
+                },
+                {
+                    "name": "eth1",
+                    "macAddress": "02-00-AC-15-64-77",
+                    "ipAddress": "192.168.2.37",
+                    "version": "IPv4",
+                    "mask": "255.255.255.252",
+                    "ports": []
+
+                }
+            ],
+            "operatingSystem": {
+                "family": "Cisco iOS",
+                "generation": "10",
+                "vendor": "Cisco Systems",
+                "localServices": [],
+                "osUsers": [],
+                "osVulnerabilities": []
+            }
+        },
+        {
+            "hostName": "SwitchL3Core",
+            "type": "Switch",
+            "id": "n11",
+            "networkInterfaces": [
+                {
+                    "name": "eth0",
+                    "macAddress": "02-00-AC-15-64-77",
+                    "ipAddress": "192.168.2.38",
+                    "version": "IPv4",
+                    "mask": "255.255.255.252",
+                    "ports": []
+
+                },
+                {
+                    "name": "eth1",
+                    "macAddress": "02-00-97-0F-00-17",
+                    "ipAddress": "192.168.2.41",
+                    "version": "IPv4",
+                    "mask": "255.255.255.252",
+                    "ports": []
+                }
+            ],
+            "operatingSystem": {
+                "family": "Cisco iOS",
+                "generation": "10",
+                "vendor": "Cisco Systems",
+                "localServices": [],
+                "osUsers": [],
+                "osVulnerabilities": []
+            }
+        },
+        {
+            "hostName": "SwitchL3Distribution",
+            "type": "Switch",
+            "id": "n12",
+            "networkInterfaces": [
+                {
+                    "name": "eth0",
+                    "macAddress": "02-00-AC-15-64-77",
+                    "ipAddress": "192.168.2.42",
+                    "version": "IPv4",
+                    "mask": "255.255.255.252",
+                    "ports": []
+
+                },
+                {
+                    "name": "eth1",
+                    "macAddress": "02-00-97-0F-00-17",
+                    "ipAddress": "10.100.27.1",
+                    "version": "IPv4",
+                    "mask": "255.255.255.0",
+                    "ports": []
+                }
+            ],
+            "operatingSystem": {
+                "family": "Cisco iOS",
+                "generation": "10",
+                "vendor": "Cisco Systems",
+                "localServices": [],
+                "osUsers": [],
+                "osVulnerabilities": []
+            }
+        }
+    ]
+}

@@ -1,0 +1,880 @@
+{
+  "environment" : "Panacea Emulation Environment - DRMP User Scenario X",
+  "fileType" : "NetworkLayerAttackGraphRepr",
+  "snapshotId" : "cidhs-847363s-8376",
+  "snapshotTime" : "2020-03-20T08:04:44.035",
+  "nodes" : [ {
+    "deviceId" : "n1",
+    "uuid" : "USER@n1",
+    "privLevel" : "USER"
+  }, {
+    "deviceId" : "n1",
+    "uuid" : "ROOT@n1",
+    "privLevel" : "ROOT"
+  }, {
+    "deviceId" : "n2",
+    "uuid" : "ROOT@n2",
+    "privLevel" : "ROOT"
+  }, {
+    "deviceId" : "n6",
+    "uuid" : "ROOT@n6",
+    "privLevel" : "ROOT"
+  }, {
+    "deviceId" : "n2",
+    "uuid" : "USER@n2",
+    "privLevel" : "USER"
+  }, {
+    "deviceId" : "n3",
+    "uuid" : "USER@n3",
+    "privLevel" : "USER"
+  }, {
+    "deviceId" : "n3",
+    "uuid" : "ROOT@n3",
+    "privLevel" : "ROOT"
+  }, {
+    "deviceId" : "n4",
+    "uuid" : "USER@n4",
+    "privLevel" : "USER"
+  }, {
+    "deviceId" : "n4",
+    "uuid" : "ROOT@n4",
+    "privLevel" : "ROOT"
+  }, {
+    "deviceId" : "n5",
+    "uuid" : "USER@n5",
+    "privLevel" : "USER"
+  }, {
+    "deviceId" : "n5",
+    "uuid" : "ROOT@n5",
+    "privLevel" : "ROOT"
+  }, {
+    "deviceId" : "n6",
+    "uuid" : "USER@n6",
+    "privLevel" : "USER"
+  }, {
+    "deviceId" : "n7",
+    "uuid" : "ROOT@n7",
+    "privLevel" : "ROOT"
+  }, {
+    "deviceId" : "n7",
+    "uuid" : "USER@n7",
+    "privLevel" : "USER"
+  }, {
+    "deviceId" : "n8",
+    "uuid" : "NONE@n8",
+    "privLevel" : "NONE"
+  }, {
+    "deviceId" : "n8",
+    "uuid" : "USER@n8",
+    "privLevel" : "USER"
+  }, {
+    "deviceId" : "n8",
+    "uuid" : "ROOT@n8",
+    "privLevel" : "ROOT"
+  }, {
+    "deviceId" : "n9",
+    "uuid" : "USER@n9",
+    "privLevel" : "USER"
+  }, {
+    "deviceId" : "n9",
+    "uuid" : "ROOT@n9",
+    "privLevel" : "ROOT"
+  }, {
+    "deviceId" : "n10",
+    "uuid" : "USER@n10",
+    "privLevel" : "USER"
+  }, {
+    "deviceId" : "n10",
+    "uuid" : "ROOT@n10",
+    "privLevel" : "ROOT"
+  }, {
+    "deviceId" : "n11",
+    "uuid" : "USER@n11",
+    "privLevel" : "USER"
+  }, {
+    "deviceId" : "n11",
+    "uuid" : "ROOT@n11",
+    "privLevel" : "ROOT"
+  } ],
+  "edges" : [ {
+    "source" : "ROOT@n10",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n10",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n8",
+    "destination" : "ROOT@n7",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "dnlab-client-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "themis-client-1.0" ],
+      "port" : 5557,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-client-1.0" ],
+      "port" : 5555,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n10",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n4",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n9",
+    "destination" : "ROOT@n7",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "themis-client-1.0" ],
+      "port" : 5557,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-client-1.0" ],
+      "port" : 5555,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "dnlab-client-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n1",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n11",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n1",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n5",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n5",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n11",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n5",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n11",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n1",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n9",
+    "destination" : "ROOT@n7",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "themis-client-1.0" ],
+      "port" : 5557,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-client-1.0" ],
+      "port" : 5555,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "dnlab-client-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n5",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n5",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n11",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n11",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n11",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n1",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n1",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n5",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n1",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n2",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n2",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n6",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n6",
+    "destination" : "ROOT@n7",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "dnlab-client-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n10",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n6",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n6",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n2",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n10",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n10",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n6",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "NONE@n8",
+    "destination" : "USER@n8",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2010-1883",
+      "type" : "local",
+      "fromInt" : null,
+      "toInt" : null,
+      "service" : null,
+      "port" : 0,
+      "protocol" : null
+    } ]
+  }, {
+    "source" : "USER@n6",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n2",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n2",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n6",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n6",
+    "destination" : "ROOT@n7",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "dnlab-client-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n2",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n3",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n3",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n7",
+    "destination" : "ROOT@n7",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "dnlab-client-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-client-1.0" ],
+      "port" : 5555,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "themis-client-1.0" ],
+      "port" : 5557,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n3",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n3",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n3",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n7",
+    "destination" : "ROOT@n7",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "dnlab-client-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-client-1.0" ],
+      "port" : 5555,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "themis-client-1.0" ],
+      "port" : 5557,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n3",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n4",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n8",
+    "destination" : "ROOT@n7",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "dnlab-client-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "themis-client-1.0" ],
+      "port" : 5557,
+      "protocol" : "TCP"
+    }, {
+      "CVE" : "CVE-2018-4846",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-client-1.0" ],
+      "port" : 5555,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n4",
+    "destination" : "ROOT@n6",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "apache-1.0" ],
+      "port" : 443,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n4",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "ROOT@n4",
+    "destination" : "ROOT@n2",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2009-2412",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "halia-server-1.0" ],
+      "port" : 5556,
+      "protocol" : "TCP"
+    } ]
+  }, {
+    "source" : "USER@n4",
+    "destination" : "ROOT@n1",
+    "vulnerabilities" : [ {
+      "CVE" : "CVE-2018-3110",
+      "type" : "network",
+      "fromInt" : "eth0",
+      "toInt" : "eth0",
+      "service" : [ "database_server_11.2.0.4" ],
+      "port" : 7778,
+      "protocol" : "TCP"
+    } ]
+  } ]
+}

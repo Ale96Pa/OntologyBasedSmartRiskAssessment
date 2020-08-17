@@ -1,0 +1,56 @@
+{
+    "environment": "Panacea Emulation Environment - DRMP User Scenario X",
+    "fileType": "CredentialInventory",
+    "snapshotId": "cidhs-847363s-8376",
+    "snapshotTime": "2020-03-20T08:04:44.035",
+    "credentials": [{
+        "id":"cred1",
+        "employeeId": "doctor1",
+        "privilegeType": "PASSWORD",
+        "destination": [{
+            "privilegeLevel": "ROOT",
+            "serviceName": null,
+            "deviceId": "n8"
+        }]
+    },
+        {
+            "id":"cred2",
+            "employeeId": "resident1",
+            "privilegeType": "PASSWORD",
+            "destination": [{
+                "privilegeLevel": "USER",
+                "serviceName":null,
+                "deviceId": "n9"
+            }]
+        },
+        {
+            "id":"cred3",
+            "employeeId": "itoperator1",
+            "privilegeType": "PASSWORD",
+            "destination": [{
+                "privilegeLevel": "ROOT",
+                "serviceName":null,
+                "deviceId":"n2"
+            },
+                {
+                    "privilegeLevel": "ROOT",
+                    "serviceName":null,
+                    "deviceId":"n6"
+                },
+                {
+                    "privilegeLevel": "ROOT",
+                    "serviceName":null,
+                    "deviceId":"n10"
+                }]
+        }, {
+            "id":"cred4",
+            "employeeId": "doctor1",
+            "privilegeType": "BADGE",
+            "destination": [{
+                "privilegeLevel": "USER",
+                "serviceName":null,
+                "deviceId":"n7"
+            }]
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+  "environment" : "Panacea Emulation Environment - DRMP User Scenario X",
+  "fileType" : "HumanLayerAttackGraphRepr",
+  "snapshotId" : "cidhs-847363s-8376",
+  "snapshotTime" : "2020-03-20T08:04:44.035",
+  "nodes" : [ {
+    "employeeId" : "doctor1",
+    "uuid" : "OWN@doctor1",
+    "privLevel" : "OWN"
+  }, {
+    "employeeId" : "resident1",
+    "uuid" : "OWN@resident1",
+    "privLevel" : "OWN"
+  }, {
+    "employeeId" : "doctor1",
+    "uuid" : "USE@doctor1",
+    "privLevel" : "USE"
+  }, {
+    "employeeId" : "INTERNAL_ATTACKER",
+    "uuid" : "OWN@INTERNAL_ATTACKER",
+    "privLevel" : "OWN"
+  }, {
+    "employeeId" : "itoperator1",
+    "uuid" : "OWN@itoperator1",
+    "privLevel" : "OWN"
+  } ],
+  "edges" : [ {
+    "source" : "OWN@INTERNAL_ATTACKER",
+    "destination" : "OWN@resident1",
+    "vulnerabilities" : [ {
+      "vulnId" : "unprotected_credential",
+      "exploitationType" : "PROXIMITY"
+    } ]
+  }, {
+    "source" : "OWN@resident1",
+    "destination" : "OWN@doctor1",
+    "vulnerabilities" : [ {
+      "vulnId" : "sharing_credential",
+      "exploitationType" : "COWORKING"
+    } ]
+  }, {
+    "source" : "OWN@resident1",
+    "destination" : "USE@doctor1",
+    "vulnerabilities" : [ {
+      "vulnId" : "no_logout",
+      "exploitationType" : "PROXIMITY"
+    } ]
+  }, {
+    "source" : "OWN@doctor1",
+    "destination" : "OWN@resident1",
+    "vulnerabilities" : [ {
+      "vulnId" : "unprotected_credential",
+      "exploitationType" : "PROXIMITY"
+    } ]
+  }, {
+    "source" : "OWN@INTERNAL_ATTACKER",
+    "destination" : "USE@doctor1",
+    "vulnerabilities" : [ {
+      "vulnId" : "no_logout",
+      "exploitationType" : "PROXIMITY"
+    } ]
+  }, {
+    "source" : "OWN@INTERNAL_ATTACKER",
+    "destination" : "OWN@itoperator1",
+    "vulnerabilities" : [ {
+      "vulnId" : "unprotected_credential",
+      "exploitationType" : "PROXIMITY"
+    } ]
+  } ]
+}

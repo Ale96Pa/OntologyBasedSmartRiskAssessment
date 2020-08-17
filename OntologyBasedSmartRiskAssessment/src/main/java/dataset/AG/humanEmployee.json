@@ -1,0 +1,74 @@
+{
+    "environment": "Panacea Emulation Environment - DRMP User Scenario X",
+    "fileType": "Employee Inventory",
+    "snapshotTime": "2020-03-20T08:04:44.035",
+    "snapshotId": "cidhs-847363s-8376",
+    "employees": [
+        {
+            "employeeName": "Mario Rossi",
+            "id": "doctor1",
+            "roles":[
+                {
+                    "id": "role1",
+                    "position": "Doctor",
+                    "department": "FPG",
+                    "from": "01/11/2019",
+                    "to": "present"
+                }
+            ],
+            "locations":[
+                {
+                    "id":"fpg_core_lab",
+                    "building": "Main building",
+                    "floor": "First floor",
+                    "corridor": "A",
+                    "room": "1"
+                }
+            ]
+        },
+        {
+            "employeeName": "Giorgio Neri",
+            "id": "resident1",
+            "roles":[
+                {
+                    "id": "role2",
+                    "position": "Resident",
+                    "department": "FPG",
+                    "from": "01/11/2019",
+                    "to": "present"
+                }
+            ],
+            "locations":[
+                {
+                    "id":"fpg_core_lab",
+                    "building": "Main building",
+                    "floor": "First floor",
+                    "corridor": "A",
+                    "room": "1"
+                }
+            ]
+        },
+        {
+            "employeeName": "Davide Bianchi",
+            "id": "itoperator1",
+            "roles":[
+                {
+                    "id": "role3",
+                    "position": "System Administrator",
+                    "department": "IT FPG",
+                    "from": "01/10/2019",
+                    "to": "present"
+                }
+            ],
+            "locations":[
+                {
+                    "id":"fpg_ced",
+                    "building": "Main building",
+                    "floor": "Underground Floor",
+                    "corridor": "Z",
+                    "room": "24"
+                }
+            ]
+        }
+    ]
+}

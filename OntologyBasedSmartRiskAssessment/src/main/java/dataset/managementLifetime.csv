@@ -1,0 +1,36 @@
+Type;Example
+Compliance;The creation and compliance of Information Security policies, procedures and standards
+Compliance;The creation of Awareness programmes (aware of the risks involved in using IT systems and responsibilities towards mediating the IT risks)
+Compliance;The level to which previously identified IT risks are managed and mediated
+Compliance;The availability, completeness and comprehensiveness of Information
+Compliance;The impact on the IT risk position of the company when policies are not complied with
+Compliance;Software licensing issues
+Compliance;The compliance with regulatory, legal and statutory requirements
+Operational;Logical access control management (edit user access rights from access control lists, ...)
+Operational;Identification and authentication management (edit user ID database and password files, ...)
+Operational;Firewall management (configuring firewalls with the authorized access rights, connecting workstations to LANS and the Internet, ...)
+Operational;Virus and malicious software management (installing and updating antivirus software)
+Operational;Setting and updating the security settings and configurations of workstations and servers
+Operational;Ensuring backups and secure storage of backups
+Operational;Ensuring availability through UPS systems
+Runtime;The fact that an action can be attributed to the actor which brings into play measurable technical and organizational mechanisms (existence of traces, user authentication, strength fo evidence)
+Runtime;Forbid human actions
+Runtime;Forbid and check
+Runtime;Forbid, check and punish violation of a rule
+Runtime;Setting limits on events that can be propagated, such as physical limits (eg: firewalls)
+Runtime;Monitoring process execution to limit the consequences of a mishap that may lead to more sever consequences
+Runtime;Setting limits on parameter variations allowed (eg: limits on amounts transferred, differences between two states, ...)
+Runtime;Hardware and software mainenance plans
+Runtime;Activity continuity and recovery plans
+Designtime;The existence of penalties, the severity of which may also be measured
+Designtime;Awareness on the part of the actor that their actions may be attributed to them and of penalties incurred in such a case
+Designtime;Completely prevent an event from occurring
+Designtime;May or may not prevent an event from occurring, depending on the severity of event
+Designtime;Make it more difficult to carry out a malicious act
+Designtime;Determine intemediary checkpoints in processes to prevent the propagation of errors or faults
+Designtime;Prevent the propagation of an initial incident
+Designtime;Anticipate reparation of equipment following a materia incident
+Designtime;Anticipate restoration of the original state following an immaterial incident
+Designtime;Anticipate backup facilities
+Designtime;Data restoration and backup plans
+Designtime;Crisis management and communication plans
