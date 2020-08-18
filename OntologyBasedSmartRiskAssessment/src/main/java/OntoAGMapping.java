@@ -47,7 +47,10 @@ public class OntoAGMapping {
         GraphDbControl gc = new GraphDbControl( "bolt://localhost:7687", "admin", "admin" );
         gc.addHumanLayer();
         //gc.printHuman();
-        gc.attachLambdaHuman(null);
+        //gc.attachLambdaHuman();
+        gc.addNetworkLayer();
+        gc.addAccessLayer();
+        gc.attachLambdaNetwork();
         try {
             gc.close();
         } catch (Exception ex) {
