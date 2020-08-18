@@ -1,8 +1,11 @@
 import control.Alignment;
+import control.GraphDbControl;
 import control.MappingParam;
 import control.ParseAlignment;
 import control.ValidationControl;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import models.AG_Model;
 import models.ISO_Model;
 import models.ManagementLifetime_Model;
@@ -13,7 +16,7 @@ import org.apache.jena.ontology.OntModel;
 public class OntoAGMapping {
 
     public static void main(String[] args){
-        
+        /*
         ISO_Model IsoOnto = new ISO_Model();
         OntModel modelIso = IsoOnto.createISOModel();
         
@@ -34,7 +37,23 @@ public class OntoAGMapping {
         ValidationControl vc = new ValidationControl();
         ArrayList<MappingParam> mp = vc.parseValidationFile();
         vc.caluclateValidationFactor(mp);
-        
+        */
+/*
+        try ( GraphDbControl greeter = new GraphDbControl( "bolt://localhost:7687", "admin", "admin" ) )
+        {
+            greeter.printGreeting( "hello, world" );
+        } catch(Exception e){}
+      */  
+        GraphDbControl gc = new GraphDbControl( "bolt://localhost:7687", "admin", "admin" );
+        gc.addHumanLayer();
+        //gc.printHuman();
+        gc.attachLambdaHuman(null);
+        try {
+            gc.close();
+        } catch (Exception ex) {
+            Logger.getLogger(OntoAGMapping.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                
   
     }
 }
