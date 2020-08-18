@@ -341,25 +341,42 @@ public class GraphDbControl implements AutoCloseable{
                                 if(resultMatch.equals(vulnId)){
                                     
                                     JSONObject impactV2 = (JSONObject) vulnObj.get("impactV2");
-                                    double av2 = (double) impactV2.get("accessVectorScore");
-                                    double ac2 = (double) impactV2.get("accessComplexityScore");
-                                    //double pr2 = (double) impactV2.get("privilegesRequired");
-                                    //double cm2 = (double) impactV2.get("explotabilityCodeMaturity");
-                                    //double rc2 = (double) impactV2.get("reportConfidence");
+                                    double av=0.0, ac=0.0, pr=0.0, cm=0.0, rc=0.0;
+                                    double av2=0.0, ac2=0.0, pr2=0.0, cm2=0.0, rc2=0.0;
+                                    double av3=0.0, ac3=0.0, pr3=0.0, cm3=0.0, rc3=0.0;
                                     
-                                    JSONObject impactV3 = (JSONObject) vulnObj.get("impactV3");
-                                    //double av3 = (double) impactV3.get("accessVectorScore");
-                                    //double ac3 = (double) impactV3.get("accessComplexityScore");
-                                    //double pr3 = (double) impactV3.get("privilegesRequired");
-                                    //double cm3 = (double) impactV3.get("explotabilityCodeMaturity");
-                                    //double rc3 = (double) impactV3.get("reportConfidence");
+                                    if(impactV2.containsKey("accessVectorScore")){
+                                        av2 = (double) impactV2.get("accessVectorScore");}
+                                    if(impactV2.containsKey("accessComplexityScore")){
+                                        ac2 = (double) impactV2.get("accessComplexityScore");}
+                                    if(impactV2.containsKey("privilegesRequired")){
+                                        pr2 = (double) impactV2.get("privilegesRequired");}
+                                    if(impactV2.containsKey("explotabilityCodeMaturity")){
+                                        cm2 = (double) impactV2.get("explotabilityCodeMaturity");}
+                                    if(impactV2.containsKey("reportConfidence")){
+                                        rc2 = (double) impactV2.get("reportConfidence");}
                                     
-
-                                    System.out.println(av2 + "--" /*+ av3*/);
-                                    System.out.println(ac2 + "--" /*+ ac3*/);
-                                    System.out.println(/*pr2 +*/ "--" /*+ pr3*/);
-                                    System.out.println(/*cm2 +*/ "--" /*+ cm3*/);
-                                    System.out.println(/*rc2 +*/ "--" /*+ rc3*/);
+                                    if(vulnObj.containsKey("impactV3")){ 
+                                        JSONObject impactV3 = (JSONObject) vulnObj.get("impactV3");
+                                        //double av3=0.0, ac3=0.0, pr3=0.0, cm3=0.0, rc3=0.0;
+                                        if(impactV3.containsKey("accessVectorScore")){
+                                            av3 = (double) impactV3.get("accessVectorScore");}
+                                        if(impactV3.containsKey("accessComplexityScore")){
+                                            ac3 = (double) impactV3.get("accessComplexityScore");}
+                                        if(impactV3.containsKey("privilegesRequired")){
+                                            pr3 = (double) impactV3.get("privilegesRequired");}
+                                        if(impactV3.containsKey("explotabilityCodeMaturity")){
+                                            cm3 = (double) impactV3.get("explotabilityCodeMaturity");}
+                                        if(impactV3.containsKey("reportConfidence")){
+                                            rc3 = (double) impactV3.get("reportConfidence");}
+                                    }
+                                    
+                                    av = Math.max(av2, av3);
+                                    ac = Math.max(ac2, ac3);
+                                    pr = Math.max(pr2, pr3);
+                                    cm = Math.max(cm2, cm3);
+                                    rc = Math.max(rc2, rc3);
+                                    System.out.println(av+" -"+ac+" -"+pr+" -"+cm+" -"+rc);
 
                                     /*
                                     tx.run("MATCH (h1:HUMAN)-[ww:work_with]->(h2:HUMAN) " +

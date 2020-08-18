@@ -44,6 +44,7 @@ public class OntoAGMapping {
             greeter.printGreeting( "hello, world" );
         } catch(Exception e){}
       */  
+        
         GraphDbControl gc = new GraphDbControl( "bolt://localhost:7687", "admin", "admin" );
         gc.addHumanLayer();
         //gc.printHuman();
