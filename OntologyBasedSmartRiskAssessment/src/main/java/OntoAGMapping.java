@@ -52,7 +52,7 @@ public class OntoAGMapping {
         vc.caluclateValidationFactor(mp);
         */
         
-        
+        /*
         GraphDbControl gc = new GraphDbControl("bolt://localhost:7687", "admin", "admin");
         //gc.buldGraph();
         ArrayList<Edge> ee = gc.setHumanEdges();
@@ -70,11 +70,11 @@ public class OntoAGMapping {
         } catch (Exception ex) {
             Logger.getLogger(GraphDbControl.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        /*
-        DiscountControl dc = new DiscountControl();
-        dc.calculateDiscount();
         */
+        
+        
+        DiscountControl dc = new DiscountControl();
+        dc.calculateFormula();
+        
     }
 }

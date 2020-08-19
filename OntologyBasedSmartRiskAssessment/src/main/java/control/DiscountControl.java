@@ -5,8 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import org.apache.jena.ontology.Individual;
-
+import java.util.Collections;
 
 public class DiscountControl {
     
@@ -79,13 +78,65 @@ public class DiscountControl {
     /*
     Dovrei tornare arco(src-dest-tutte info) + layer a cui appartiene + lambda
     */
-    public void calculateLambda(){
+    public ArrayList<Edge> calculateLambda(ArrayList<Discount> discounts, String layer){
+                
+        ArrayList<Edge> edgesWithDiscount = new ArrayList();
+        int counter=0;
         
         GraphDbControl gc = new GraphDbControl("bolt://localhost:7687", "admin", "admin");
-        ArrayList<Edge> edges = gc.setHumanEdges();
+        ArrayList<Double> lambdas = new ArrayList();
+        ArrayList<Edge> edges = new ArrayList();
+        if("human".equals(layer)){edges = gc.setHumanEdges();}
+        else if("network".equals(layer)){edges = gc.setNetworkEdges();}
+        //else if("access".equals(layer)){edges = gc.setAccessEdges();}
         for(Edge e : edges){
-            System.out.println(e.getLayer() + " " + e.getLambda() + " " +e.getDescriptionId());
+            double lambda = e.getLambda();
+            lambdas.add(lambda);
         }
+        double max = Collections.max(lambdas);
+        double min = Collections.min(lambdas);
+        double threshold1 = (max-min)/3;
+        double threshold2 = (max-min)*2/3;
+        
+        for(Edge e : edges){
+            double lambda = e.getLambda();
+            double disInLayerPlus = 0, disInLayerMinus = 0;
+            double finalDis=0;
+                    
+            for(Discount dis: discounts){
+                disInLayerPlus += dis.getDisPositive()/dis.getNumElemPositive();
+                disInLayerMinus += dis.getDisNegative()/dis.getNumElemNegative();
+            }
+            
+            if(lambda <= threshold1){
+                //System.out.println("CASE 1");
+                double dis1 = disInLayerPlus/100;
+                double dis2 = ((disInLayerMinus/100)-lambda)/2;
+                finalDis = dis1 + dis2;
+
+                //System.out.println(finalDis);
+            }
+            else if(lambda >= threshold2){
+                //System.out.println("CASE 3");
+                double dis1 = ((disInLayerPlus/100)+lambda)/2;
+                double dis2 = disInLayerMinus/100;
+                finalDis = dis1 + dis2;
+
+                //System.out.println(finalDis);
+            }
+            else{
+                //System.out.println("CASE 2");
+                double dis1 = disInLayerPlus/100;
+                double dis2 = disInLayerMinus/100;
+                finalDis = dis1 + dis2;
+
+                //System.out.println(finalDis);
+            }
+            edgesWithDiscount.add(new Edge(e.getLayer(), finalDis, e.getDescriptionId()));
+            counter++;
+        }
+        System.out.println("counter: " + counter);
+        return edgesWithDiscount;
     }
     
     public ArrayList<Factor> calculateManagement(){
@@ -147,6 +198,50 @@ public class DiscountControl {
         return vc.caluclateValidationFactor(mp);
     }
     
+    public double normalizeWithAssessment(/*ArrayList<Edge> edges,*/ ArrayList<Factor> factorControls){
+        double cv =0;
+        int numC=0, numPC=0, numNC=0;
+        
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(pathMatchingISO));
+            br.readLine(); // skip the first line (header)
+            String line;
+            
+            while((line = br.readLine()) != null) {
+                
+                String[] data = line.split(";");
+                
+                // Elements in matching csv dataset
+                String controlId = data[0];
+                String assessment = data[8];
+                
+                
+                for(Factor fact : factorControls){
+                    if(controlId.equals(fact.getId())){
+                        if("C".equals(assessment)){numC++;}
+                        if("PC".equals(assessment)){numPC++;}
+                        if("NC".equals(assessment)){numNC++;}
+                    }
+                }
+            }
+            System.out.println("C: " + numC + " PC: " + numPC + " NC: " + numNC + "----" + (numC+numPC+numNC));
+            if(numC >= numPC && numC >= numNC){cv=0.9;}
+            else if(numPC > numC && numPC >= numNC){cv=0.4;}
+            else{cv=0.1;}
+            System.out.println("cv: " + cv);
+        }
+        catch (FileNotFoundException e) {}
+        catch (IOException e) {}
+        finally {
+            if (br != null){
+                try {br.close();}
+                catch (IOException e) {}
+            }
+        }
+        return cv;
+    }
+    
     public Discount calculateDiscount(Factor f11, ArrayList<Factor> f2, ArrayList<Factor> f3){
         
         Discount dis = new Discount(0,0,0,0);
@@ -199,9 +294,21 @@ public class DiscountControl {
         ArrayList<Factor> f2 = calculateValidation();
         ArrayList<Factor> f3 = calculateManagement();
         
+        ArrayList<Factor> factorsHuman = new ArrayList();
+        ArrayList<Factor> factorsAccess = new ArrayList();
+        ArrayList<Factor> factorsNetwork = new ArrayList();
+        
         ArrayList<Discount> disH = new ArrayList();
         ArrayList<Discount> disA = new ArrayList();
         ArrayList<Discount> disN = new ArrayList();
+        
+        ArrayList<Edge> edgeH = new ArrayList();
+        ArrayList<Edge> edgeA = new ArrayList();
+        ArrayList<Edge> edgeN = new ArrayList();
+        
+        ArrayList<Edge> edgeFinalH = new ArrayList();
+        ArrayList<Edge> edgeFinalA = new ArrayList();
+        ArrayList<Edge> edgeFinalN = new ArrayList();
         
         
         //ArrayList<Factor> result = new ArrayList();
@@ -211,36 +318,65 @@ public class DiscountControl {
                 if(calculateDiscount(f11, f2, f3) != null){
                     disH.add(calculateDiscount(f11, f2, f3));
                 }
+                factorsHuman.add(f11);
+                
             }
             else if ("access".equals(f11.getType()) && f11.getValue()!= 0){
                 if(calculateDiscount(f11, f2, f3) != null){
                     disA.add(calculateDiscount(f11, f2, f3));
                 }
+                factorsAccess.add(f11);
             }
             else if ("network".equals(f11.getType()) && f11.getValue()!= 0){
                 if(calculateDiscount(f11, f2, f3) != null){
                     disN.add(calculateDiscount(f11, f2, f3));
                 }
+                factorsNetwork.add(f11);
             }
         }
-        // Prendo human edges e su ogni ci faccio il calcolo del discount
+        
+        double cvHuman = normalizeWithAssessment(factorsHuman);
+        double cvAccess = normalizeWithAssessment(factorsAccess);
+        double cvNetwork = normalizeWithAssessment(factorsNetwork);
         
         
-        // Prendo il discount finale ed elaboro l'output finale per ogni arco
+        
+        edgeH = calculateLambda(disH, "human");
+        //edgeA = calculateLambda(disA, "access");
+        edgeN = calculateLambda(disN, "network");
         
         /*
         System.out.println("HUMAN---------------------------------");
-        for(Factor f : fH){
-            System.out.println(f.getId() + " " + f.getType() + " " + f.getValue());
+        for(Discount d : disH){
+            System.out.println(d.getDisPositive() + " " + d.getDisNegative());
         }
         System.out.println("ACCESS---------------------------------");
-        for(Factor f : fA){
-            System.out.println(f.getId() + " " + f.getType() + " " + f.getValue());
+        for(Discount d : disA){
+            System.out.println(d.getDisPositive() + " " + d.getDisNegative());
         }
         System.out.println("NETWORK---------------------------------");
-        for(Factor f : fN){
-            System.out.println(f.getId() + " " + f.getType() + " " + f.getValue());
+        for(Discount d : disN){
+            System.out.println(d.getDisPositive() + " " + d.getDisNegative());
+        }
+       */
+        for(Edge e: edgeH){
+            edgeFinalH.add(new Edge(e.getLayer(), e.getLambda()*cvHuman, e.getDescriptionId()));
+        }
+        /*
+        for(Edge e: edgeA){
+            edgeFinalH.add(new Edge(e.getLayer(), e.getLambda()*cvAccess, e.getDescriptionId()));
         }
         */
+        for(Edge e: edgeN){
+            edgeFinalN.add(new Edge(e.getLayer(), e.getLambda()*cvNetwork, e.getDescriptionId()));
+        }
+        
+        for(Edge e : edgeFinalH){
+            System.out.println(e.getDescriptionId() + " discount factor: " + e.getLambda());
+        }
+        for(Edge e : edgeFinalN){
+            System.out.println(e.getDescriptionId() + " discount factor: " + e.getLambda());
+        }
+        
     }
 }
