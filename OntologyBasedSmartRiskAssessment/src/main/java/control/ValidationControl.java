@@ -73,8 +73,10 @@ public class ValidationControl {
         else {return 0;}
     }
     
-    public void caluclateValidationFactor(ArrayList<MappingParam> mappings){
+    public ArrayList<Factor> caluclateValidationFactor(ArrayList<MappingParam> mappings){
          
+        ArrayList<Factor> factors = new ArrayList();
+        
         double denominator = 14;
         
         for (MappingParam mapping : mappings) {
@@ -109,7 +111,11 @@ public class ValidationControl {
             
             double val = (lt+ml+Prc+maxGap)/denominator;
             
-            System.out.println(id + " -validation factor- " + val);
+            //System.out.println(id + " -validation factor- " + val);
+            Factor f = new Factor(id, val, "validation");
+            factors.add(f);
         }
+        
+        return factors;
     }
 }
