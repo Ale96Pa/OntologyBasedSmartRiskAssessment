@@ -139,32 +139,32 @@ public class ISO_Model {
                 Individual indId = m.createIndividual(uri + wellFormedCsv(idCsv), ID);
                 indId.addLabel(idCsv, "");
                 
-                Individual indName = m.createIndividual(uri + wellFormedCsv(nameCsv), name);
-                indName.addLabel(nameCsv, "");
+                Individual indName = m.createIndividual(uri+ idCsv+";" + wellFormedCsv(nameCsv), name);
+                indName.addLabel(idCsv+";"+nameCsv, "");
                 
-                Individual indCat = m.createIndividual(uri+ wellFormedCsv(catCsv), category);
-                indCat.addLabel(catCsv, "");
+                Individual indCat = m.createIndividual(uri+ idCsv+";"+ wellFormedCsv(catCsv), category);
+                indCat.addLabel(idCsv+";"+catCsv, "");
                 
-                Individual indSubcat = m.createIndividual(uri+ wellFormedCsv(subcatCsv), subcategory);
-                indSubcat.addLabel(subcatCsv, "");
+                Individual indSubcat = m.createIndividual(uri+idCsv+";"+ wellFormedCsv(subcatCsv), subcategory);
+                indSubcat.addLabel(idCsv+";"+subcatCsv, "");
                 
-                Individual indObj = m.createIndividual(uri+ wellFormedCsv(objCsv), objective);
-                indObj.addLabel(objCsv, "");
+                Individual indObj = m.createIndividual(uri+idCsv+";"+ wellFormedCsv(objCsv), objective);
+                indObj.addLabel(idCsv+";"+objCsv, "");
                 
-                Individual indDescr = m.createIndividual(uri+ wellFormedCsv(descrCsv), description);
-                indDescr.addLabel(descrCsv, "");
+                Individual indDescr = m.createIndividual(uri+idCsv+";"+ wellFormedCsv(descrCsv), description);
+                indDescr.addLabel(idCsv+";"+descrCsv, "");
                 
-                Individual indVonSolms = m.createIndividual(uri+ wellFormedCsv(vsExCsv), VS_example);
-                indVonSolms.addLabel(vsExCsv, "");
+                Individual indVonSolms = m.createIndividual(uri+idCsv+";"+ wellFormedCsv(vsExCsv), VS_example);
+                indVonSolms.addLabel(idCsv+";"+vsExCsv, "");
                 
-                Individual indMehari = m.createIndividual(uri+ wellFormedCsv(mehExCsv), M_example);
-                indMehari.addLabel(mehExCsv, "");
+                Individual indMehari = m.createIndividual(uri+idCsv+";"+ wellFormedCsv(mehExCsv), M_example);
+                indMehari.addLabel(idCsv+";"+mehExCsv, "");
                 
-                Individual indMLabel = m.createIndividual(uri+ wellFormedCsv(mehLabel), M_label);
-                indMLabel.addLabel(mehLabel, "");
+                Individual indMLabel = m.createIndividual(uri+idCsv+";"+ wellFormedCsv(mehLabel), M_label);
+                indMLabel.addLabel(idCsv+";"+mehLabel, "");
                 
-                Individual indPanacea = m.createIndividual(uri+ wellFormedCsv(vulnPanaceaCsv), hvul);
-                indPanacea.addLabel(vulnPanaceaCsv, "");
+                Individual indPanacea = m.createIndividual(uri+idCsv+";"+ wellFormedCsv(vulnPanaceaCsv), hvul);
+                indPanacea.addLabel(idCsv+";"+vulnPanaceaCsv, "");
                 
                 /***************************
                 * OBJECT PROPERTY ASSERTON *

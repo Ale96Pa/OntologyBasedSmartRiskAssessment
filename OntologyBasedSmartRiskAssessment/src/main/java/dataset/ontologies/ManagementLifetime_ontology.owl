@@ -13,109 +13,109 @@
   <owl:ObjectProperty rdf:about="http://thesisAP.com/mng-lt#hasExample">
     <rdfs:range rdf:resource="http://thesisAP.com/mng-lt#EXAMPLE"/>
   </owl:ObjectProperty>
-  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#The%20level%20to%20which%20previously%20identified%20IT%20risks%20are%20managed%20and%20mediated">
-    <rdfs:label>The level to which previously identified IT risks are managed and mediated</rdfs:label>
+  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#compliance;The%20compliance%20with%20regulatory,%20legal%20and%20statutory%20requirements">
+    <rdfs:label>compliance;The compliance with regulatory, legal and statutory requirements</rdfs:label>
   </j.0:COMPLIANCE>
-  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#The%20impact%20on%20the%20IT%20risk%20position%20of%20the%20company%20when%20policies%20are%20not%20complied%20with">
-    <rdfs:label>The impact on the IT risk position of the company when policies are not complied with</rdfs:label>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;Anticipate%20reparation%20of%20equipment%20following%20a%20materia%20incident">
+    <rdfs:label>designtime;Anticipate reparation of equipment following a materia incident</rdfs:label>
+  </j.0:DESIGNTIME>
+  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#operational;Firewall%20management%20(configuring%20firewalls%20with%20the%20authorized%20access%20rights,%20connecting%20workstations%20to%20LANS%20and%20the%20Internet,%20...)">
+    <rdfs:label>operational;Firewall management (configuring firewalls with the authorized access rights, connecting workstations to LANS and the Internet, ...)</rdfs:label>
+  </j.0:OPERATIONAL>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;Data%20restoration%20and%20backup%20plans">
+    <rdfs:label>designtime;Data restoration and backup plans</rdfs:label>
+  </j.0:DESIGNTIME>
+  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#compliance;The%20level%20to%20which%20previously%20identified%20IT%20risks%20are%20managed%20and%20mediated">
+    <rdfs:label>compliance;The level to which previously identified IT risks are managed and mediated</rdfs:label>
   </j.0:COMPLIANCE>
-  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#The%20availability,%20completeness%20and%20comprehensiveness%20of%20Information">
-    <rdfs:label>The availability, completeness and comprehensiveness of Information</rdfs:label>
+  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#runtime;Setting%20limits%20on%20events%20that%20can%20be%20propagated,%20such%20as%20physical%20limits%20(eg:%20firewalls)">
+    <rdfs:label>runtime;Setting limits on events that can be propagated, such as physical limits (eg: firewalls)</rdfs:label>
+  </j.0:RUNTIME>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;Make%20it%20more%20difficult%20to%20carry%20out%20a%20malicious%20act">
+    <rdfs:label>designtime;Make it more difficult to carry out a malicious act</rdfs:label>
+  </j.0:DESIGNTIME>
+  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#runtime;Forbid%20human%20actions">
+    <rdfs:label>runtime;Forbid human actions</rdfs:label>
+  </j.0:RUNTIME>
+  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#compliance;The%20creation%20and%20compliance%20of%20Information%20Security%20policies,%20procedures%20and%20standards">
+    <rdfs:label>compliance;The creation and compliance of Information Security policies, procedures and standards</rdfs:label>
   </j.0:COMPLIANCE>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#Awareness%20on%20the%20part%20of%20the%20actor%20that%20their%20actions%20may%20be%20attributed%20to%20them%20and%20of%20penalties%20incurred%20in%20such%20a%20case">
-    <rdfs:label>Awareness on the part of the actor that their actions may be attributed to them and of penalties incurred in such a case</rdfs:label>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;Anticipate%20restoration%20of%20the%20original%20state%20following%20an%20immaterial%20incident">
+    <rdfs:label>designtime;Anticipate restoration of the original state following an immaterial incident</rdfs:label>
   </j.0:DESIGNTIME>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#Data%20restoration%20and%20backup%20plans">
-    <rdfs:label>Data restoration and backup plans</rdfs:label>
-  </j.0:DESIGNTIME>
-  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#Monitoring%20process%20execution%20to%20limit%20the%20consequences%20of%20a%20mishap%20that%20may%20lead%20to%20more%20sever%20consequences">
-    <rdfs:label>Monitoring process execution to limit the consequences of a mishap that may lead to more sever consequences</rdfs:label>
-  </j.0:RUNTIME>
-  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#Ensuring%20availability%20through%20UPS%20systems">
-    <rdfs:label>Ensuring availability through UPS systems</rdfs:label>
+  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)">
+    <rdfs:label>operational;Logical access control management (edit user access rights from access control lists, ...)</rdfs:label>
   </j.0:OPERATIONAL>
-  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#Activity%20continuity%20and%20recovery%20plans">
-    <rdfs:label>Activity continuity and recovery plans</rdfs:label>
+  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#runtime;Forbid%20and%20check">
+    <rdfs:label>runtime;Forbid and check</rdfs:label>
   </j.0:RUNTIME>
-  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#The%20fact%20that%20an%20action%20can%20be%20attributed%20to%20the%20actor%20which%20brings%20into%20play%20measurable%20technical%20and%20organizational%20mechanisms%20(existence%20of%20traces,%20user%20authentication,%20strength%20fo%20evidence)">
-    <rdfs:label>The fact that an action can be attributed to the actor which brings into play measurable technical and organizational mechanisms (existence of traces, user authentication, strength fo evidence)</rdfs:label>
-  </j.0:RUNTIME>
-  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#Setting%20and%20updating%20the%20security%20settings%20and%20configurations%20of%20workstations%20and%20servers">
-    <rdfs:label>Setting and updating the security settings and configurations of workstations and servers</rdfs:label>
-  </j.0:OPERATIONAL>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#Completely%20prevent%20an%20event%20from%20occurring">
-    <rdfs:label>Completely prevent an event from occurring</rdfs:label>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;Anticipate%20backup%20facilities">
+    <rdfs:label>designtime;Anticipate backup facilities</rdfs:label>
   </j.0:DESIGNTIME>
-  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#The%20creation%20of%20Awareness%20programmes%20(aware%20of%20the%20risks%20involved%20in%20using%20IT%20systems%20and%20responsibilities%20towards%20mediating%20the%20IT%20risks)">
-    <rdfs:label>The creation of Awareness programmes (aware of the risks involved in using IT systems and responsibilities towards mediating the IT risks)</rdfs:label>
+  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#runtime;The%20fact%20that%20an%20action%20can%20be%20attributed%20to%20the%20actor%20which%20brings%20into%20play%20measurable%20technical%20and%20organizational%20mechanisms%20(existence%20of%20traces,%20user%20authentication,%20strength%20fo%20evidence)">
+    <rdfs:label>runtime;The fact that an action can be attributed to the actor which brings into play measurable technical and organizational mechanisms (existence of traces, user authentication, strength fo evidence)</rdfs:label>
+  </j.0:RUNTIME>
+  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#runtime;Forbid,%20check%20and%20punish%20violation%20of%20a%20rule">
+    <rdfs:label>runtime;Forbid, check and punish violation of a rule</rdfs:label>
+  </j.0:RUNTIME>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;The%20existence%20of%20penalties,%20the%20severity%20of%20which%20may%20also%20be%20measured">
+    <rdfs:label>designtime;The existence of penalties, the severity of which may also be measured</rdfs:label>
+  </j.0:DESIGNTIME>
+  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#compliance;The%20impact%20on%20the%20IT%20risk%20position%20of%20the%20company%20when%20policies%20are%20not%20complied%20with">
+    <rdfs:label>compliance;The impact on the IT risk position of the company when policies are not complied with</rdfs:label>
   </j.0:COMPLIANCE>
-  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#Software%20licensing%20issues">
-    <rdfs:label>Software licensing issues</rdfs:label>
+  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#compliance;The%20creation%20of%20Awareness%20programmes%20(aware%20of%20the%20risks%20involved%20in%20using%20IT%20systems%20and%20responsibilities%20towards%20mediating%20the%20IT%20risks)">
+    <rdfs:label>compliance;The creation of Awareness programmes (aware of the risks involved in using IT systems and responsibilities towards mediating the IT risks)</rdfs:label>
   </j.0:COMPLIANCE>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#Make%20it%20more%20difficult%20to%20carry%20out%20a%20malicious%20act">
-    <rdfs:label>Make it more difficult to carry out a malicious act</rdfs:label>
-  </j.0:DESIGNTIME>
-  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#Virus%20and%20malicious%20software%20management%20(installing%20and%20updating%20antivirus%20software)">
-    <rdfs:label>Virus and malicious software management (installing and updating antivirus software)</rdfs:label>
+  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)">
+    <rdfs:label>operational;Identification and authentication management (edit user ID database and password files, ...)</rdfs:label>
   </j.0:OPERATIONAL>
-  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#The%20compliance%20with%20regulatory,%20legal%20and%20statutory%20requirements">
-    <rdfs:label>The compliance with regulatory, legal and statutory requirements</rdfs:label>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;Prevent%20the%20propagation%20of%20an%20initial%20incident">
+    <rdfs:label>designtime;Prevent the propagation of an initial incident</rdfs:label>
+  </j.0:DESIGNTIME>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;Crisis%20management%20and%20communication%20plans">
+    <rdfs:label>designtime;Crisis management and communication plans</rdfs:label>
+  </j.0:DESIGNTIME>
+  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#operational;Ensuring%20availability%20through%20UPS%20systems">
+    <rdfs:label>operational;Ensuring availability through UPS systems</rdfs:label>
+  </j.0:OPERATIONAL>
+  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#runtime;Monitoring%20process%20execution%20to%20limit%20the%20consequences%20of%20a%20mishap%20that%20may%20lead%20to%20more%20sever%20consequences">
+    <rdfs:label>runtime;Monitoring process execution to limit the consequences of a mishap that may lead to more sever consequences</rdfs:label>
+  </j.0:RUNTIME>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;May%20or%20may%20not%20prevent%20an%20event%20from%20occurring,%20depending%20on%20the%20severity%20of%20event">
+    <rdfs:label>designtime;May or may not prevent an event from occurring, depending on the severity of event</rdfs:label>
+  </j.0:DESIGNTIME>
+  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#operational;Virus%20and%20malicious%20software%20management%20(installing%20and%20updating%20antivirus%20software)">
+    <rdfs:label>operational;Virus and malicious software management (installing and updating antivirus software)</rdfs:label>
+  </j.0:OPERATIONAL>
+  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#runtime;Hardware%20and%20software%20mainenance%20plans">
+    <rdfs:label>runtime;Hardware and software mainenance plans</rdfs:label>
+  </j.0:RUNTIME>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;Completely%20prevent%20an%20event%20from%20occurring">
+    <rdfs:label>designtime;Completely prevent an event from occurring</rdfs:label>
+  </j.0:DESIGNTIME>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;Awareness%20on%20the%20part%20of%20the%20actor%20that%20their%20actions%20may%20be%20attributed%20to%20them%20and%20of%20penalties%20incurred%20in%20such%20a%20case">
+    <rdfs:label>designtime;Awareness on the part of the actor that their actions may be attributed to them and of penalties incurred in such a case</rdfs:label>
+  </j.0:DESIGNTIME>
+  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#runtime;Setting%20limits%20on%20parameter%20variations%20allowed%20(eg:%20limits%20on%20amounts%20transferred,%20differences%20between%20two%20states,%20...)">
+    <rdfs:label>runtime;Setting limits on parameter variations allowed (eg: limits on amounts transferred, differences between two states, ...)</rdfs:label>
+  </j.0:RUNTIME>
+  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#designtime;Determine%20intemediary%20checkpoints%20in%20processes%20to%20prevent%20the%20propagation%20of%20errors%20or%20faults">
+    <rdfs:label>designtime;Determine intemediary checkpoints in processes to prevent the propagation of errors or faults</rdfs:label>
+  </j.0:DESIGNTIME>
+  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#operational;Ensuring%20backups%20and%20secure%20storage%20of%20backups">
+    <rdfs:label>operational;Ensuring backups and secure storage of backups</rdfs:label>
+  </j.0:OPERATIONAL>
+  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#compliance;The%20availability,%20completeness%20and%20comprehensiveness%20of%20Information">
+    <rdfs:label>compliance;The availability, completeness and comprehensiveness of Information</rdfs:label>
   </j.0:COMPLIANCE>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#May%20or%20may%20not%20prevent%20an%20event%20from%20occurring,%20depending%20on%20the%20severity%20of%20event">
-    <rdfs:label>May or may not prevent an event from occurring, depending on the severity of event</rdfs:label>
-  </j.0:DESIGNTIME>
-  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#Hardware%20and%20software%20mainenance%20plans">
-    <rdfs:label>Hardware and software mainenance plans</rdfs:label>
-  </j.0:RUNTIME>
-  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#Setting%20limits%20on%20events%20that%20can%20be%20propagated,%20such%20as%20physical%20limits%20(eg:%20firewalls)">
-    <rdfs:label>Setting limits on events that can be propagated, such as physical limits (eg: firewalls)</rdfs:label>
-  </j.0:RUNTIME>
-  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#The%20creation%20and%20compliance%20of%20Information%20Security%20policies,%20procedures%20and%20standards">
-    <rdfs:label>The creation and compliance of Information Security policies, procedures and standards</rdfs:label>
+  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#operational;Setting%20and%20updating%20the%20security%20settings%20and%20configurations%20of%20workstations%20and%20servers">
+    <rdfs:label>operational;Setting and updating the security settings and configurations of workstations and servers</rdfs:label>
+  </j.0:OPERATIONAL>
+  <j.0:COMPLIANCE rdf:about="http://thesisAP.com/mng-lt#compliance;Software%20licensing%20issues">
+    <rdfs:label>compliance;Software licensing issues</rdfs:label>
   </j.0:COMPLIANCE>
-  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#Setting%20limits%20on%20parameter%20variations%20allowed%20(eg:%20limits%20on%20amounts%20transferred,%20differences%20between%20two%20states,%20...)">
-    <rdfs:label>Setting limits on parameter variations allowed (eg: limits on amounts transferred, differences between two states, ...)</rdfs:label>
+  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#runtime;Activity%20continuity%20and%20recovery%20plans">
+    <rdfs:label>runtime;Activity continuity and recovery plans</rdfs:label>
   </j.0:RUNTIME>
-  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)">
-    <rdfs:label>Identification and authentication management (edit user ID database and password files, ...)</rdfs:label>
-  </j.0:OPERATIONAL>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#Anticipate%20reparation%20of%20equipment%20following%20a%20materia%20incident">
-    <rdfs:label>Anticipate reparation of equipment following a materia incident</rdfs:label>
-  </j.0:DESIGNTIME>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#Anticipate%20backup%20facilities">
-    <rdfs:label>Anticipate backup facilities</rdfs:label>
-  </j.0:DESIGNTIME>
-  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)">
-    <rdfs:label>Logical access control management (edit user access rights from access control lists, ...)</rdfs:label>
-  </j.0:OPERATIONAL>
-  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#Firewall%20management%20(configuring%20firewalls%20with%20the%20authorized%20access%20rights,%20connecting%20workstations%20to%20LANS%20and%20the%20Internet,%20...)">
-    <rdfs:label>Firewall management (configuring firewalls with the authorized access rights, connecting workstations to LANS and the Internet, ...)</rdfs:label>
-  </j.0:OPERATIONAL>
-  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#Forbid%20and%20check">
-    <rdfs:label>Forbid and check</rdfs:label>
-  </j.0:RUNTIME>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#Prevent%20the%20propagation%20of%20an%20initial%20incident">
-    <rdfs:label>Prevent the propagation of an initial incident</rdfs:label>
-  </j.0:DESIGNTIME>
-  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#Forbid,%20check%20and%20punish%20violation%20of%20a%20rule">
-    <rdfs:label>Forbid, check and punish violation of a rule</rdfs:label>
-  </j.0:RUNTIME>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#The%20existence%20of%20penalties,%20the%20severity%20of%20which%20may%20also%20be%20measured">
-    <rdfs:label>The existence of penalties, the severity of which may also be measured</rdfs:label>
-  </j.0:DESIGNTIME>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#Anticipate%20restoration%20of%20the%20original%20state%20following%20an%20immaterial%20incident">
-    <rdfs:label>Anticipate restoration of the original state following an immaterial incident</rdfs:label>
-  </j.0:DESIGNTIME>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#Determine%20intemediary%20checkpoints%20in%20processes%20to%20prevent%20the%20propagation%20of%20errors%20or%20faults">
-    <rdfs:label>Determine intemediary checkpoints in processes to prevent the propagation of errors or faults</rdfs:label>
-  </j.0:DESIGNTIME>
-  <j.0:DESIGNTIME rdf:about="http://thesisAP.com/mng-lt#Crisis%20management%20and%20communication%20plans">
-    <rdfs:label>Crisis management and communication plans</rdfs:label>
-  </j.0:DESIGNTIME>
-  <j.0:RUNTIME rdf:about="http://thesisAP.com/mng-lt#Forbid%20human%20actions">
-    <rdfs:label>Forbid human actions</rdfs:label>
-  </j.0:RUNTIME>
-  <j.0:OPERATIONAL rdf:about="http://thesisAP.com/mng-lt#Ensuring%20backups%20and%20secure%20storage%20of%20backups">
-    <rdfs:label>Ensuring backups and secure storage of backups</rdfs:label>
-  </j.0:OPERATIONAL>
 </rdf:RDF>

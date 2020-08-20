@@ -129,23 +129,23 @@ public class NIST_Model {
                 Individual indId = ID.createIndividual(uri+ wellFormedCsv(idCsv));
                 indId.addLabel(idCsv, "");
                 
-                Individual indName = name.createIndividual(uri+ wellFormedCsv(nameCsv));
-                indName.addLabel(nameCsv, "");
+                Individual indName = name.createIndividual(uri+wellFormedCsv(idCsv+";"+nameCsv));
+                indName.addLabel(idCsv+";"+nameCsv, "");
                 
-                Individual indFam = family.createIndividual(uri+ wellFormedCsv(famCsv));
-                indFam.addLabel(famCsv, "");
+                Individual indFam = family.createIndividual(uri+ wellFormedCsv(idCsv+";"+famCsv));
+                indFam.addLabel(idCsv+";"+famCsv, "");
                 
-                Individual indPri = priority.createIndividual(uri+ wellFormedCsv(priCsv));
-                indPri.addLabel(priCsv, "");
+                Individual indPri = priority.createIndividual(uri+ wellFormedCsv(idCsv+";"+priCsv));
+                indPri.addLabel(idCsv+";"+priCsv, "");
                 
-                Individual indImp = impact.createIndividual(uri+ wellFormedCsv(impCsv));
-                indImp.addLabel(impCsv, "");
+                Individual indImp = impact.createIndividual(uri+ wellFormedCsv(idCsv+";"+impCsv));
+                indImp.addLabel(idCsv+";"+impCsv, "");
                 
-                Individual indDescr = description.createIndividual(uri+ wellFormedCsv(descrCsv));
-                indDescr.addLabel(descrCsv, "");
+                Individual indDescr = description.createIndividual(uri+ wellFormedCsv(idCsv+";"+descrCsv));
+                indDescr.addLabel(idCsv+";"+descrCsv, "");
                 
-                Individual indGuid = guidance.createIndividual(uri+ wellFormedCsv(guidCsv));
-                indGuid.addLabel(guidCsv, "");
+                Individual indGuid = guidance.createIndividual(uri+ wellFormedCsv(idCsv+";"+guidCsv));
+                indGuid.addLabel(idCsv+";"+guidCsv, "");
                 
                 // Object Property assertions
                 indId.addProperty(hasName, indName);
@@ -155,13 +155,16 @@ public class NIST_Model {
                 indId.addProperty(hasDescription, indDescr);
                 indId.addProperty(hasGuidance, indGuid);
                 
+                /*
                 // Related controls
-                if(!"NaN".equals(guidCsv)){
+                if(!"NaN".equals(relCsv)){
                     String[] controls = relCsv.split(",");
                     for (String control : controls) {
-                        indId.addProperty(relatedTo, control);
+                        Individual indControlRelated = ID.createIndividual(uri+ wellFormedCsv(control));
+                        indId.addProperty(relatedTo, indControlRelated);
                     }
                 }
+                */
             }
             System.out.println("Read, parsed and inserted " + counter + " records");
         }
@@ -194,13 +197,6 @@ public class NIST_Model {
      * @param str
      * @return well formed string for uri
      */
-    public String wellFormedUri(String str){
-        str = str.replace("%", "%25");
-        str = str.replace("[", "(");
-        str = str.replace("]", ")");
-        str = str.replace("#", "%23");
-        return str;
-    }
     private static String wellFormedCsv(String input) {
         if (input.contains("\"")) {
             input = input.replaceAll("\"", "");

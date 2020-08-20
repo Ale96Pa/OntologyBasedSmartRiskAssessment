@@ -25,25 +25,25 @@ public class OntoAGMapping {
     public static void main(String[] args){
         
         // OK
-        /*
+        
         ISO_Model IsoOnto = new ISO_Model();
         OntModel modelIso = IsoOnto.createISOModel();
-        */
+        
         // OK
-        /*
+        
         NIST_Model nistOnto = new NIST_Model();
         OntModel modelNIST = nistOnto.createNISTModel();
-        */
+        
         // OK
-        /*
+        
         AG_Model agOnto = new AG_Model();
         OntModel modelMLAG = agOnto.createAGModel();
-        */
+        
         // OK
-        /*
+        
         ManagementLifetime_Model mngmOnto = new ManagementLifetime_Model();
         OntModel modelMngm = mngmOnto.createManagementModel();
-        */
+        
         
         /*
         ParseAlignment pa = new ParseAlignment();

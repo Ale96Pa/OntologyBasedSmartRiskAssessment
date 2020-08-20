@@ -1,0 +1,2734 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>D:\projects\TESI_project\OBSRA\OntologyBasedSmartRiskAssessment\OntologyBasedSmartRiskAssessment\src\main\java\dataset\ontologies\NIST_ontology.owl</onto1>
+	<onto2>D:\projects\TESI_project\OBSRA\OntologyBasedSmartRiskAssessment\OntologyBasedSmartRiskAssessment\src\main\java\dataset\ontologies\AG_ontology.owl</onto2>
+	<uri1>D:\projects\TESI_project\OBSRA\OntologyBasedSmartRiskAssessment\OntologyBasedSmartRiskAssessment\src\main\java\dataset\ontologies\NIST_ontology.owl</uri1>
+	<uri2>D:\projects\TESI_project\OBSRA\OntologyBasedSmartRiskAssessment\OntologyBasedSmartRiskAssessment\src\main\java\dataset\ontologies\AG_ontology.owl</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AU-9%20(4);ACCESS%20BY%20SUBSET%20OF%20PRIVILEGED%20USERS"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;USER"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5446</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(18);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(18);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(18);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(18);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(16);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(16);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(16);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(16);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(15);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(15);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(15);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(15);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(13);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(13);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(13);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(13);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(14);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(14);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(14);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(14);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(17);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(17);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(17);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(17);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(20);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(20);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(20);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(20);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(12);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(12);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(12);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(12);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(22);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(22);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(22);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(22);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(21);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(21);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(21);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(21);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(19);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(19);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(19);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(19);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(11);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(11);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(11);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(11);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(11);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(11);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(11);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(11);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-8;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-8;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-8;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-8;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(12);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(12);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(12);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(12);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(13);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(13);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(13);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(13);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-5;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-5;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-5;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-5;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-1;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-1;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-1;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-1;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;cred4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4719</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(22);ACCESS%20ONLY"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;ROOT"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4639</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SI-4%20(22);UNAUTHORIZED%20NETWORK%20SERVICES"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;Server"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4521</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-10;NETWORK%20DISCONNECT"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;n4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4171</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-10;NETWORK%20DISCONNECT"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;n3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4171</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-10;NETWORK%20DISCONNECT"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;n2"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4171</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-10;NETWORK%20DISCONNECT"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;n1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4171</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-10;NETWORK%20DISCONNECT"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;n9"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4171</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-10;NETWORK%20DISCONNECT"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;n8"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4171</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-10;NETWORK%20DISCONNECT"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;n7"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4171</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-10;NETWORK%20DISCONNECT"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;n6"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4171</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-10;NETWORK%20DISCONNECT"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;n5"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4171</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(3);NETWORK%20ACCESS%20TO%20PRIVILEGED%20COMMANDS"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#access;PASSWORD"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3774</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(9);HUMAN%20REVIEWS"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#human;Resident"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3534</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#CM-11%20(2);Privileged%20status%20can%20be%20obtained,%20for%20example,%20by%20serving%20in%20the%20role%20of%20system%20administrator."/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#human;System%20Administrator"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3223</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-20%20(4);NETWORK%20ACCESSIBLE%20STORAGE%20DEVICES"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;Medical%20Device"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3221</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(10);SHARED%20/%20GROUP%20ACCOUNT%20CREDENTIAL%20TERMINATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#human;sharing_credential"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2624</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(10);SHARED%20/%20GROUP%20ACCOUNT%20CREDENTIAL%20TERMINATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#human;sharing%20credential"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2624</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#CA-3%20(1);The%20organization%20prohibits%20the%20direct%20connection%20of%20an%20(Assignment:%20organization-defined%20unclassified,%20national%20security%20system)%20to%20an%20external%20network%20without%20the%20use%20of%20(Assignment:%20organization-defined%20boundary%20protection%20device)."/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;Terminal"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2492</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#CA-3%20(3);The%20organization%20prohibits%20the%20direct%20connection%20of%20an%20(Assignment:%20organization-defined%20unclassified,%20non-national%20security%20system)%20to%20an%20external%20network%20without%20the%20use%20of%20(Assignment,%20organization-defined%20boundary%20protection%20device)."/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;Terminal"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2492</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-3%20(2);CRYPTOGRAPHIC%20BIDIRECTIONAL%20NETWORK%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;halia-client"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2184</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-3%20(2);CRYPTOGRAPHIC%20BIDIRECTIONAL%20NETWORK%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mlag#network;halia-tomcat"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2184</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

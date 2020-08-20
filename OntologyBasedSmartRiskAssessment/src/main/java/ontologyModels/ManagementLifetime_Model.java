@@ -86,26 +86,30 @@ public class ManagementLifetime_Model {
                 switch (typeCsv) {
                     case "Compliance":
                         {
-                            Individual indCompl = m.createIndividual(uri + wellFormedCsv(exampleCsv), compliance);
-                            indCompl.addLabel(exampleCsv, "");
+                            Individual indCompl = m.createIndividual(uri+"compliance;" + 
+                                    wellFormedCsv(exampleCsv), compliance);
+                            indCompl.addLabel("compliance;"+exampleCsv, "");
                             break;
                         }
                     case "Operational":
                         {
-                            Individual indOper = m.createIndividual(uri + wellFormedCsv(exampleCsv), operational);
-                            indOper.addLabel(exampleCsv, "");
+                            Individual indOper = m.createIndividual(uri +"operational;"+ 
+                                    wellFormedCsv(exampleCsv), operational);
+                            indOper.addLabel("operational;"+exampleCsv, "");
                             break;
                         }
                     case "Runtime":
                         {
-                            Individual indRuntime = m.createIndividual(uri + wellFormedCsv(exampleCsv), runtime);
-                            indRuntime.addLabel(exampleCsv, "");
+                            Individual indRuntime = m.createIndividual(uri + "runtime;"+ 
+                                    wellFormedCsv(exampleCsv), runtime);
+                            indRuntime.addLabel("runtime;"+exampleCsv, "");
                             break;
                         }
                     case "Designtime":
                         {
-                            Individual indDesigntime = m.createIndividual(uri + wellFormedCsv(exampleCsv), designtime);
-                            indDesigntime.addLabel(exampleCsv, "");
+                            Individual indDesigntime = m.createIndividual(uri+ "designtime;" + 
+                                    wellFormedCsv(exampleCsv), designtime);
+                            indDesigntime.addLabel("designtime;"+exampleCsv, "");
                             break;
                         }
                 }

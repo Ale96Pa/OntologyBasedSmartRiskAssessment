@@ -26,10 +26,10 @@
     <rdfs:subClassOf rdf:resource="http://thesisAP.com/mlag#HUMAN"/>
   </owl:Class>
   <owl:Class rdf:about="http://thesisAP.com/mlag#CPE"/>
-  <owl:Class rdf:about="http://thesisAP.com/mlag#PROTOCOL"/>
   <owl:Class rdf:about="http://thesisAP.com/mlag#E_POSITION"/>
-  <owl:Class rdf:about="http://thesisAP.com/mlag#OS_SERVICE"/>
+  <owl:Class rdf:about="http://thesisAP.com/mlag#PROTOCOL"/>
   <owl:Class rdf:about="http://thesisAP.com/mlag#MASK"/>
+  <owl:Class rdf:about="http://thesisAP.com/mlag#OS_SERVICE"/>
   <owl:Class rdf:about="http://thesisAP.com/mlag#PORT"/>
   <owl:Class rdf:about="http://thesisAP.com/mlag#NUMBER"/>
   <owl:Class rdf:about="http://thesisAP.com/mlag#PRE-CONDITION"/>
@@ -86,6 +86,10 @@
     <rdfs:range rdf:resource="http://thesisAP.com/mlag#PORT"/>
     <rdfs:domain rdf:resource="http://thesisAP.com/mlag#NETWORK_INTERFACE"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#hasService">
+    <rdfs:range rdf:resource="http://thesisAP.com/mlag#PORT_SERVICE"/>
+    <rdfs:domain rdf:resource="http://thesisAP.com/mlag#PORT"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#hasState">
     <rdfs:range rdf:resource="http://thesisAP.com/mlag#STATE"/>
     <rdfs:domain rdf:resource="http://thesisAP.com/mlag#PORT"/>
@@ -93,10 +97,6 @@
   <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#hasPosition">
     <rdfs:range rdf:resource="http://thesisAP.com/mlag#E_POSITION"/>
     <rdfs:domain rdf:resource="http://thesisAP.com/mlag#EMPLOYEE"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#hasService">
-    <rdfs:range rdf:resource="http://thesisAP.com/mlag#PORT_SERVICE"/>
-    <rdfs:domain rdf:resource="http://thesisAP.com/mlag#PORT"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#isCwe">
     <rdfs:range rdf:resource="http://thesisAP.com/mlag#CWE"/>
@@ -110,13 +110,13 @@
     <rdfs:range rdf:resource="http://thesisAP.com/mlag#PRE-CONDITION"/>
     <rdfs:domain rdf:resource="http://thesisAP.com/mlag#HUMAN_VULNERABILITY"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#hasOperatingSystemService">
-    <rdfs:range rdf:resource="http://thesisAP.com/mlag#OS_SERVICE"/>
-    <rdfs:domain rdf:resource="http://thesisAP.com/mlag#OPERATING_SYSTEM"/>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#hasProtocol">
     <rdfs:range rdf:resource="http://thesisAP.com/mlag#PROTOCOL"/>
     <rdfs:domain rdf:resource="http://thesisAP.com/mlag#PORT"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#hasOperatingSystemService">
+    <rdfs:range rdf:resource="http://thesisAP.com/mlag#OS_SERVICE"/>
+    <rdfs:domain rdf:resource="http://thesisAP.com/mlag#OPERATING_SYSTEM"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#hasNumber">
     <rdfs:range rdf:resource="http://thesisAP.com/mlag#NUMBER"/>
@@ -150,48 +150,538 @@
     <rdfs:range rdf:resource="http://thesisAP.com/mlag#E_LOCATION"/>
     <rdfs:domain rdf:resource="http://thesisAP.com/mlag#EMPLOYEE"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#hasOperatingSystem">
-    <rdfs:range rdf:resource="http://thesisAP.com/mlag#OPERATING_SYSTEM"/>
-    <rdfs:domain rdf:resource="http://thesisAP.com/mlag#DEVICE"/>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#hasInterface">
     <rdfs:range rdf:resource="http://thesisAP.com/mlag#NETWORK_INTERFACE"/>
     <rdfs:domain rdf:resource="http://thesisAP.com/mlag#DEVICE"/>
   </owl:ObjectProperty>
-  <j.0:CREDENTIAL rdf:about="http://thesisAP.com/mlag#cred3">
+  <owl:ObjectProperty rdf:about="http://thesisAP.com/mlag#hasOperatingSystem">
+    <rdfs:range rdf:resource="http://thesisAP.com/mlag#OPERATING_SYSTEM"/>
+    <rdfs:domain rdf:resource="http://thesisAP.com/mlag#DEVICE"/>
+  </owl:ObjectProperty>
+  <j.0:HUMAN_VULNERABILITY rdf:about="http://thesisAP.com/mlag#human;sharing_credential">
+    <j.0:hasPostCondition>
+      <j.0:POST-CONDITION rdf:about="http://thesisAP.com/mlag#human;OWN">
+        <rdfs:label>human;OWN</rdfs:label>
+      </j.0:POST-CONDITION>
+    </j.0:hasPostCondition>
+    <j.0:hasPreCondition>
+      <j.0:PRE-CONDITION rdf:about="http://thesisAP.com/mlag#human;COWORKING">
+        <j.0:hasScore>
+          <j.0:AV-SCORE rdf:about="http://thesisAP.com/mlag#human;0.62">
+            <rdfs:label>human;0.62</rdfs:label>
+          </j.0:AV-SCORE>
+        </j.0:hasScore>
+        <rdfs:label>human;COWORKING</rdfs:label>
+        <rdf:type rdf:resource="http://thesisAP.com/mlag#ACCESS_VECTOR"/>
+      </j.0:PRE-CONDITION>
+    </j.0:hasPreCondition>
+    <j.0:hasAccessVector rdf:resource="http://thesisAP.com/mlag#human;COWORKING"/>
+    <j.0:hasDescription>
+      <j.0:HV_DESCRIPTION rdf:about="http://thesisAP.com/mlag#human;The%20person%20has%20the%20attitude%20to%20share%20his/her%20personal%20credential%20with%20others">
+        <rdfs:label>human;The person has the attitude to share his/her personal credential with others</rdfs:label>
+      </j.0:HV_DESCRIPTION>
+    </j.0:hasDescription>
+    <j.0:hasName>
+      <j.0:HV_NAME rdf:about="http://thesisAP.com/mlag#human;sharing%20credential">
+        <rdfs:label>human;sharing credential</rdfs:label>
+      </j.0:HV_NAME>
+    </j.0:hasName>
+    <rdfs:label>human;sharing_credential</rdfs:label>
+  </j.0:HUMAN_VULNERABILITY>
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n10">
+    <j.0:hasOperatingSystem>
+      <j.0:OPERATING_SYSTEM rdf:about="http://thesisAP.com/mlag#network;Cisco%20iOS-Cisco%20Systems">
+        <rdfs:label>network;Cisco iOS-Cisco Systems</rdfs:label>
+      </j.0:OPERATING_SYSTEM>
+    </j.0:hasOperatingSystem>
+    <j.0:hasType>
+      <j.0:TYPE rdf:about="http://thesisAP.com/mlag#network;Switch">
+        <rdfs:label>network;Switch</rdfs:label>
+      </j.0:TYPE>
+    </j.0:hasType>
+    <rdfs:label>network;n10</rdfs:label>
+  </j.0:DEVICE>
+  <j.0:NETWORK_INTERFACE rdf:about="http://thesisAP.com/mlag#network;eth1">
+    <j.0:hasMask>
+      <j.0:MASK rdf:about="http://thesisAP.com/mlag#network;255.255.255.252">
+        <rdfs:label>network;255.255.255.252</rdfs:label>
+      </j.0:MASK>
+    </j.0:hasMask>
+    <j.0:hasVersion>
+      <j.0:VERSION rdf:about="http://thesisAP.com/mlag#network;IPv4">
+        <rdfs:label>network;IPv4</rdfs:label>
+      </j.0:VERSION>
+    </j.0:hasVersion>
+    <j.0:hasVersion>
+      <j.0:VERSION rdf:about="http://thesisAP.com/mlag#network;IPV4">
+        <rdfs:label>network;IPV4</rdfs:label>
+      </j.0:VERSION>
+    </j.0:hasVersion>
+    <j.0:hasMask>
+      <j.0:MASK rdf:about="http://thesisAP.com/mlag#network;255.255.255.0">
+        <rdfs:label>network;255.255.255.0</rdfs:label>
+      </j.0:MASK>
+    </j.0:hasMask>
+    <rdfs:label>network;eth1</rdfs:label>
+  </j.0:NETWORK_INTERFACE>
+  <j.0:EMPLOYEE rdf:about="http://thesisAP.com/mlag#human;itoperator1">
+    <j.0:hasLocation>
+      <j.0:E_LOCATION rdf:about="http://thesisAP.com/mlag#human;fpg_ced">
+        <rdfs:label>human;fpg_ced</rdfs:label>
+      </j.0:E_LOCATION>
+    </j.0:hasLocation>
+    <j.0:hasPosition>
+      <j.0:E_POSITION rdf:about="http://thesisAP.com/mlag#human;System%20Administrator">
+        <rdfs:label>human;System Administrator</rdfs:label>
+      </j.0:E_POSITION>
+    </j.0:hasPosition>
+    <rdfs:label>human;itoperator1</rdfs:label>
+  </j.0:EMPLOYEE>
+  <j.0:CREDENTIAL rdf:about="http://thesisAP.com/mlag#access;cred2">
     <j.0:hasPrivilegeLevel>
-      <j.0:PRIVILEGE_LEVEL rdf:about="http://thesisAP.com/mlag#ROOT">
-        <rdfs:label>ROOT</rdfs:label>
+      <j.0:PRIVILEGE_LEVEL rdf:about="http://thesisAP.com/mlag#access;USER">
+        <rdfs:label>access;USER</rdfs:label>
       </j.0:PRIVILEGE_LEVEL>
     </j.0:hasPrivilegeLevel>
     <j.0:hasPrivilegeType>
-      <j.0:PRIVILEGE_TYPE rdf:about="http://thesisAP.com/mlag#PASSWORD">
-        <rdfs:label>PASSWORD</rdfs:label>
+      <j.0:PRIVILEGE_TYPE rdf:about="http://thesisAP.com/mlag#access;PASSWORD">
+        <rdfs:label>access;PASSWORD</rdfs:label>
       </j.0:PRIVILEGE_TYPE>
     </j.0:hasPrivilegeType>
-    <rdfs:label>cred3</rdfs:label>
+    <rdfs:label>access;cred2</rdfs:label>
   </j.0:CREDENTIAL>
-  <j.0:CREDENTIAL rdf:about="http://thesisAP.com/mlag#cred4">
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n5">
+    <j.0:hasOperatingSystem>
+      <j.0:OPERATING_SYSTEM rdf:about="http://thesisAP.com/mlag#network;Debian-Linux">
+        <j.0:hasService>
+          <j.0:OS_SERVICE rdf:about="http://thesisAP.com/mlag#network;apache2">
+            <rdfs:label>network;apache2</rdfs:label>
+          </j.0:OS_SERVICE>
+        </j.0:hasService>
+        <j.0:hasService>
+          <j.0:OS_SERVICE rdf:about="http://thesisAP.com/mlag#network;dnlab">
+            <rdfs:label>network;dnlab</rdfs:label>
+          </j.0:OS_SERVICE>
+        </j.0:hasService>
+        <rdfs:label>network;Debian-Linux</rdfs:label>
+      </j.0:OPERATING_SYSTEM>
+    </j.0:hasOperatingSystem>
+    <j.0:hasType>
+      <j.0:TYPE rdf:about="http://thesisAP.com/mlag#network;Server">
+        <rdfs:label>network;Server</rdfs:label>
+      </j.0:TYPE>
+    </j.0:hasType>
+    <rdfs:label>network;n5</rdfs:label>
+  </j.0:DEVICE>
+  <j.0:NETWORK_VULNERABILITY rdf:about="http://thesisAP.com/mlag#network;CVE-2010-1883">
+    <j.0:isCwe>
+      <j.0:CWE rdf:about="http://thesisAP.com/mlag#network;CWE-189">
+        <rdfs:label>network;CWE-189</rdfs:label>
+      </j.0:CWE>
+    </j.0:isCwe>
+    <rdfs:label>network;CVE-2010-1883</rdfs:label>
+  </j.0:NETWORK_VULNERABILITY>
+  <j.0:NETWORK_INTERFACE rdf:about="http://thesisAP.com/mlag#network;eth0">
+    <j.0:hasPort>
+      <j.0:NUMBER rdf:about="http://thesisAP.com/mlag#network;port-443">
+        <j.0:hasService>
+          <j.0:PORT_SERVICE rdf:about="http://thesisAP.com/mlag#network;dnlab-server-web">
+            <rdfs:label>network;dnlab-server-web</rdfs:label>
+          </j.0:PORT_SERVICE>
+        </j.0:hasService>
+        <j.0:hasCpe>
+          <j.0:CPE rdf:about="http://thesisAP.com/mlag#network;apache-1.0">
+            <rdfs:label>network;apache-1.0</rdfs:label>
+          </j.0:CPE>
+        </j.0:hasCpe>
+        <j.0:hasProtocol>
+          <j.0:PROTOCOL rdf:about="http://thesisAP.com/mlag#network;TCP">
+            <rdfs:label>network;TCP</rdfs:label>
+          </j.0:PROTOCOL>
+        </j.0:hasProtocol>
+        <j.0:hasState>
+          <j.0:STATE rdf:about="http://thesisAP.com/mlag#network;port-open">
+            <rdfs:label>network;port-open</rdfs:label>
+          </j.0:STATE>
+        </j.0:hasState>
+        <rdfs:label>network;port-443</rdfs:label>
+        <j.0:hasCpe>
+          <j.0:CPE rdf:about="http://thesisAP.com/mlag#network;dnlab-server-web-1.0">
+            <rdfs:label>network;dnlab-server-web-1.0</rdfs:label>
+          </j.0:CPE>
+        </j.0:hasCpe>
+        <j.0:hasCpe>
+          <j.0:CPE rdf:about="http://thesisAP.com/mlag#network;halia-iis-1.0">
+            <rdfs:label>network;halia-iis-1.0</rdfs:label>
+          </j.0:CPE>
+        </j.0:hasCpe>
+        <j.0:hasCve>
+          <j.0:NETWORK_VULNERABILITY rdf:about="http://thesisAP.com/mlag#network;CVE-2009-2412">
+            <j.0:isCwe rdf:resource="http://thesisAP.com/mlag#network;CWE-189"/>
+            <rdfs:label>network;CVE-2009-2412</rdfs:label>
+            <rdf:type rdf:resource="http://thesisAP.com/mlag#CVE"/>
+          </j.0:NETWORK_VULNERABILITY>
+        </j.0:hasCve>
+        <j.0:hasService>
+          <j.0:PORT_SERVICE rdf:about="http://thesisAP.com/mlag#network;halia-iis">
+            <rdfs:label>network;halia-iis</rdfs:label>
+          </j.0:PORT_SERVICE>
+        </j.0:hasService>
+        <j.0:hasService>
+          <j.0:PORT_SERVICE rdf:about="http://thesisAP.com/mlag#network;apache">
+            <rdfs:label>network;apache</rdfs:label>
+          </j.0:PORT_SERVICE>
+        </j.0:hasService>
+      </j.0:NUMBER>
+    </j.0:hasPort>
+    <j.0:hasPort>
+      <j.0:NUMBER rdf:about="http://thesisAP.com/mlag#network;port-7778">
+        <j.0:hasCpe>
+          <j.0:CPE rdf:about="http://thesisAP.com/mlag#network;database_server_11.2.0.4">
+            <rdfs:label>network;database_server_11.2.0.4</rdfs:label>
+          </j.0:CPE>
+        </j.0:hasCpe>
+        <j.0:hasCve>
+          <j.0:NETWORK_VULNERABILITY rdf:about="http://thesisAP.com/mlag#network;CVE-2018-3110">
+            <j.0:isCwe>
+              <j.0:CWE rdf:about="http://thesisAP.com/mlag#network;CWE-284">
+                <rdfs:label>network;CWE-284</rdfs:label>
+              </j.0:CWE>
+            </j.0:isCwe>
+            <rdfs:label>network;CVE-2018-3110</rdfs:label>
+            <rdf:type rdf:resource="http://thesisAP.com/mlag#CVE"/>
+          </j.0:NETWORK_VULNERABILITY>
+        </j.0:hasCve>
+        <j.0:hasService>
+          <j.0:PORT_SERVICE rdf:about="http://thesisAP.com/mlag#network;database_server">
+            <rdfs:label>network;database_server</rdfs:label>
+          </j.0:PORT_SERVICE>
+        </j.0:hasService>
+        <j.0:hasProtocol rdf:resource="http://thesisAP.com/mlag#network;TCP"/>
+        <j.0:hasState rdf:resource="http://thesisAP.com/mlag#network;port-open"/>
+        <rdfs:label>network;port-7778</rdfs:label>
+      </j.0:NUMBER>
+    </j.0:hasPort>
+    <j.0:hasPort>
+      <j.0:NUMBER rdf:about="http://thesisAP.com/mlag#network;port-5557">
+        <j.0:hasCpe>
+          <j.0:CPE rdf:about="http://thesisAP.com/mlag#network;themis-client-1.0">
+            <rdfs:label>network;themis-client-1.0</rdfs:label>
+          </j.0:CPE>
+        </j.0:hasCpe>
+        <j.0:hasCve>
+          <j.0:NETWORK_VULNERABILITY rdf:about="http://thesisAP.com/mlag#network;CVE-2018-4846">
+            <j.0:isCwe>
+              <j.0:CWE rdf:about="http://thesisAP.com/mlag#network;CWE-798">
+                <rdfs:label>network;CWE-798</rdfs:label>
+              </j.0:CWE>
+            </j.0:isCwe>
+            <rdfs:label>network;CVE-2018-4846</rdfs:label>
+            <rdf:type rdf:resource="http://thesisAP.com/mlag#CVE"/>
+          </j.0:NETWORK_VULNERABILITY>
+        </j.0:hasCve>
+        <j.0:hasService>
+          <j.0:PORT_SERVICE rdf:about="http://thesisAP.com/mlag#network;themis-client">
+            <rdfs:label>network;themis-client</rdfs:label>
+          </j.0:PORT_SERVICE>
+        </j.0:hasService>
+        <j.0:hasProtocol rdf:resource="http://thesisAP.com/mlag#network;TCP"/>
+        <j.0:hasState rdf:resource="http://thesisAP.com/mlag#network;port-open"/>
+        <rdfs:label>network;port-5557</rdfs:label>
+      </j.0:NUMBER>
+    </j.0:hasPort>
+    <j.0:hasPort>
+      <j.0:NUMBER rdf:about="http://thesisAP.com/mlag#network;port-31337">
+        <j.0:hasCpe>
+          <j.0:CPE rdf:about="http://thesisAP.com/mlag#network;dnlab-referti-1.0">
+            <rdfs:label>network;dnlab-referti-1.0</rdfs:label>
+          </j.0:CPE>
+        </j.0:hasCpe>
+        <j.0:hasService>
+          <j.0:PORT_SERVICE rdf:about="http://thesisAP.com/mlag#network;dnlab-referti">
+            <rdfs:label>network;dnlab-referti</rdfs:label>
+          </j.0:PORT_SERVICE>
+        </j.0:hasService>
+        <j.0:hasProtocol rdf:resource="http://thesisAP.com/mlag#network;TCP"/>
+        <j.0:hasState rdf:resource="http://thesisAP.com/mlag#network;port-open"/>
+        <rdfs:label>network;port-31337</rdfs:label>
+      </j.0:NUMBER>
+    </j.0:hasPort>
+    <j.0:hasPort>
+      <j.0:NUMBER rdf:about="http://thesisAP.com/mlag#network;port-8443">
+        <j.0:hasCpe>
+          <j.0:CPE rdf:about="http://thesisAP.com/mlag#network;halia-jboss-1.0">
+            <rdfs:label>network;halia-jboss-1.0</rdfs:label>
+          </j.0:CPE>
+        </j.0:hasCpe>
+        <j.0:hasService>
+          <j.0:PORT_SERVICE rdf:about="http://thesisAP.com/mlag#network;halia-jboss">
+            <rdfs:label>network;halia-jboss</rdfs:label>
+          </j.0:PORT_SERVICE>
+        </j.0:hasService>
+        <j.0:hasCpe>
+          <j.0:CPE rdf:about="http://thesisAP.com/mlag#network;halia-tomcat-1.0">
+            <rdfs:label>network;halia-tomcat-1.0</rdfs:label>
+          </j.0:CPE>
+        </j.0:hasCpe>
+        <j.0:hasService>
+          <j.0:PORT_SERVICE rdf:about="http://thesisAP.com/mlag#network;halia-tomcat">
+            <rdfs:label>network;halia-tomcat</rdfs:label>
+          </j.0:PORT_SERVICE>
+        </j.0:hasService>
+        <j.0:hasProtocol rdf:resource="http://thesisAP.com/mlag#network;TCP"/>
+        <j.0:hasState rdf:resource="http://thesisAP.com/mlag#network;port-open"/>
+        <rdfs:label>network;port-8443</rdfs:label>
+      </j.0:NUMBER>
+    </j.0:hasPort>
+    <j.0:hasMask rdf:resource="http://thesisAP.com/mlag#network;255.255.255.252"/>
+    <rdfs:label>network;eth0</rdfs:label>
+    <j.0:hasVersion rdf:resource="http://thesisAP.com/mlag#network;IPV4"/>
+    <j.0:hasMask rdf:resource="http://thesisAP.com/mlag#network;255.255.255.0"/>
+    <j.0:hasPort>
+      <j.0:NUMBER rdf:about="http://thesisAP.com/mlag#network;port-5555">
+        <j.0:hasCpe>
+          <j.0:CPE rdf:about="http://thesisAP.com/mlag#network;halia-client-1.0">
+            <rdfs:label>network;halia-client-1.0</rdfs:label>
+          </j.0:CPE>
+        </j.0:hasCpe>
+        <j.0:hasCve rdf:resource="http://thesisAP.com/mlag#network;CVE-2018-4846"/>
+        <j.0:hasService>
+          <j.0:PORT_SERVICE rdf:about="http://thesisAP.com/mlag#network;halia-client">
+            <rdfs:label>network;halia-client</rdfs:label>
+          </j.0:PORT_SERVICE>
+        </j.0:hasService>
+        <j.0:hasProtocol rdf:resource="http://thesisAP.com/mlag#network;TCP"/>
+        <j.0:hasState rdf:resource="http://thesisAP.com/mlag#network;port-open"/>
+        <rdfs:label>network;port-5555</rdfs:label>
+      </j.0:NUMBER>
+    </j.0:hasPort>
+    <j.0:hasPort>
+      <j.0:NUMBER rdf:about="http://thesisAP.com/mlag#network;port-5556">
+        <rdfs:label>network;port-5556</rdfs:label>
+        <j.0:hasProtocol rdf:resource="http://thesisAP.com/mlag#network;TCP"/>
+        <j.0:hasService>
+          <j.0:PORT_SERVICE rdf:about="http://thesisAP.com/mlag#network;dnlab-client">
+            <rdfs:label>network;dnlab-client</rdfs:label>
+          </j.0:PORT_SERVICE>
+        </j.0:hasService>
+        <j.0:hasCpe>
+          <j.0:CPE rdf:about="http://thesisAP.com/mlag#network;dnlab-client-1.0">
+            <rdfs:label>network;dnlab-client-1.0</rdfs:label>
+          </j.0:CPE>
+        </j.0:hasCpe>
+        <j.0:hasState rdf:resource="http://thesisAP.com/mlag#network;port-open"/>
+        <j.0:hasCpe>
+          <j.0:CPE rdf:about="http://thesisAP.com/mlag#network;halia-server-1.0">
+            <rdfs:label>network;halia-server-1.0</rdfs:label>
+          </j.0:CPE>
+        </j.0:hasCpe>
+        <j.0:hasCve rdf:resource="http://thesisAP.com/mlag#network;CVE-2018-4846"/>
+        <j.0:hasCve rdf:resource="http://thesisAP.com/mlag#network;CVE-2009-2412"/>
+        <j.0:hasService>
+          <j.0:PORT_SERVICE rdf:about="http://thesisAP.com/mlag#network;halia-server">
+            <rdfs:label>network;halia-server</rdfs:label>
+          </j.0:PORT_SERVICE>
+        </j.0:hasService>
+      </j.0:NUMBER>
+    </j.0:hasPort>
+    <j.0:hasPort>
+      <j.0:NUMBER rdf:about="http://thesisAP.com/mlag#network;port-4443">
+        <j.0:hasCpe rdf:resource="http://thesisAP.com/mlag#network;halia-tomcat-1.0"/>
+        <j.0:hasService rdf:resource="http://thesisAP.com/mlag#network;halia-tomcat"/>
+        <j.0:hasCpe rdf:resource="http://thesisAP.com/mlag#network;halia-iis-1.0"/>
+        <j.0:hasService rdf:resource="http://thesisAP.com/mlag#network;halia-iis"/>
+        <j.0:hasProtocol rdf:resource="http://thesisAP.com/mlag#network;TCP"/>
+        <j.0:hasState rdf:resource="http://thesisAP.com/mlag#network;port-open"/>
+        <rdfs:label>network;port-4443</rdfs:label>
+      </j.0:NUMBER>
+    </j.0:hasPort>
+    <j.0:hasVersion rdf:resource="http://thesisAP.com/mlag#network;IPv4"/>
+  </j.0:NETWORK_INTERFACE>
+  <j.0:CREDENTIAL rdf:about="http://thesisAP.com/mlag#access;cred3">
     <j.0:hasPrivilegeLevel>
-      <j.0:PRIVILEGE_LEVEL rdf:about="http://thesisAP.com/mlag#USER">
-        <rdfs:label>USER</rdfs:label>
+      <j.0:PRIVILEGE_LEVEL rdf:about="http://thesisAP.com/mlag#access;ROOT">
+        <rdfs:label>access;ROOT</rdfs:label>
       </j.0:PRIVILEGE_LEVEL>
     </j.0:hasPrivilegeLevel>
+    <j.0:hasPrivilegeType rdf:resource="http://thesisAP.com/mlag#access;PASSWORD"/>
+    <rdfs:label>access;cred3</rdfs:label>
+  </j.0:CREDENTIAL>
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n4">
+    <j.0:hasOperatingSystem>
+      <j.0:OPERATING_SYSTEM rdf:about="http://thesisAP.com/mlag#network;Windows%20Server-Microsoft">
+        <j.0:hasService rdf:resource="http://thesisAP.com/mlag#network;apache2"/>
+        <j.0:hasService rdf:resource="http://thesisAP.com/mlag#network;dnlab"/>
+        <rdfs:label>network;Windows Server-Microsoft</rdfs:label>
+      </j.0:OPERATING_SYSTEM>
+    </j.0:hasOperatingSystem>
+    <j.0:hasType rdf:resource="http://thesisAP.com/mlag#network;Server"/>
+    <rdfs:label>network;n4</rdfs:label>
+  </j.0:DEVICE>
+  <j.0:HUMAN_VULNERABILITY rdf:about="http://thesisAP.com/mlag#human;no_logout">
+    <j.0:hasPostCondition>
+      <j.0:POST-CONDITION rdf:about="http://thesisAP.com/mlag#human;USE">
+        <rdfs:label>human;USE</rdfs:label>
+      </j.0:POST-CONDITION>
+    </j.0:hasPostCondition>
+    <j.0:hasPreCondition>
+      <j.0:PRE-CONDITION rdf:about="http://thesisAP.com/mlag#human;PROXIMITY">
+        <j.0:hasScore>
+          <j.0:AV-SCORE rdf:about="http://thesisAP.com/mlag#human;0.85">
+            <rdfs:label>human;0.85</rdfs:label>
+          </j.0:AV-SCORE>
+        </j.0:hasScore>
+        <rdfs:label>human;PROXIMITY</rdfs:label>
+        <rdf:type rdf:resource="http://thesisAP.com/mlag#ACCESS_VECTOR"/>
+      </j.0:PRE-CONDITION>
+    </j.0:hasPreCondition>
+    <j.0:hasAccessVector rdf:resource="http://thesisAP.com/mlag#human;PROXIMITY"/>
+    <j.0:hasDescription>
+      <j.0:HV_DESCRIPTION rdf:about="http://thesisAP.com/mlag#human;The%20person%20has%20the%20attitude%20to%20leave%20unattended%20his/her%20device(s)%20logged%20in%20with%20his/her%20personal%20credential">
+        <rdfs:label>human;The person has the attitude to leave unattended his/her device(s) logged in with his/her personal credential</rdfs:label>
+      </j.0:HV_DESCRIPTION>
+    </j.0:hasDescription>
+    <j.0:hasName>
+      <j.0:HV_NAME rdf:about="http://thesisAP.com/mlag#human;No%20&apos;logout&apos;%20when%20leaving%20the%20workstation">
+        <rdfs:label>human;No 'logout' when leaving the workstation</rdfs:label>
+      </j.0:HV_NAME>
+    </j.0:hasName>
+    <rdfs:label>human;no_logout</rdfs:label>
+  </j.0:HUMAN_VULNERABILITY>
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n2">
+    <j.0:hasOperatingSystem rdf:resource="http://thesisAP.com/mlag#network;Windows%20Server-Microsoft"/>
+    <j.0:hasType rdf:resource="http://thesisAP.com/mlag#network;Server"/>
+    <rdfs:label>network;n2</rdfs:label>
+  </j.0:DEVICE>
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n3">
+    <j.0:hasOperatingSystem rdf:resource="http://thesisAP.com/mlag#network;Windows%20Server-Microsoft"/>
+    <j.0:hasType rdf:resource="http://thesisAP.com/mlag#network;Server"/>
+    <rdfs:label>network;n3</rdfs:label>
+  </j.0:DEVICE>
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n1">
+    <j.0:hasOperatingSystem>
+      <j.0:OPERATING_SYSTEM rdf:about="http://thesisAP.com/mlag#network;Centos-Linux">
+        <rdfs:label>network;Centos-Linux</rdfs:label>
+      </j.0:OPERATING_SYSTEM>
+    </j.0:hasOperatingSystem>
+    <j.0:hasType rdf:resource="http://thesisAP.com/mlag#network;Server"/>
+    <rdfs:label>network;n1</rdfs:label>
+  </j.0:DEVICE>
+  <j.0:CREDENTIAL rdf:about="http://thesisAP.com/mlag#access;cred1">
+    <j.0:hasPrivilegeLevel rdf:resource="http://thesisAP.com/mlag#access;ROOT"/>
+    <j.0:hasPrivilegeType rdf:resource="http://thesisAP.com/mlag#access;PASSWORD"/>
+    <rdfs:label>access;cred1</rdfs:label>
+  </j.0:CREDENTIAL>
+  <j.0:EMPLOYEE rdf:about="http://thesisAP.com/mlag#human;doctor1">
+    <j.0:hasRelation>
+      <j.0:RELATION rdf:about="http://thesisAP.com/mlag#human;supervise">
+        <rdfs:label>human;supervise</rdfs:label>
+      </j.0:RELATION>
+    </j.0:hasRelation>
+    <j.0:hasLocation>
+      <j.0:E_LOCATION rdf:about="http://thesisAP.com/mlag#human;fpg_core_lab">
+        <rdfs:label>human;fpg_core_lab</rdfs:label>
+      </j.0:E_LOCATION>
+    </j.0:hasLocation>
+    <j.0:hasPosition>
+      <j.0:E_POSITION rdf:about="http://thesisAP.com/mlag#human;Doctor">
+        <rdfs:label>human;Doctor</rdfs:label>
+      </j.0:E_POSITION>
+    </j.0:hasPosition>
+    <rdfs:label>human;doctor1</rdfs:label>
+  </j.0:EMPLOYEE>
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n9">
+    <j.0:hasOperatingSystem>
+      <j.0:OPERATING_SYSTEM rdf:about="http://thesisAP.com/mlag#network;Windows-Microsoft">
+        <rdfs:label>network;Windows-Microsoft</rdfs:label>
+      </j.0:OPERATING_SYSTEM>
+    </j.0:hasOperatingSystem>
+    <j.0:hasType>
+      <j.0:TYPE rdf:about="http://thesisAP.com/mlag#network;Terminal">
+        <rdfs:label>network;Terminal</rdfs:label>
+      </j.0:TYPE>
+    </j.0:hasType>
+    <rdfs:label>network;n9</rdfs:label>
+  </j.0:DEVICE>
+  <j.0:HUMAN_VULNERABILITY rdf:about="http://thesisAP.com/mlag#human;unprotected_credential">
+    <j.0:hasPostCondition rdf:resource="http://thesisAP.com/mlag#human;OWN"/>
+    <j.0:hasPreCondition rdf:resource="http://thesisAP.com/mlag#human;PROXIMITY"/>
+    <j.0:hasAccessVector rdf:resource="http://thesisAP.com/mlag#human;PROXIMITY"/>
+    <j.0:hasDescription>
+      <j.0:HV_DESCRIPTION rdf:about="http://thesisAP.com/mlag#human;The%20person%20has%20the%20attitude%20to%20use%20default%20or%20weak%20passwords%20or%20to%20not%20update%20them%20properly">
+        <rdfs:label>human;The person has the attitude to use default or weak passwords or to not update them properly</rdfs:label>
+      </j.0:HV_DESCRIPTION>
+    </j.0:hasDescription>
+    <j.0:hasName>
+      <j.0:HV_NAME rdf:about="http://thesisAP.com/mlag#human;Poor%20password%20management">
+        <rdfs:label>human;Poor password management</rdfs:label>
+      </j.0:HV_NAME>
+    </j.0:hasName>
+    <rdfs:label>human;unprotected_credential</rdfs:label>
+  </j.0:HUMAN_VULNERABILITY>
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n8">
+    <j.0:hasOperatingSystem rdf:resource="http://thesisAP.com/mlag#network;Windows-Microsoft"/>
+    <j.0:hasType rdf:resource="http://thesisAP.com/mlag#network;Terminal"/>
+    <rdfs:label>network;n8</rdfs:label>
+  </j.0:DEVICE>
+  <j.0:EMPLOYEE rdf:about="http://thesisAP.com/mlag#human;resident1">
+    <j.0:hasLocation rdf:resource="http://thesisAP.com/mlag#human;fpg_core_lab"/>
+    <j.0:hasPosition>
+      <j.0:E_POSITION rdf:about="http://thesisAP.com/mlag#human;Resident">
+        <rdfs:label>human;Resident</rdfs:label>
+      </j.0:E_POSITION>
+    </j.0:hasPosition>
+    <rdfs:label>human;resident1</rdfs:label>
+  </j.0:EMPLOYEE>
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n12">
+    <j.0:hasOperatingSystem rdf:resource="http://thesisAP.com/mlag#network;Cisco%20iOS-Cisco%20Systems"/>
+    <j.0:hasType rdf:resource="http://thesisAP.com/mlag#network;Switch"/>
+    <rdfs:label>network;n12</rdfs:label>
+  </j.0:DEVICE>
+  <j.0:CREDENTIAL rdf:about="http://thesisAP.com/mlag#access;cred4">
+    <j.0:hasPrivilegeLevel rdf:resource="http://thesisAP.com/mlag#access;USER"/>
     <j.0:hasPrivilegeType>
-      <j.0:PRIVILEGE_TYPE rdf:about="http://thesisAP.com/mlag#BADGE">
-        <rdfs:label>BADGE</rdfs:label>
+      <j.0:PRIVILEGE_TYPE rdf:about="http://thesisAP.com/mlag#access;BADGE">
+        <rdfs:label>access;BADGE</rdfs:label>
       </j.0:PRIVILEGE_TYPE>
     </j.0:hasPrivilegeType>
-    <rdfs:label>cred4</rdfs:label>
+    <rdfs:label>access;cred4</rdfs:label>
   </j.0:CREDENTIAL>
-  <j.0:CREDENTIAL rdf:about="http://thesisAP.com/mlag#cred1">
-    <j.0:hasPrivilegeLevel rdf:resource="http://thesisAP.com/mlag#ROOT"/>
-    <j.0:hasPrivilegeType rdf:resource="http://thesisAP.com/mlag#PASSWORD"/>
-    <rdfs:label>cred1</rdfs:label>
-  </j.0:CREDENTIAL>
-  <j.0:CREDENTIAL rdf:about="http://thesisAP.com/mlag#cred2">
-    <j.0:hasPrivilegeLevel rdf:resource="http://thesisAP.com/mlag#USER"/>
-    <j.0:hasPrivilegeType rdf:resource="http://thesisAP.com/mlag#PASSWORD"/>
-    <rdfs:label>cred2</rdfs:label>
-  </j.0:CREDENTIAL>
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n7">
+    <j.0:hasOperatingSystem>
+      <j.0:OPERATING_SYSTEM rdf:about="http://thesisAP.com/mlag#network;Android-Linux">
+        <rdfs:label>network;Android-Linux</rdfs:label>
+      </j.0:OPERATING_SYSTEM>
+    </j.0:hasOperatingSystem>
+    <j.0:hasType>
+      <j.0:TYPE rdf:about="http://thesisAP.com/mlag#network;Medical%20Device">
+        <rdfs:label>network;Medical Device</rdfs:label>
+      </j.0:TYPE>
+    </j.0:hasType>
+    <rdfs:label>network;n7</rdfs:label>
+  </j.0:DEVICE>
+  <j.0:NETWORK_VULNERABILITY rdf:about="http://thesisAP.com/mlag#network;CVE-2019-2018">
+    <j.0:isCwe>
+      <j.0:CWE rdf:about="http://thesisAP.com/mlag#network;CWE-264">
+        <rdfs:label>network;CWE-264</rdfs:label>
+      </j.0:CWE>
+    </j.0:isCwe>
+    <rdfs:label>network;CVE-2019-2018</rdfs:label>
+  </j.0:NETWORK_VULNERABILITY>
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n11">
+    <j.0:hasOperatingSystem rdf:resource="http://thesisAP.com/mlag#network;Cisco%20iOS-Cisco%20Systems"/>
+    <j.0:hasType rdf:resource="http://thesisAP.com/mlag#network;Switch"/>
+    <rdfs:label>network;n11</rdfs:label>
+  </j.0:DEVICE>
+  <j.0:DEVICE rdf:about="http://thesisAP.com/mlag#network;n6">
+    <j.0:hasOperatingSystem>
+      <j.0:OPERATING_SYSTEM rdf:about="http://thesisAP.com/mlag#network;Ubuntu%20Server-Linux">
+        <j.0:hasService rdf:resource="http://thesisAP.com/mlag#network;apache2"/>
+        <j.0:hasService rdf:resource="http://thesisAP.com/mlag#network;dnlab"/>
+        <rdfs:label>network;Ubuntu Server-Linux</rdfs:label>
+      </j.0:OPERATING_SYSTEM>
+    </j.0:hasOperatingSystem>
+    <j.0:hasType rdf:resource="http://thesisAP.com/mlag#network;Server"/>
+    <rdfs:label>network;n6</rdfs:label>
+  </j.0:DEVICE>
 </rdf:RDF>

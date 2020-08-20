@@ -1,0 +1,1294 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>D:\projects\TESI_project\OBSRA\OntologyBasedSmartRiskAssessment\OntologyBasedSmartRiskAssessment\src\main\java\dataset\ontologies\NIST_ontology.owl</onto1>
+	<onto2>D:\projects\TESI_project\OBSRA\OntologyBasedSmartRiskAssessment\OntologyBasedSmartRiskAssessment\src\main\java\dataset\ontologies\ManagementLifetime_ontology.owl</onto2>
+	<uri1>D:\projects\TESI_project\OBSRA\OntologyBasedSmartRiskAssessment\OntologyBasedSmartRiskAssessment\src\main\java\dataset\ontologies\NIST_ontology.owl</uri1>
+	<uri2>D:\projects\TESI_project\OBSRA\OntologyBasedSmartRiskAssessment\OntologyBasedSmartRiskAssessment\src\main\java\dataset\ontologies\ManagementLifetime_ontology.owl</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(12);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(2);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(5);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-8%20(1);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(4);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-4%20(4);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-8;IDENTIFICATION%20AND%20AUTHENTICATION%20(NON-ORGANIZATIONAL%20USERS)"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(1);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-9%20(1);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-3%20(1);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-4%20(7);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(7);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-4%20(3);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(4);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-4%20(6);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(13);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-1;IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(7);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(1);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(15);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(10);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-8%20(2);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-8%20(3);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-4%20(2);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(5);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-4%20(1);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(6);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(6);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-9%20(2);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-3%20(4);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-8%20(5);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-3%20(3);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-8;IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(8);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-3;IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-3%20(2);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-4%20(5);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(11);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2;IDENTIFICATION%20AND%20AUTHENTICATION%20(ORGANIZATIONAL%20USERS)"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-7;IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(10);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(2);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(12);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-9;IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(11);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(14);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(9);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(13);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(9);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-4;IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(3);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-8%20(4);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5;IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2%20(3);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-6;IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-5%20(8);IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#IA-2;IDENTIFICATION%20AND%20AUTHENTICATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Identification%20and%20authentication%20management%20(edit%20user%20ID%20database%20and%20password%20files,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7564</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#MA-4%20(2);The%20organization%20documents%20in%20the%20security%20plan%20for%20the%20information%20system,%20the%20policies%20and%20procedures%20for%20the%20establishment%20and%20use%20of%20nonlocal%20maintenance%20and%20diagnostic%20connections."/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#compliance;The%20creation%20and%20compliance%20of%20Information%20Security%20policies,%20procedures%20and%20standards"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4834</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(18);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(13);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(14);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(17);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(20);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(21);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(19);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(11);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-8;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(12);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-1;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-7%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(16);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(15);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(12);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(9);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(22);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(10);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(5);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(8);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(11);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(2);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-6%20(3);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(6);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(1);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-2%20(13);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-5;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-3%20(4);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-4%20(7);ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#AC-9;ACCESS%20CONTROL"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Logical%20access%20control%20management%20(edit%20user%20access%20rights%20from%20access%20control%20lists,%20...)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4657</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#CM-9;CONFIGURATION%20MANAGEMENT%20PLAN"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#designtime;Crisis%20management%20and%20communication%20plans"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.398</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#CA-5%20(1);The%20organization%20employs%20automated%20mechanisms%20to%20help%20ensure%20that%20the%20plan%20of%20action%20and%20milestones%20for%20the%20information%20system%20is%20accurate,%20up%20to%20date,%20and%20readily%20available."/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#runtime;The%20fact%20that%20an%20action%20can%20be%20attributed%20to%20the%20actor%20which%20brings%20into%20play%20measurable%20technical%20and%20organizational%20mechanisms%20(existence%20of%20traces,%20user%20authentication,%20strength%20fo%20evidence)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3788</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#CM-6;CONFIGURATION%20SETTINGS"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Setting%20and%20updating%20the%20security%20settings%20and%20configurations%20of%20workstations%20and%20servers"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3332</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#CM-7%20(2);The%20information%20system%20prevents%20program%20execution%20in%20accordance%20with%20(Selection%20(one%20or%20more):%20(Assignment:%20organization-defined%20policies%20regarding%20software%20program%20usage%20and%20restrictions),%20rules%20authorizing%20the%20terms%20and%20conditions%20of%20software%20program%20usage)."/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#compliance;The%20creation%20of%20Awareness%20programmes%20(aware%20of%20the%20risks%20involved%20in%20using%20IT%20systems%20and%20responsibilities%20towards%20mediating%20the%20IT%20risks)"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3284</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-10;The%20information%20system%20terminates%20the%20network%20connection%20associated%20with%20a%20communications%20session%20at%20the%20end%20of%20the%20session%20or%20after%20(Assignment:%20organization-defined%20time%20period)%20of%20inactivity."/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#designtime;Awareness%20on%20the%20part%20of%20the%20actor%20that%20their%20actions%20may%20be%20attributed%20to%20them%20and%20of%20penalties%20incurred%20in%20such%20a%20case"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3227</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#CM-7%20(3);The%20organization%20ensures%20compliance%20with%20(Assignment:%20organization-defined%20registration%20requirements%20for%20functions,%20ports,%20protocols,%20and%20services)."/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#compliance;The%20compliance%20with%20regulatory,%20legal%20and%20statutory%20requirements"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3189</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-42;The%20information%20system:%20Prohibits%20the%20remote%20activation%20of%20environmental%20sensing%20capabilities%20with%20the%20following%20exceptions:%20(Assignment:%20organization-defined%20exceptions%20where%20remote%20activation%20of%20sensors%20is%20allowed),%20and%20Provides%20an%20explicit%20indication%20of%20sensor%20use%20to%20(Assignment:%20organization-defined%20class%20of%20users)."/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#designtime;Anticipate%20restoration%20of%20the%20original%20state%20following%20an%20immaterial%20incident"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2881</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-36%20(1);The%20organization%20employs%20polling%20techniques%20to%20identify%20potential%20faults,%20errors,%20or%20compromises%20to%20(Assignment:%20organization-defined%20distributed%20processing%20and%20storage%20components)."/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#designtime;Determine%20intemediary%20checkpoints%20in%20processes%20to%20prevent%20the%20propagation%20of%20errors%20or%20faults"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2853</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#CP-10%20(2);TRANSACTION%20RECOVERY"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#runtime;Activity%20continuity%20and%20recovery%20plans"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2785</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SA-4%20(8);The%20organization%20requires%20the%20developer%20of%20the%20information%20system,%20system%20component,%20or%20information%20system%20service%20to%20produce%20a%20plan%20for%20the%20continuous%20monitoring%20of%20security%20control%20effectiveness%20that%20contains%20(Assignment:%20organization-defined%20level%20of%20detail)."/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#runtime;Monitoring%20process%20execution%20to%20limit%20the%20consequences%20of%20a%20mishap%20that%20may%20lead%20to%20more%20sever%20consequences"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2761</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SI-4%20(20);The%20organization%20implements%20(Assignment:%20organization-defined%20additional%20monitoring)%20of%20privileged%20users."/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#designtime;Prevent%20the%20propagation%20of%20an%20initial%20incident"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2643</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SA-9%20(5);PROCESSING,%20STORAGE,%20AND%20SERVICE%20LOCATION"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Ensuring%20backups%20and%20secure%20storage%20of%20backups"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2548</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#SC-12%20(1);AVAILABILITY"/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#operational;Ensuring%20availability%20through%20UPS%20systems"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2248</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://thesisAP.com/nist#CP-10%20(6);The%20organization%20protects%20backup%20and%20restoration%20hardware,%20firmware,%20and%20software."/>
+			<entity2 rdf:resource="http://thesisAP.com/mng-lt#designtime;Data%20restoration%20and%20backup%20plans"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2106</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

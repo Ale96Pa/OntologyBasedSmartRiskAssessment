@@ -12,10 +12,11 @@ public class Config {
     
     // Path of files having information to build the ontology (sources)
     private String attackGraphDataset = "src\\main\\java\\dataset\\AG\\";
-    private String csvDataset = "src\\main\\java\\dataset\\";
-    private String isoCsvPath = csvDataset+"ISO.csv";
-    private String nistCsvPath = csvDataset+"NIST.csv";
-    private String managementCsvPath = csvDataset+"managementLifetime.csv";
+    private String rootDataset = "src\\main\\java\\dataset\\";
+    
+    private String isoCsvPath = rootDataset+"ISO.csv";
+    private String nistCsvPath = rootDataset+"NIST.csv";
+    private String managementCsvPath = rootDataset+"managementLifetime.csv";
     
     // Path of files having information to build the ontology (destination)
     private String owlDataset = "src\\main\\java\\dataset\\ontologies\\";
@@ -36,9 +37,9 @@ public class Config {
     private String alignmentIsoPath = alignmentDataset + "AlignmentISOTotal.csv";
     
     // Path of files for attack graph dataset
-    private String humanGraphPath = attackGraphDataset + "graphs\\humanLayerAttackGraphRepr.json";
-    private String accessGraphPath = attackGraphDataset + "graphs\\interLayerAttackGraphRepr.json";
-    private String networkGraphPath = attackGraphDataset + "graphs\\networkLayerAttackGraphRepr.json";
+    private String humanGraphPath = rootDataset + "graphs\\humanLayerAttackGraphRepr.json";
+    private String accessGraphPath = rootDataset + "graphs\\interLayerAttackGraphRepr.json";
+    private String networkGraphPath = rootDataset + "graphs\\networkLayerAttackGraphRepr.json";
     
     private String humanVulnerabilityPath = attackGraphDataset + "humanVulnerability.json";
     private String networkVulnerabilityPath = attackGraphDataset + "networkVulnerability.json";

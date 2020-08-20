@@ -236,11 +236,13 @@ public class AG_Model {
                         JSONArray destJson = (JSONArray)credentialObj.get("destination");
                         
                         // Write individuals on ontology
-                        Individual indIdAccess = m.createIndividual(uri + wellFormedCsv(idJson), credential);
-                        indIdAccess.addLabel(idJson, "");
+                        Individual indIdAccess = m.createIndividual(uri + "access;" + 
+                                wellFormedCsv(idJson), credential);
+                        indIdAccess.addLabel( "access;" + idJson, "");
                         
-                        Individual indPrivType = m.createIndividual(uri + wellFormedCsv(privTypeJson), privType);
-                        indPrivType.addLabel(privTypeJson, "");
+                        Individual indPrivType = m.createIndividual(uri + "access;"  + 
+                                wellFormedCsv(privTypeJson), privType);
+                        indPrivType.addLabel( "access;" + privTypeJson, "");
                         
                         indIdAccess.addProperty(hasPrivType, indPrivType);
                         
@@ -248,8 +250,9 @@ public class AG_Model {
                             JSONObject destObject = (JSONObject) dest;
                             String privLevelJson =( String) destObject.get("privilegeLevel");
                             
-                            Individual indPrivLevel = m.createIndividual(uri + wellFormedCsv(privLevelJson), privLevel);
-                            indPrivLevel.addLabel(privLevelJson, "");
+                            Individual indPrivLevel = m.createIndividual(uri + "access;" + 
+                                    wellFormedCsv(privLevelJson), privLevel);
+                            indPrivLevel.addLabel( "access;" + privLevelJson, "");
                             
                             indIdAccess.addProperty(hasPrivLevel, indPrivLevel);
                         }
@@ -267,8 +270,9 @@ public class AG_Model {
                         JSONArray locationjson = (JSONArray)employeeObj.get("locations");
                         
                         // Write individuals on ontology
-                        Individual indIdEmployee = m.createIndividual(uri + wellFormedCsv(idEmployee), employee);
-                        indIdEmployee.addLabel(idEmployee, "");
+                        Individual indIdEmployee = m.createIndividual(uri + "human;" + 
+                                wellFormedCsv(idEmployee), employee);
+                        indIdEmployee.addLabel( "human;" + idEmployee, "");
                         
                         for (Object role : rolesjson) {
                             // Parse JSON file
@@ -276,8 +280,9 @@ public class AG_Model {
                             String positionJson = (String) roleObj.get("position");
                             
                             // Write individuals on ontology
-                            Individual indPosition = m.createIndividual(uri + wellFormedCsv(positionJson), position);
-                            indPosition.addLabel(positionJson, "");
+                            Individual indPosition = m.createIndividual(uri + "human;" + 
+                                    wellFormedCsv(positionJson), position);
+                            indPosition.addLabel( "human;" + positionJson, "");
                             
                             indIdEmployee.addProperty(hasPosition, indPosition);
                         }
@@ -287,8 +292,9 @@ public class AG_Model {
                             String locationJson =( String) locatObj.get("id");
                             
                             // Write individuals on ontology
-                            Individual indLocation = m.createIndividual(uri + wellFormedCsv(locationJson), location);
-                            indLocation.addLabel(locationJson, "");
+                            Individual indLocation = m.createIndividual(uri +  "human;"  + 
+                                    wellFormedCsv(locationJson), location);
+                            indLocation.addLabel( "human;" + locationJson, "");
                             
                             indIdEmployee.addProperty(hasLocation, indLocation);
                         }
@@ -304,9 +310,10 @@ public class AG_Model {
                         String relationType = (String) policyObj.get("relationType");
                         
                         // Write individuals on ontology
-                        Individual indSrc = m.getIndividual(uri+wellFormedCsv(src));
-                        Individual indRelation = m.createIndividual(uri+wellFormedCsv(relationType), relType);
-                        indRelation.addLabel(relationType, "");
+                        Individual indSrc = m.getIndividual(uri +  "human;" + wellFormedCsv(src));
+                        Individual indRelation = m.createIndividual(uri + "human;" + 
+                                wellFormedCsv(relationType), relType);
+                        indRelation.addLabel( "human;" + relationType, "");
                         
                         indSrc.addProperty(hasRelation, indRelation);
                     }
@@ -326,26 +333,33 @@ public class AG_Model {
                         String vulnPostJson = (String) humanVulnObj.get("postCondition");
    
                         // Write individuals on ontology
-                        Individual indVulnId = m.createIndividual(uri+wellFormedCsv(vulnIdJson), vulnerabilityHum);
-                        indVulnId.addLabel(vulnIdJson, "");
+                        Individual indVulnId = m.createIndividual(uri+ "human;" +
+                                wellFormedCsv(vulnIdJson), vulnerabilityHum);
+                        indVulnId.addLabel( "human;" +vulnIdJson, "");
                         
-                        Individual indVulnName = m.createIndividual(uri+wellFormedCsv(vulnNameJson), name);
-                        indVulnName.addLabel(vulnNameJson, "");
+                        Individual indVulnName = m.createIndividual(uri+ "human;" +
+                                wellFormedCsv(vulnNameJson), name);
+                        indVulnName.addLabel( "human;" +vulnNameJson, "");
                         
-                        Individual indVulnDescr = m.createIndividual(uri+wellFormedCsv(vulnDescrJson), description);
-                        indVulnDescr.addLabel(vulnDescrJson, "");
+                        Individual indVulnDescr = m.createIndividual(uri+ "human;" +
+                                wellFormedCsv(vulnDescrJson), description);
+                        indVulnDescr.addLabel( "human;" +vulnDescrJson, "");
                         
-                        Individual indAV = m.createIndividual(uri+wellFormedCsv(vulnAVJson), accessVector);
-                        indAV.addLabel(vulnAVJson, "");
+                        Individual indAV = m.createIndividual(uri+ "human;" +
+                                wellFormedCsv(vulnAVJson), accessVector);
+                        indAV.addLabel( "human;" +vulnAVJson, "");
                         
-                        Individual indAVScore = m.createIndividual(uri+wellFormedCsv(vulnScoreJson), score);
-                        indAVScore.addLabel(vulnScoreJson, "");
+                        Individual indAVScore = m.createIndividual(uri+ "human;" +
+                                wellFormedCsv(vulnScoreJson), score);
+                        indAVScore.addLabel( "human;" +vulnScoreJson, "");
                         
-                        Individual indPreCond = m.createIndividual(uri+wellFormedCsv(vulnPreJson), preCondition);
-                        indPreCond.addLabel(vulnPreJson, "");
+                        Individual indPreCond = m.createIndividual(uri+ "human;" +
+                                wellFormedCsv(vulnPreJson), preCondition);
+                        indPreCond.addLabel( "human;" +vulnPreJson, "");
                         
-                        Individual indPostCond = m.createIndividual(uri+wellFormedCsv(vulnPostJson), postCondition);
-                        indPostCond.addLabel(vulnPostJson, "");
+                        Individual indPostCond = m.createIndividual(uri+ "human;" +
+                                wellFormedCsv(vulnPostJson), postCondition);
+                        indPostCond.addLabel( "human;" +vulnPostJson, "");
                         
                         indVulnId.addProperty(hasName, indVulnName);
                         indVulnId.addProperty(hasDescription, indVulnDescr);
@@ -368,11 +382,11 @@ public class AG_Model {
                         JSONArray devIface = (JSONArray)deviceObj.get("networkInterfaces");
                         
                         // Write individuals on ontology
-                        Individual indIdDevice = m.createIndividual(uri + wellFormedCsv(devId), device);
-                        indIdDevice.addLabel(devId, "");
+                        Individual indIdDevice = m.createIndividual(uri + "network;" + wellFormedCsv(devId), device);
+                        indIdDevice.addLabel("network;"+devId, "");
                         
-                        Individual indDevType = m.createIndividual(uri + wellFormedCsv(devType), type);
-                        indDevType.addLabel(devType, "");
+                        Individual indDevType = m.createIndividual(uri+ "network;" + wellFormedCsv(devType), type);
+                        indDevType.addLabel("network;"+devType, "");
                         
                         indIdDevice.addProperty(hasType, indDevType);
                         
@@ -383,8 +397,9 @@ public class AG_Model {
                         JSONArray serviceOs = (JSONArray)osObj.get("localServices");
                         
                         // Write individuals on ontology
-                        Individual indOs = m.createIndividual(uri + wellFormedCsv(familyOs) + "-" + wellFormedCsv(vendorOs), os);
-                        indOs.addLabel(familyOs + "-" + vendorOs, "");
+                        Individual indOs = m.createIndividual(uri+"network;" + wellFormedCsv(familyOs) + 
+                                "-" + wellFormedCsv(vendorOs), os);
+                        indOs.addLabel("network;"+familyOs + "-" + vendorOs, "");
 
                         indIdDevice.addProperty(hasOs, indOs);
 
@@ -394,8 +409,9 @@ public class AG_Model {
                             String serviceNameJson = (String) osServObj.get("name");
 
                             // Write individuals on ontology
-                            Individual indService = m.createIndividual(uri + wellFormedCsv(serviceNameJson), osService);
-                            indService.addLabel(serviceNameJson, "");
+                            Individual indService = m.createIndividual(uri +"network;" + 
+                                    wellFormedCsv(serviceNameJson), osService);
+                            indService.addLabel("network;"+serviceNameJson, "");
 
                             indOs.addProperty(hasService, indService);
                         }
@@ -409,14 +425,17 @@ public class AG_Model {
                             JSONArray portJson = (JSONArray)ifaceObj.get("ports");
                             
                             // Write individuals on ontology
-                            Individual indIfaceName = m.createIndividual(uri + wellFormedCsv(ifaceNameJson), netIface);
-                            indIfaceName.addLabel(ifaceNameJson, "");
+                            Individual indIfaceName = m.createIndividual(uri+"network;" +
+                                    wellFormedCsv(ifaceNameJson), netIface);
+                            indIfaceName.addLabel("network;"+ifaceNameJson, "");
                             
-                            Individual indMask = m.createIndividual(uri + wellFormedCsv(maskJson), mask);
-                            indMask.addLabel(maskJson, "");
+                            Individual indMask = m.createIndividual(uri+"network;" + 
+                                    wellFormedCsv(maskJson), mask);
+                            indMask.addLabel("network;"+maskJson, "");
                             
-                            Individual indVersion = m.createIndividual(uri + wellFormedCsv(versionJson), version);
-                            indVersion.addLabel(versionJson, "");
+                            Individual indVersion = m.createIndividual(uri +"network;"+ 
+                                    wellFormedCsv(versionJson), version);
+                            indVersion.addLabel("network;"+versionJson, "");
 
                             indIfaceName.addProperty(hasMask, indMask);
                             indIfaceName.addProperty(hasVersion, indVersion);
@@ -431,14 +450,17 @@ public class AG_Model {
                                 JSONObject portServiceJson = (JSONObject)portObj.get("service");
 
                                 // Write individuals on ontology
-                                Individual indPortNum = m.createIndividual(uri + "port-"+wellFormedCsv(numberJson), number);
-                                indPortNum.addLabel("port-"+numberJson, "");
+                                Individual indPortNum = m.createIndividual(uri+"network;" + 
+                                        "port-"+wellFormedCsv(numberJson), number);
+                                indPortNum.addLabel("network;"+"port-"+numberJson, "");
 
-                                Individual indState = m.createIndividual(uri + "port-"+wellFormedCsv(stateJson), state);
-                                indState.addLabel("port-"+stateJson, "");
+                                Individual indState = m.createIndividual(uri+"network;" + 
+                                        "port-"+wellFormedCsv(stateJson), state);
+                                indState.addLabel("network;"+"port-"+stateJson, "");
 
-                                Individual indProtocol = m.createIndividual(uri + wellFormedCsv(protocolJson), protocol);
-                                indProtocol.addLabel(protocolJson, "");
+                                Individual indProtocol = m.createIndividual(uri+"network;" + 
+                                        wellFormedCsv(protocolJson), protocol);
+                                indProtocol.addLabel("network;"+protocolJson, "");
 
                                 indIfaceName.addProperty(hasPort, indPortNum);
                                 indPortNum.addProperty(hasState, indState);
@@ -451,8 +473,9 @@ public class AG_Model {
                                 JSONArray portCpeJson = (JSONArray)portServiceJson.get("cpe");
 
                                 // Write individuals on ontology
-                                Individual indPortService = m.createIndividual(uri + wellFormedCsv(portServiceJ), service);
-                                indPortService.addLabel(portServiceJ, "");
+                                Individual indPortService = m.createIndividual(uri+"network;" + 
+                                        wellFormedCsv(portServiceJ), service);
+                                indPortService.addLabel("network;"+portServiceJ, "");
 
                                 indPortNum.addProperty(hasService, indPortService);
 
@@ -461,8 +484,9 @@ public class AG_Model {
                                     String vulnJson = vulnJ.toString();
 
                                     // Write individuals on ontology
-                                    Individual indVulnPort = m.createIndividual(uri + wellFormedCsv(vulnJson), cve);
-                                    indVulnPort.addLabel(vulnJson, "");
+                                    Individual indVulnPort = m.createIndividual(uri+"network;" + 
+                                            wellFormedCsv(vulnJson), cve);
+                                    indVulnPort.addLabel("network;"+vulnJson, "");
 
                                     indPortNum.addProperty(hasCve, indVulnPort);
                                 }
@@ -471,8 +495,9 @@ public class AG_Model {
                                     String cpeJson = cpeJ.toString();
 
                                     // Write individuals on ontology
-                                    Individual indCpe = m.createIndividual(uri + wellFormedCsv(cpeJson), cpe);
-                                    indCpe.addLabel(cpeJson, "");
+                                    Individual indCpe = m.createIndividual(uri+"network;" + 
+                                            wellFormedCsv(cpeJson), cpe);
+                                    indCpe.addLabel("network;"+cpeJson, "");
 
                                     indPortNum.addProperty(hasCpe, indCpe);
                                 }
@@ -491,8 +516,9 @@ public class AG_Model {
                         JSONArray cweJson = (JSONArray)vulnObj.get("cwe");
                         
                         // Write individuals on ontology
-                        Individual indVulnId = m.createIndividual(uri + wellFormedCsv(vulnId), vulnerabilityNet);
-                        indVulnId.addLabel(vulnId, "");
+                        Individual indVulnId = m.createIndividual(uri+"network;" + 
+                                wellFormedCsv(vulnId), vulnerabilityNet);
+                        indVulnId.addLabel("network;"+vulnId, "");
                         
                         for (Object cweJ : cweJson) {
                         
@@ -501,8 +527,9 @@ public class AG_Model {
                             String cweJs = (String) cweObj.get("cweId");
 
                             // Write individuals on ontology
-                            Individual indCweId = m.createIndividual(uri + wellFormedCsv(cweJs), cwe);
-                            indCweId.addLabel(cweJs, "");
+                            Individual indCweId = m.createIndividual(uri+"network;" + 
+                                    wellFormedCsv(cweJs), cwe);
+                            indCweId.addLabel("network;"+cweJs, "");
                             
                             indVulnId.addProperty(isCwe, indCweId);
                         }
