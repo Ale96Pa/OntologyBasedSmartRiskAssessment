@@ -1,5 +1,5 @@
 
-package control;
+package control.models;
 
 import java.util.ArrayList;
 

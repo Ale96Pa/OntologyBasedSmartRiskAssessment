@@ -1,23 +1,19 @@
+// TODO
 package control;
 
+import control.models.Alignment;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 import static java.lang.Float.parseFloat;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Dictionary;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import models.ISO_Model;
 import org.apache.jena.ontology.Individual;
-import org.apache.jena.ontology.ObjectProperty;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.query.Query;
-import org.apache.jena.query.QueryExecException;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QueryFactory;

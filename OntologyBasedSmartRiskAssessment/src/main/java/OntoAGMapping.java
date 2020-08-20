@@ -1,20 +1,25 @@
-import control.Alignment;
+import config.Config;
+import control.models.Alignment;
 import control.DiscountControl;
-import control.Edge;
+import control.models.Edge;
 import control.GraphDbControl;
-import control.MappingParam;
+import control.models.MappingParam;
 import control.ParseAlignment;
 import control.ValidationControl;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import models.AG_Model;
-import models.ISO_Model;
-import models.ManagementLifetime_Model;
-import models.NIST_Model;
+import ontologyModels.AG_Model;
+import ontologyModels.ISO_Model;
+import ontologyModels.ManagementLifetime_Model;
+import ontologyModels.NIST_Model;
 import org.apache.jena.ontology.OntModel;
 
-
+/**
+ * This is the main class managing the entire work-flow of the project, all done
+ * with methods and classes in this project.
+ * @author Alessandro
+ */
 public class OntoAGMapping {
 
     public static void main(String[] args){
@@ -46,15 +51,18 @@ public class OntoAGMapping {
         pa.calculateMatching(modelIso, modelMLAG, alignment);
         */
         
+        // OK
         /*
         ValidationControl vc = new ValidationControl();
         ArrayList<MappingParam> mp = vc.parseValidationFile();
         vc.caluclateValidationFactor(mp);
         */
         
-        /*
-        GraphDbControl gc = new GraphDbControl("bolt://localhost:7687", "admin", "admin");
-        //gc.buldGraph();
+        // OK
+        /* 
+        Config conf = new Config();
+        GraphDbControl gc = new GraphDbControl(conf.getUri(), conf.getUser(), conf.getPassword());
+        gc.buildGraph();
         ArrayList<Edge> ee = gc.setHumanEdges();
         for(Edge e : ee){
             System.out.println(e.getLayer() + " " + e.getLambda() + " " +e.getDescriptionId());
@@ -72,9 +80,9 @@ public class OntoAGMapping {
         }
         */
         
-        
+        /*
         DiscountControl dc = new DiscountControl();
         dc.calculateFormula();
-        
+        */
     }
 }

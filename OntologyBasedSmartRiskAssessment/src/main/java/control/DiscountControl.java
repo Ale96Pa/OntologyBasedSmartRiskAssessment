@@ -1,5 +1,9 @@
 package control;
 
+import control.models.Discount;
+import control.models.MappingParam;
+import control.models.Edge;
+import control.models.Factor;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

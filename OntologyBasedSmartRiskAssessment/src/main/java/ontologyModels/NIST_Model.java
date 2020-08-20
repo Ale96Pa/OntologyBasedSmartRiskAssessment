@@ -6,7 +6,7 @@
  * Master Thesis in Engineering in Computer Science
  * University of Rome "La Sapienza"
  */
-package models;
+package ontologyModels;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
