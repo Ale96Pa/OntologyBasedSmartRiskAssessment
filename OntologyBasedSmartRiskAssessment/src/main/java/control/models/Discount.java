@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This class represents the model for collecting information about discount
+ * factor, dividing positive and negative parts of such an element.
  */
 package control.models;
 
-/**
- *
- * @author Alessandro
- */
 public class Discount {
     
     //Attributes
@@ -18,7 +13,6 @@ public class Discount {
     int numElemNegative;
     
     //Constructor
-
     public Discount(double disPositive, int numElemPositive, double disNegative, int numElemNegative) {
         this.disPositive = disPositive;
         this.numElemPositive = numElemPositive;
@@ -26,41 +20,20 @@ public class Discount {
         this.numElemNegative = numElemNegative;
     }
 
-    
-    
     // Methods
+    public double getDisPositive() {return disPositive;}
 
-    public double getDisPositive() {
-        return disPositive;
-    }
+    public void setDisPositive(double disPositive) {this.disPositive = disPositive;}
 
-    public void setDisPositive(double disPositive) {
-        this.disPositive = disPositive;
-    }
+    public double getDisNegative() {return disNegative;}
 
-    public double getDisNegative() {
-        return disNegative;
-    }
+    public void setDisNegative(double disNegative) {this.disNegative = disNegative;}
 
-    public void setDisNegative(double disNegative) {
-        this.disNegative = disNegative;
-    }
+    public int getNumElemPositive() {return numElemPositive;}
 
-    public int getNumElemPositive() {
-        return numElemPositive;
-    }
+    public void setNumElemPositive(int numElemPositive) {this.numElemPositive = numElemPositive;}
 
-    public void setNumElemPositive(int numElemPositive) {
-        this.numElemPositive = numElemPositive;
-    }
+    public int getNumElemNegative() {return numElemNegative;}
 
-    public int getNumElemNegative() {
-        return numElemNegative;
-    }
-
-    public void setNumElemNegative(int numElemNegative) {
-        this.numElemNegative = numElemNegative;
-    }
-    
-    
+    public void setNumElemNegative(int numElemNegative) {this.numElemNegative = numElemNegative;}
 }

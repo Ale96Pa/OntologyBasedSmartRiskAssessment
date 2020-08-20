@@ -8,6 +8,7 @@
  */
 package ontologyModels;
 
+import config.Config;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -23,27 +24,21 @@ import org.apache.jena.rdf.model.ModelFactory;
 
 public class ISO_Model {
     
-    /* Constant attributes */
+    Config conf = new Config();
     // Source file
-    final String datasetPath = "src\\main\\java\\dataset\\ISO.csv";
-    
+    final String datasetPath = conf.getIsoCsvPath();
     // Destination file
-    final String ontologyPath = "src\\main\\java\\dataset\\ISO_ontology.owl";
-    String formatFile = "RDF/XML-ABBREV"; // Format of the output file
-    
+    final String ontologyPath = conf.getIsoOwlPath();
+    // Format of the output file
+    String formatFile = conf.getFormatOntology(); 
     // Local namespace for entities
-    final String uri = "http://thesisAP.com/iso#" ;
+    final String uri = conf.getUriIso();
 
-    public String getUri() {
-        return uri;
-    }
-    
     /*
     The method createISOModel creates the ontology of the ISO 27001:2013 
     controls taking in input a file with the following elements:
     ID;Name;Category;Sub-category;Objective;Decription;VonSolmsExample;
     MehariExample;MehariLabel;VulnerabiltyPanacea
-    
     It writes the model into a file stored in the dataset package and it 
     returns the OntoModel.
     */
@@ -83,7 +78,6 @@ public class ISO_Model {
         /*******************
          * OBJECT PROPERTY *
          ******************/
-
         ObjectProperty hasName = m.createObjectProperty(uri +"hasName");
         hasName.addDomain(ID);
         hasName.addRange(name);

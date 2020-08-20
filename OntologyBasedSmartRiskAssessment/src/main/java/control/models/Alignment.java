@@ -1,3 +1,7 @@
+/**
+ * This class represents the model for collecting information about the ontology
+ * alignment represented by triple <src, target, valueMatching>.
+ */
 package control.models;
 
 public class Alignment {
@@ -7,35 +11,23 @@ public class Alignment {
     String targetUri;
     float matchingValue;
 
+    // Constructor
     public Alignment(String sourceOntology, String targetOntology, float matchingValue) {
         this.sourceUri = sourceOntology;
         this.targetUri = targetOntology;
         this.matchingValue = matchingValue;
     }
 
-    public String getSourceUri() {
-        return sourceUri;
-    }
+    // Methods
+    public String getSourceUri() {return sourceUri;}
 
-    public void setSourceUri(String sourceOntology) {
-        this.sourceUri = sourceOntology;
-    }
+    public void setSourceUri(String sourceOntology) {this.sourceUri = sourceOntology;}
 
-    public String getTargetUri() {
-        return targetUri;
-    }
+    public String getTargetUri() {return targetUri;}
 
-    public void setTargetUri(String targetUri) {
-        this.targetUri = targetUri;
-    }
+    public void setTargetUri(String targetUri) {this.targetUri = targetUri;}
 
-    public float getMatchingValue() {
-        return matchingValue;
-    }
+    public float getMatchingValue() {return matchingValue;}
 
-    public void setMatchingValue(float matchingValue) {
-        this.matchingValue = matchingValue;
-    }
-    
-    
+    public void setMatchingValue(float matchingValue) {this.matchingValue = matchingValue;}
 }

@@ -1,8 +1,10 @@
-
+/**
+ * This class represents the model for collecting information about edges in the
+ * multi layer attack graph.
+ */
 package control.models;
 
 import java.util.ArrayList;
-
 
 public class Edge {
     
@@ -19,29 +21,15 @@ public class Edge {
     }
     
     // Methods
-    public String getLayer() {
-        return layer;
-    }
+    public String getLayer() {return layer;}
 
-    public void setLayer(String layer) {
-        this.layer = layer;
-    }
+    public void setLayer(String layer) {this.layer = layer;}
 
-    public double getLambda() {
-        return lambda;
-    }
+    public double getLambda() {return lambda;}
 
-    public void setLambda(double lambda) {
-        this.lambda = lambda;
-    }
+    public void setLambda(double lambda) {this.lambda = lambda;}
 
-    public ArrayList<String> getDescriptionId() {
-        return descriptionId;
-    }
+    public ArrayList<String> getDescriptionId() {return descriptionId;}
 
-    public void setDescriptionId(ArrayList<String> descriptionId) {
-        this.descriptionId = descriptionId;
-    }
-
-    
+    public void setDescriptionId(ArrayList<String> descriptionId) {this.descriptionId = descriptionId;}
 }

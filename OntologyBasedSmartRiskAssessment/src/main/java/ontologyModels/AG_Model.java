@@ -8,6 +8,7 @@
  */
 package ontologyModels;
 
+import config.Config;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -23,29 +24,25 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-//D:\projects\TESI_project\SmartRiskAssessment\src\main\java\com\assessment\dataset\
+
 public class AG_Model {
     
-    /* Constant attributes */
+    Config conf = new Config();
     // Source file
-    final String datasetPath = "src\\main\\java\\dataset\\AG\\";
-    
+    final String datasetPath = conf.getAttackGraphDataset();
     // Destination file
-    final String ontologyPath = "src\\main\\java\\dataset\\AG_ontology.owl";
-    String formatFile = "RDF/XML-ABBREV"; // Format of the output file
-    
+    final String ontologyPath = conf.getAgOwlPath();
+    // Format of the output file
+    String formatFile = conf.getFormatOntology(); 
     // Local namespace for entities
-    final String uri = "http://thesisAP.com/mlag#" ;
+    final String uri = conf.getUriAG();
     
     /*
     The method createAGModel creates the ontology of the attack graph 
-    taking in input the files containing the following information:
-    TODO
-    
+    taking in input the files containing suitable information
     It writes the model into a file stored in the dataset package and it 
     returns the OntoModel.
     */
-    
     public OntModel createAGModel(){
         
         // Initialize the model for the ontology
@@ -95,7 +92,6 @@ public class AG_Model {
         OntClass vulnerabilityNet = m.createClass(uri + "NETWORK_VULNERABILITY");
         OntClass cwe = m.createClass(uri + "CWE");
         
-        
         // Create classes hierarchy
         layer.addSubClass(accessLayer);
         layer.addSubClass(humanLayer);
@@ -110,7 +106,6 @@ public class AG_Model {
         /*******************
          * OBJECT PROPERTY *
          ******************/
-        
         // Access layer
         ObjectProperty hasPrivLevel = m.createObjectProperty(uri +"hasPrivilegeLevel");
         hasPrivLevel.addDomain(credential);
@@ -222,7 +217,6 @@ public class AG_Model {
         /***************
          * INDIVIDUALS *
          **************/
-        
         File directoryPath = new File(datasetPath);
         File filesList[] = directoryPath.listFiles(); // get all files of dataset
         

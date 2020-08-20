@@ -8,6 +8,7 @@
  */
 package ontologyModels;
 
+import config.Config;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -25,22 +26,20 @@ import org.apache.jena.rdf.model.ModelFactory;
 
 public class NIST_Model {
     
-    /* Constant attributes */
+    Config conf = new Config();
     // Source file
-    final String datasetPath = "src\\main\\java\\dataset\\NIST.csv";
-    
+    final String datasetPath = conf.getNistCsvPath();
     // Destination file
-    final String ontologyPath = "src\\main\\java\\dataset\\NIST_ontology.owl";
-    String formatFile = "RDF/XML-ABBREV"; // Format of the output file
-    
+    final String ontologyPath = conf.getNistOwlPath();
+    // Format of the output file
+    String formatFile = conf.getFormatOntology(); 
     // Local namespace for entities
-    final String uri = "http://thesisAP.com/nist#" ;
+    final String uri = conf.getUriNist();
     
     /*
     The method createNISTModel creates the ontology of the NIST 800-53 
     controls taking in input a file with the following elements:
     Family;Name;Title;Priority;Impact;Description;SupplementarGuidance;Related
-    
     It writes the model into a file stored in the dataset package and it 
     returns the OntoModel.
     */
@@ -70,7 +69,6 @@ public class NIST_Model {
         /*******************
          * OBJECT PROPERTY *
          ******************/
-
         ObjectProperty hasName = m.createObjectProperty(uri +"hasName");
         hasName.addDomain(ID);
         hasName.addRange(name);
@@ -167,7 +165,6 @@ public class NIST_Model {
             }
             System.out.println("Read, parsed and inserted " + counter + " records");
         }
-        
         catch (FileNotFoundException e) {}
         catch (IOException e) {}
         finally {
@@ -204,7 +201,6 @@ public class NIST_Model {
         str = str.replace("#", "%23");
         return str;
     }
-
     private static String wellFormedCsv(String input) {
         if (input.contains("\"")) {
             input = input.replaceAll("\"", "");
@@ -218,5 +214,4 @@ public class NIST_Model {
         input = input.replace("]", ")");
         return input;
     }
-    
 }

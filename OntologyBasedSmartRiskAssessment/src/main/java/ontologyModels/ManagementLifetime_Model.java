@@ -1,5 +1,14 @@
+/*
+ * This file build and write the model for management and lifetime semantic
+ * of controls into a suitable ontology designed and developed by the author.
+
+ * Author: Alessandro Palma
+ * Master Thesis in Engineering in Computer Science
+ * University of Rome "La Sapienza"
+ */
 package ontologyModels;
 
+import config.Config;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -14,26 +23,20 @@ import org.apache.jena.ontology.OntModel;
 import org.apache.jena.rdf.model.ModelFactory;
 
 public class ManagementLifetime_Model {
-    /* Constant attributes */
+    
+    Config conf = new Config();
     // Source file
-    final String datasetPath = "src\\main\\java\\dataset\\managementLifetime.csv";
-    
+    final String datasetPath = conf.getManagementCsvPath();
     // Destination file
-    final String ontologyPath = "src\\main\\java\\dataset\\ManagementLifetime_ontology.owl";
-    String formatFile = "RDF/XML-ABBREV"; // Format of the output file
-    
+    final String ontologyPath = conf.getManagementOwlPath();
+    // Format of the output file
+    String formatFile = conf.getFormatOntology(); 
     // Local namespace for entities
-    final String uri = "http://thesisAP.com/mng-lt#" ;
-
-    public String getUri() {
-        return uri;
-    }
+    final String uri = conf.getUriManagement();
     
     /*
     The method createISOModel creates the ontology of the management level
-    taking in input a file with the following elements:
-    Type;Example
-    
+    taking in input a file with the following elements: Type;Example
     It writes the model into a file stored in the dataset package and it 
     returns the OntoModel.
     */
@@ -59,7 +62,6 @@ public class ManagementLifetime_Model {
         /*******************
          * OBJECT PROPERTY *
          ******************/
-
         ObjectProperty hasExample = m.createObjectProperty(uri +"hasExample");
         hasExample.addRange(example);
         
@@ -74,13 +76,11 @@ public class ManagementLifetime_Model {
             String line;
             
             while((line = br.readLine()) != null) {
-                
                 String[] data = line.split(";");
                 
                 // Elements in ISO 27001:2013 dataset
                 String typeCsv = data[0];
                 String exampleCsv = data[1];
-                
                 
                 // Create instances of classes
                 switch (typeCsv) {
@@ -112,7 +112,6 @@ public class ManagementLifetime_Model {
             }
             System.out.println("Read, parsed and inserted management and lifetime records");
         }
-        
         catch (FileNotFoundException e) {}
         catch (IOException e) {}
         finally {
@@ -121,7 +120,6 @@ public class ManagementLifetime_Model {
                 catch (IOException e) {}
             }
         }
-        
         
         // Write on file with format expressed with the attribute formatFile
         FileWriter out = null;
