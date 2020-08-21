@@ -32,9 +32,26 @@ public class Config {
     private String uriManagement = "http://thesisAP.com/mng-lt#";
     private String uriAG = "http://thesisAP.com/mlag#";
     
+    // Path of file having the assessment
+    private String assessmentIsoC = rootDataset + "AssessmentIsoC.csv";
+    private String assessmentIsoPC = rootDataset + "AssessmentIsoPC.csv";
+    private String assessmentIsoNC = rootDataset + "AssessmentIsoNC.csv";
+    private String assessmentIsoReal = rootDataset + "AssessmentIsoReal.csv";
+    
+    private String assessmentNistC = rootDataset + "AssessmentNistC.csv";
+    private String assessmentNistPC = rootDataset + "AssessmentNistPC.csv";
+    private String assessmentNistNC = rootDataset + "AssessmentNistNC.csv";
+    private String assessmentNistReal = rootDataset + "AssessmentNistReal.csv";
+    
     // Path of file having the alignment of all the ontologies
-    private String alignmentDataset = "src\\main\\java\\dataset\\alignment\\iso\\";
-    private String alignmentIsoPath = alignmentDataset + "AlignmentISOTotal.csv";
+    private String alignmentDataset = "src\\main\\java\\dataset\\alignment\\";
+    private String alignmentIsoFinalPath = alignmentDataset + "iso\\MappingISOTotal.csv";
+    private String alignmentIsoAgPath = alignmentDataset +"iso\\iso-ag-alignment.rdf";
+    private String alignmentIsoManagementPath = alignmentDataset + "iso\\iso-management-alignment.rdf";
+    
+    private String alignmentNistFinalPath = alignmentDataset + "nist\\MappingNISTTotal.csv";
+    private String alignmentNistAgPath = alignmentDataset +"nist\\nist-ag-alignment.rdf";
+    private String alignmentNistManagementPath = alignmentDataset + "nist\\nist-management-alignment.rdf";
     
     // Path of files for attack graph dataset
     private String humanGraphPath = rootDataset + "graphs\\humanLayerAttackGraphRepr.json";
@@ -50,10 +67,6 @@ public class Config {
     private String password = "admin";
     
     // Getter methods
-    public String getAlignmentIsoPath() {
-        return alignmentIsoPath;
-    }
-
     public String getHumanGraphPath() {
         return humanGraphPath;
     }
@@ -137,6 +150,63 @@ public class Config {
     public String getUriAG() {
         return uriAG;
     }
+
+    public String getAlignmentIsoFinalPath() {
+        return alignmentIsoFinalPath;
+    }
+
+    public String getAlignmentIsoAgPath() {
+        return alignmentIsoAgPath;
+    }
+
+    public String getAlignmentIsoManagementPath() {
+        return alignmentIsoManagementPath;
+    }
+
+    public String getAlignmentNistFinalPath() {
+        return alignmentNistFinalPath;
+    }
+
+    public String getAlignmentNistAgPath() {
+        return alignmentNistAgPath;
+    }
+
+    public String getAlignmentNistManagementPath() {
+        return alignmentNistManagementPath;
+    }
+
+    public String getAssessmentIsoC() {
+        return assessmentIsoC;
+    }
+
+    public String getAssessmentIsoPC() {
+        return assessmentIsoPC;
+    }
+
+    public String getAssessmentIsoNC() {
+        return assessmentIsoNC;
+    }
+
+    public String getAssessmentIsoReal() {
+        return assessmentIsoReal;
+    }
+
+    public String getAssessmentNistC() {
+        return assessmentNistC;
+    }
+
+    public String getAssessmentNistPC() {
+        return assessmentNistPC;
+    }
+
+    public String getAssessmentNistNC() {
+        return assessmentNistNC;
+    }
+
+    public String getAssessmentNistReal() {
+        return assessmentNistReal;
+    }
+    
     
     
     

@@ -1,5 +1,6 @@
 package control;
 
+import config.Config;
 import control.models.Discount;
 import control.models.MappingParam;
 import control.models.Edge;
@@ -13,7 +14,9 @@ import java.util.Collections;
 
 public class DiscountControl {
     
-    final String pathMatchingISO = "src\\main\\java\\dataset\\alignment\\iso\\AlignmentISOTotal.csv";
+    Config conf = new Config();
+    final String pathMatchingISO = conf.getAlignmentIsoFinalPath();
+            //"src\\main\\java\\dataset\\alignment\\iso\\AlignmentISOTotal.csv";
     
     /*
     Devo parsare il file totale
@@ -47,12 +50,12 @@ public class DiscountControl {
                 if(access != 0.0){valDiscountA = ((gapLayer/2) + access)/2;}
                 if(network != 0.0){valDiscountN = ((gapLayer/2) + network)/2;}
                 
-                if(gapLayer < 20){
+                if(gapLayer < 0.3){
                     resultH = -valDiscountH;
                     resultA = -valDiscountA;
                     resultN = -valDiscountN;
                 }
-                else if (gapLayer >= 35){
+                else if (gapLayer >= 0.35){
                     resultH = valDiscountH;
                     resultA = valDiscountA;
                     resultN = valDiscountN;
@@ -114,24 +117,24 @@ public class DiscountControl {
             
             if(lambda <= threshold1){
                 //System.out.println("CASE 1");
-                double dis1 = disInLayerPlus/100;
-                double dis2 = ((disInLayerMinus/100)-lambda)/2;
+                double dis1 = disInLayerPlus;
+                double dis2 = (disInLayerMinus-lambda)/2;
                 finalDis = dis1 + dis2;
 
                 //System.out.println(finalDis);
             }
             else if(lambda >= threshold2){
                 //System.out.println("CASE 3");
-                double dis1 = ((disInLayerPlus/100)+lambda)/2;
-                double dis2 = disInLayerMinus/100;
+                double dis1 = (disInLayerPlus+lambda)/2;
+                double dis2 = disInLayerMinus;
                 finalDis = dis1 + dis2;
 
                 //System.out.println(finalDis);
             }
             else{
                 //System.out.println("CASE 2");
-                double dis1 = disInLayerPlus/100;
-                double dis2 = disInLayerMinus/100;
+                double dis1 = disInLayerPlus;
+                double dis2 = disInLayerMinus;
                 finalDis = dis1 + dis2;
 
                 //System.out.println(finalDis);
@@ -167,12 +170,12 @@ public class DiscountControl {
                 
                
                 if(runtime > designtime){
-                    if(operational > compliance){result = 50;}
-                    else if(operational < compliance){result = 25;}
+                    if(operational > compliance){result = 0.5;}
+                    else if(operational < compliance){result = 0.25;}
                 }
                 else if (runtime < designtime){
-                    if(operational > compliance){result = 25;}
-                    else if(operational < compliance){result = -25;}
+                    if(operational > compliance){result = 0.25;}
+                    else if(operational < compliance){result = -0.25;}
                 }
                 
                 Factor fact = new Factor(controlId, result, "management");
@@ -229,11 +232,11 @@ public class DiscountControl {
                     }
                 }
             }
-            System.out.println("C: " + numC + " PC: " + numPC + " NC: " + numNC + "----" + (numC+numPC+numNC));
+//            System.out.println("C: " + numC + " PC: " + numPC + " NC: " + numNC + "----" + (numC+numPC+numNC));
             if(numC >= numPC && numC >= numNC){cv=0.9;}
             else if(numPC > numC && numPC >= numNC){cv=0.4;}
             else{cv=0.1;}
-            System.out.println("cv: " + cv);
+//            System.out.println("cv: " + cv);
         }
         catch (FileNotFoundException e) {}
         catch (IOException e) {}

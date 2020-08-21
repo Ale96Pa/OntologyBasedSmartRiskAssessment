@@ -13,12 +13,13 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import static java.lang.Double.parseDouble;
 import static java.lang.Float.parseFloat;
 import java.util.ArrayList;
 
 public class ValidationControl {
     
-    final String alignmentISOPath = new Config().getAlignmentIsoPath();
+    final String alignmentISOPath = new Config().getAlignmentIsoFinalPath();
     
     /*
     This method parse the file containing the allignment with the elements:
@@ -52,13 +53,13 @@ public class ValidationControl {
                 
                 MappingParam map = new MappingParam();
                 map.setControlID(idControl);
-                map.setHuman(rescalePercentageToFour(parseFloat(humanParam)));
-                map.setAccess(rescalePercentageToFour(parseFloat(accessParam)));
-                map.setNetwork(rescalePercentageToFour(parseFloat(networkParam)));
-                map.setOperational(rescalePercentageToFour(parseFloat(operational)));
-                map.setCompliance(rescalePercentageToFour(parseFloat(compliance)));
-                map.setDesigntime(rescalePercentageToTwo(parseFloat(designtime)));
-                map.setRuntime(rescalePercentageToTwo(parseFloat(runtime)));
+                map.setHuman(rescalePercentageToFour(parseDouble(humanParam)));
+                map.setAccess(rescalePercentageToFour(parseDouble(accessParam)));
+                map.setNetwork(rescalePercentageToFour(parseDouble(networkParam)));
+                map.setOperational(rescalePercentageToFour(parseDouble(operational)));
+                map.setCompliance(rescalePercentageToFour(parseDouble(compliance)));
+                map.setDesigntime(rescalePercentageToTwo(parseDouble(designtime)));
+                map.setRuntime(rescalePercentageToTwo(parseDouble(runtime)));
                 map.setAssessment(assessment);
                 
                 mappings.add(map);
@@ -80,7 +81,7 @@ public class ValidationControl {
     the corresponding value in a scale between 0 and 4 (according to paper 
     mentioned in the description of this file).
     */
-    public int rescalePercentageToFour(float percentage){
+    public int rescalePercentageToFour(double percentage){
         if(percentage > 20 && percentage <=40){return 1;}
         else if(percentage > 40 && percentage <=60){return 2;}
         else if(percentage > 60 && percentage <=80){return 3;}
@@ -93,7 +94,7 @@ public class ValidationControl {
     the corresponding value in a scale between 0 and 2 (according to paper 
     mentioned in the description of this file).
     */
-    public int rescalePercentageToTwo(float percentage){
+    public int rescalePercentageToTwo(double percentage){
         if(percentage > 20 && percentage <= 60){return 1;}
         else if(percentage > 60){return 2;}
         else {return 0;}
@@ -110,14 +111,14 @@ public class ValidationControl {
         ArrayList<Factor> factors = new ArrayList();
         
         double denominator = 14; // According to paper (4+4+4+2)
-        int maxGap, Prc, lt, ml;
+        double maxGap, Prc, lt, ml;
         double val;
         
         for (MappingParam mapping : mappings) {
             String id = mapping.getControlID();
-            int hum = mapping.getHuman();
-            int acc = mapping.getAccess();
-            int net = mapping.getNetwork();
+            double hum = mapping.getHuman();
+            double acc = mapping.getAccess();
+            double net = mapping.getNetwork();
             
             // Reliability condition for reliability-coverage factor matrix
             String reliability;

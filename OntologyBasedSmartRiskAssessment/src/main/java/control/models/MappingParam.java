@@ -9,15 +9,15 @@ public class MappingParam {
     // Attributes
     private String controlID;
     
-    private int human;
-    private int access;
-    private int network;
+    private double human;
+    private double access;
+    private double network;
     
-    private int operational;
-    private int compliance;
+    private double operational;
+    private double compliance;
     
-    private int runtime;
-    private int designtime;
+    private double runtime;
+    private double designtime;
     
     private String assessment;
 
@@ -26,33 +26,33 @@ public class MappingParam {
 
     public void setControlID(String controlID) {this.controlID = controlID;}
 
-    public int getHuman() {return human;}
+    public double getHuman() {return human;}
 
-    public void setHuman(int human) {this.human = human;}
+    public void setHuman(double human) {this.human = human;}
 
-    public int getAccess() {return access;}
+    public double getAccess() {return access;}
 
-    public void setAccess(int access) {this.access = access;}
+    public void setAccess(double access) {this.access = access;}
 
-    public int getNetwork() {return network;}
+    public double getNetwork() {return network;}
 
-    public void setNetwork(int network) {this.network = network;}
+    public void setNetwork(double network) {this.network = network;}
 
-    public int getOperational() {return operational;}
+    public double getOperational() {return operational;}
 
-    public void setOperational(int operational) {this.operational = operational;}
+    public void setOperational(double operational) {this.operational = operational;}
 
-    public int getCompliance() {return compliance;}
+    public double getCompliance() {return compliance;}
 
-    public void setCompliance(int compliance) {this.compliance = compliance;}
+    public void setCompliance(double compliance) {this.compliance = compliance;}
 
-    public int getRuntime() {return runtime;}
+    public double getRuntime() {return runtime;}
 
-    public void setRuntime(int runtime) {this.runtime = runtime;}
+    public void setRuntime(double runtime) {this.runtime = runtime;}
 
-    public int getDesigntime() {return designtime;}
+    public double getDesigntime() {return designtime;}
 
-    public void setDesigntime(int designtime) {this.designtime = designtime;}
+    public void setDesigntime(double designtime) {this.designtime = designtime;}
     
     public String getAssessment() { return assessment;}
 

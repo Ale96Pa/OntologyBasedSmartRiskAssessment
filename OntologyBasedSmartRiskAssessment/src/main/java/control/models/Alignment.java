@@ -9,10 +9,10 @@ public class Alignment {
     // Attributes
     String sourceUri;
     String targetUri;
-    float matchingValue;
+    double matchingValue;
 
     // Constructor
-    public Alignment(String sourceOntology, String targetOntology, float matchingValue) {
+    public Alignment(String sourceOntology, String targetOntology, double matchingValue) {
         this.sourceUri = sourceOntology;
         this.targetUri = targetOntology;
         this.matchingValue = matchingValue;
@@ -27,7 +27,7 @@ public class Alignment {
 
     public void setTargetUri(String targetUri) {this.targetUri = targetUri;}
 
-    public float getMatchingValue() {return matchingValue;}
+    public double getMatchingValue() {return matchingValue;}
 
-    public void setMatchingValue(float matchingValue) {this.matchingValue = matchingValue;}
+    public void setMatchingValue(double matchingValue) {this.matchingValue = matchingValue;}
 }
