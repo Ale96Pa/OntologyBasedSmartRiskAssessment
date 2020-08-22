@@ -31,6 +31,11 @@ public class AG_Model {
     taking in input the files containing suitable information
     It writes the model into a file stored in the dataset package and it 
     returns the OntoModel.
+     * @param datasetPath: csv path ISO controls
+     * @param ontologyPath: output path
+     * @param formatFile
+     * @param uri: base uri for concepts
+     * @return 
     */
     public OntModel createAGModel(String datasetPath, String ontologyPath, 
             String formatFile, String uri){

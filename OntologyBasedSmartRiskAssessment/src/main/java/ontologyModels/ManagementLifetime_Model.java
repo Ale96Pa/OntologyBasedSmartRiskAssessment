@@ -28,6 +28,11 @@ public class ManagementLifetime_Model {
     taking in input a file with the following elements: Type;Example
     It writes the model into a file stored in the dataset package and it 
     returns the OntoModel.
+     * @param datasetPath: csv path ISO controls
+     * @param ontologyPath: output path
+     * @param formatFile
+     * @param uri: base uri for concepts
+     * @return 
     */
     public OntModel createManagementModel(String datasetPath, String ontologyPath, 
             String formatFile, String uri){

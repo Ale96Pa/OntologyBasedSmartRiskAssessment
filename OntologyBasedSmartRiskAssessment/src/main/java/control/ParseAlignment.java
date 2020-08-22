@@ -276,17 +276,17 @@ public class ParseAlignment {
     
     /**
      * This method organizes all above methods to write final output file
-     * @param datasetIso
-     * @param alignmentIsoAg
-     * @param alignmentIsoManagement
-     * @param outputMappingIso
-     * @param assessmentIso
+     * @param datasetCsv
+     * @param alignmentWithAg
+     * @param alignmentWithManagement
+     * @param outputMapping
+     * @param assessment
      */
-    public void writeMappingFromAlignmentIso(String datasetIso, String alignmentIsoAg, 
-            String alignmentIsoManagement, String assessmentIso, String outputMappingIso){
+    public void writeMappingFromAlignment(String datasetCsv, String alignmentWithAg, 
+            String alignmentWithManagement, String assessment, String outputMapping){
         
-        ArrayList<Alignment> alignmentAg = parseAlignment(alignmentIsoAg);
-        ArrayList<Alignment> alignmentManagement = parseAlignment(alignmentIsoManagement);
+        ArrayList<Alignment> alignmentAg = parseAlignment(alignmentWithAg);
+        ArrayList<Alignment> alignmentManagement = parseAlignment(alignmentWithManagement);
         ArrayList<Alignment> alignmentAll = new ArrayList();
         ArrayList<Factor> factorsAll;
         Map<String, List<Factor>> mappings;
@@ -295,13 +295,13 @@ public class ParseAlignment {
         for(Alignment a : alignmentAg){alignmentAll.add(a);}
         for(Alignment a : alignmentManagement){alignmentAll.add(a);}
         
-        factorsAll = writeAllFactors(datasetIso, alignmentAll);
+        factorsAll = writeAllFactors(datasetCsv, alignmentAll);
         
         mappings = collectData(factorsAll);
        
-        rows = setRows(assessmentIso, mappings);
+        rows = setRows(assessment, mappings);
         
-        writeMapping(outputMappingIso, rows);
+        writeMapping(outputMapping, rows);
     }
     
 }

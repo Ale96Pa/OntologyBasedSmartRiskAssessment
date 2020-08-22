@@ -539,8 +539,8 @@ public class GraphDbControl implements AutoCloseable{
             String pathAccessGraph, String pathNetworkGraph, String pathNetworkVulnerability){
         flushGraph();
         addHumanLayer(pathHumanGraph, pathHumanVulnerability);
-        addNetworkLayer(pathAccessGraph, pathHumanVulnerability);
-        addAccessLayer(pathNetworkGraph, pathNetworkVulnerability);
+        addNetworkLayer(pathNetworkGraph, pathNetworkVulnerability);
+        addAccessLayer(pathAccessGraph, pathHumanVulnerability);
     }
     
     /* This method put all human edges in a list with all the information in

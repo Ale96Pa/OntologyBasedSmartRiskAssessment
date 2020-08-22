@@ -92,10 +92,9 @@ public class DiscountControl {
      * @return 
      */
     private ArrayList<Edge> calculateLambda(ArrayList<Discount> discounts, String layer,
-            String uriNeo4j, String usernameNeo4j, String passwordNeo4j){
+            GraphDbControl gc){
                 
-        ArrayList<Edge> edgesWithDiscount = new ArrayList();
-        GraphDbControl gc = new GraphDbControl(uriNeo4j, usernameNeo4j, passwordNeo4j);
+        ArrayList<Edge> edgesWithDiscount = new ArrayList();        
         ArrayList<Double> lambdas = new ArrayList();
         ArrayList<Edge> edges = new ArrayList();
         
@@ -316,10 +315,9 @@ public class DiscountControl {
     /**
      * Final method for calculating the discount factor also including lambda
      */
-    public void calculateFormula(String pathMatchingISO, String alignmentISOPath,
-            String uriNeo4j, String usernameNeo4j, String passwordNeo4j){
+    public void calculateFormula(String pathMatchingISO, GraphDbControl gc){
         ArrayList<Factor> fLayers = calculateMatchingLayer(pathMatchingISO);
-        ArrayList<Factor> fValid = calculateValidation(alignmentISOPath);
+        ArrayList<Factor> fValid = calculateValidation(pathMatchingISO);
         ArrayList<Factor> fManag = calculateManagement(pathMatchingISO);
         
         ArrayList<Factor> factorsHuman = new ArrayList();
@@ -362,9 +360,9 @@ public class DiscountControl {
         double cvAccess = normalizeWithAssessment(pathMatchingISO, factorsAccess);
         double cvNetwork = normalizeWithAssessment(pathMatchingISO, factorsNetwork);
 
-        edgeH = calculateLambda(disH, "human", uriNeo4j, usernameNeo4j, passwordNeo4j);
-        edgeA = calculateLambda(disA, "access", uriNeo4j, usernameNeo4j, passwordNeo4j);
-        edgeN = calculateLambda(disN, "network", uriNeo4j, usernameNeo4j, passwordNeo4j);
+        edgeH = calculateLambda(disH, "human", gc);
+        edgeA = calculateLambda(disA, "access", gc);
+        edgeN = calculateLambda(disN, "network", gc);
 
         for(Edge e: edgeH){
             edgeFinalH.add(new Edge(e.getLayer(), e.getLambda()*cvHuman, e.getDescriptionId()));

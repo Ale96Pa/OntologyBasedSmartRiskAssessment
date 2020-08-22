@@ -1,18 +1,7 @@
 import config.Config;
-import control.models.Alignment;
 import control.DiscountControl;
-import control.models.Edge;
 import control.GraphDbControl;
-import control.models.MappingParam;
 import control.ParseAlignment;
-import control.ValidationControl;
-import control.models.Factor;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import ontologyModels.AG_Model;
 import ontologyModels.ISO_Model;
 import ontologyModels.ManagementLifetime_Model;
@@ -26,112 +15,122 @@ import org.apache.jena.ontology.OntModel;
  */
 public class OntoAGMapping {
     
-    Config conf = new Config();
+    static Config conf = new Config();
     // Path of files having information to build the ontology (sources)
-    private String agDataset = conf.getAttackGraphDataset();    
-    private String isoCsvPath = conf.getIsoCsvPath();
-    private String nistCsvPath = conf.getNistCsvPath();
-    private String managementCsvPath = conf.getManagementCsvPath();
+    private static  String agDataset = conf.getAttackGraphDataset();    
+    private static  String isoCsvPath = conf.getIsoCsvPath();
+    private static  String nistCsvPath = conf.getNistCsvPath();
+    private static  String managementCsvPath = conf.getManagementCsvPath();
     
     // Path of files having information to build the ontology (destination)
-    private String isoOwlPath = conf.getIsoOwlPath();
-    private String nistOwlPath = conf.getNistOwlPath();
-    private String managementOwlPath = conf.getManagementOwlPath();
-    private String agOwlPath = conf.getAgOwlPath();
+    private static  String isoOwlPath = conf.getIsoOwlPath();
+    private static  String nistOwlPath = conf.getNistOwlPath();
+    private static  String managementOwlPath = conf.getManagementOwlPath();
+    private static  String agOwlPath = conf.getAgOwlPath();
     
     // Configuration elements for ontologies
-    private String formatOntology = conf.getFormatOntology();
-    private String uriIso = conf.getUriIso();
-    private String uriNist = conf.getUriNist();
-    private String uriManagement = conf.getUriManagement();
-    private String uriAG = conf.getUriAG();
+    private static  String formatOntology = conf.getFormatOntology();
+    private static  String uriIso = conf.getUriIso();
+    private static  String uriNist = conf.getUriNist();
+    private static  String uriManagement = conf.getUriManagement();
+    private static  String uriAG = conf.getUriAG();
     
     // Path of file having the assessment
-    private String assessmentIsoC = conf.getAssessmentIsoC();
-    private String assessmentIsoPC = conf.getAssessmentIsoPC();
-    private String assessmentIsoNC = conf.getAssessmentIsoNC();
-    private String assessmentIsoReal = conf.getAssessmentIsoReal();
-    private String assessmentNistC = conf.getAssessmentNistC();
-    private String assessmentNistPC = conf.getAssessmentNistPC();
-    private String assessmentNistNC = conf.getAssessmentNistNC();
-    private String assessmentNistReal = conf.getAssessmentNistReal();
+    private static  String assessmentIsoC = conf.getAssessmentIsoC();
+    private static  String assessmentIsoPC = conf.getAssessmentIsoPC();
+    private static  String assessmentIsoNC = conf.getAssessmentIsoNC();
+    private static  String assessmentIsoReal = conf.getAssessmentIsoReal();
+    private static  String assessmentNistC = conf.getAssessmentNistC();
+    private static  String assessmentNistPC = conf.getAssessmentNistPC();
+    private static  String assessmentNistNC = conf.getAssessmentNistNC();
+    private static  String assessmentNistReal = conf.getAssessmentNistReal();
     
     // Path of file having the alignment of all the ontologies
-    private String alignmentIsoFinalPath = conf.getAlignmentIsoFinalPath();
-    private String alignmentIsoAgPath = conf.getAlignmentIsoAgPath();
-    private String alignmentIsoManagementPath = conf.getAlignmentIsoManagementPath();
-    private String alignmentNistFinalPath = conf.getAlignmentNistFinalPath();
-    private String alignmentNistAgPath = conf.getAlignmentNistAgPath();
-    private String alignmentNistManagementPath = conf.getAlignmentNistManagementPath();
+    private static  String alignmentIsoFinalPath = conf.getAlignmentIsoFinalPath();
+    private static  String alignmentIsoAgPath = conf.getAlignmentIsoAgPath();
+    private static  String alignmentIsoManagementPath = conf.getAlignmentIsoManagementPath();
+    private static  String alignmentNistFinalPath = conf.getAlignmentNistFinalPath();
+    private static  String alignmentNistAgPath = conf.getAlignmentNistAgPath();
+    private static  String alignmentNistManagementPath = conf.getAlignmentNistManagementPath();
     
     // Path of files for attack graph dataset
-    private String humanGraphPath = conf.getHumanGraphPath();
-    private String accessGraphPath = conf.getAccessGraphPath();
-    private String networkGraphPath = conf.getNetworkGraphPath();
-    private String humanVulnerabilityPath = conf.getHumanVulnerabilityPath();
-    private String networkVulnerabilityPath = conf.getNetworkVulnerabilityPath();
+    private static  String humanGraphPath = conf.getHumanGraphPath();
+    private static  String accessGraphPath = conf.getAccessGraphPath();
+    private static  String networkGraphPath = conf.getNetworkGraphPath();
+    private static  String humanVulnerabilityPath = conf.getHumanVulnerabilityPath();
+    private static  String networkVulnerabilityPath = conf.getNetworkVulnerabilityPath();
     
     // Configuration parameters for neo4j dataset
-    private String uri = conf.getUri();
-    private String user = conf.getUser();
-    private String password = conf.getPassword();
+    private static String uri = conf.getUri();
+    private static String user = conf.getUser();
+    private static String password = conf.getPassword();
     
     public static void main(String[] args){
         
-/*
-        // OK
-        
+        // 1 - Build the ontologies
         ISO_Model IsoOnto = new ISO_Model();
-        OntModel modelIso = IsoOnto.createISOModel();
-
-        // OK
+        OntModel modelIso = IsoOnto.createISOModel(isoCsvPath,isoOwlPath,formatOntology,uriIso);
 
         NIST_Model nistOnto = new NIST_Model();
-        OntModel modelNIST = nistOnto.createNISTModel();
-
-        // OK
-
-        AG_Model agOnto = new AG_Model();
-        OntModel modelMLAG = agOnto.createAGModel();
-
-        // OK
-
+        OntModel modelNIST = nistOnto.createNISTModel(nistCsvPath,nistOwlPath,formatOntology,uriNist);
+        
         ManagementLifetime_Model mngmOnto = new ManagementLifetime_Model();
-        OntModel modelMngm = mngmOnto.createManagementModel();
-
-        //OK
-
+        OntModel modelMngm = mngmOnto.createManagementModel(managementCsvPath,managementOwlPath,
+                formatOntology,uriManagement);
+        
+        AG_Model agOnto = new AG_Model();
+        OntModel modelMLAG = agOnto.createAGModel(agDataset,agOwlPath,formatOntology,uriAG);
+        
+        /* 2 - Load ontology files into AML for making alignments and produce alignment files.*/
+        
+        // 3 - Parse alignment files for creating the mapping output
         ParseAlignment pa = new ParseAlignment();
-        pa.writeMappingFromAlignmentIso();
-
-        // OK
- 
-        Config conf = new Config();
-        GraphDbControl gc = new GraphDbControl(conf.getUri(), conf.getUser(), conf.getPassword());
-        gc.buildGraph();
-        ArrayList<Edge> ee = gc.setHumanEdges();
-        for(Edge e : ee){
-            System.out.println(e.getLayer() + " " + e.getLambda() + " " +e.getDescriptionId());
-        }
-        ArrayList<Edge> ee2 = gc.setNetworkEdges();
-        for(Edge e : ee2){
-            System.out.println(e.getLayer() + " " + e.getLambda() + " " +e.getDescriptionId());
-        }
-        ArrayList<Edge> ee3 = gc.setAccessEdges();
-        for(Edge e : ee3){
-            System.out.println(e.getLayer() + " " + e.getLambda() + " " +e.getDescriptionId());
-        }
-        try {
-            gc.close();
-        } catch (Exception ex) {
-            Logger.getLogger(GraphDbControl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        //OK
-
+            //3.1: ISO all C
+        pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
+                alignmentIsoManagementPath, assessmentIsoC, alignmentIsoFinalPath+"C.csv");
+            //3.2: ISO all PC
+        pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
+                alignmentIsoManagementPath, assessmentIsoPC, alignmentIsoFinalPath+"PC.csv");
+            //3.3: ISO all NC
+        pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
+                alignmentIsoManagementPath, assessmentIsoNC, alignmentIsoFinalPath+"NC.csv");
+        /*
+            //3.4: NIST all C
+        pa.writeMappingFromAlignment(nistCsvPath, alignmentNistAgPath, 
+                alignmentNistManagementPath, assessmentNistC, alignmentNistFinalPath+"C.csv");
+            //3.5: NIST all PC
+        pa.writeMappingFromAlignment(nistCsvPath, alignmentNistAgPath, 
+                alignmentNistManagementPath, assessmentNistPC, alignmentNistFinalPath+"PC.csv");
+            //3.6: NIST all NC
+        pa.writeMappingFromAlignment(nistCsvPath, alignmentNistAgPath, 
+                alignmentNistManagementPath, assessmentNistNC, alignmentNistFinalPath+"NC.csv");
+        */
+        
+        // 4 - Build the graph with lambda factors
+        GraphDbControl gc = new GraphDbControl(uri, user, password);
+        gc.buildGraph(humanGraphPath, humanVulnerabilityPath, accessGraphPath, 
+                networkGraphPath, networkVulnerabilityPath);
+        
+        // 5 - Evaluate discount formula
         DiscountControl dc = new DiscountControl();
-        dc.calculateFormula();
-*/
+        
+            //5.1: ISO all C
+        dc.calculateFormula(alignmentIsoFinalPath+"C.csv", gc);
+            //5.2: ISO all PC
+        dc.calculateFormula(alignmentIsoFinalPath+"PC.csv", gc);
+            //5.3: ISO all NC
+        dc.calculateFormula(alignmentIsoFinalPath+"NC.csv", gc);
+        
+        /*
+            //5.1: ISO all C
+        dc.calculateFormula(alignmentNistFinalPath+"C.csv", uri, user, password);
+            //5.2: ISO all PC
+        dc.calculateFormula(alignmentNistFinalPath+"PC.csv", uri, user, password);
+            //5.3: ISO all NC
+        dc.calculateFormula(alignmentNistFinalPath+"NC.csv", uri, user, password);
+        */
+        
+        gc.close(); // Close neo4j connection
         
     }
 }
