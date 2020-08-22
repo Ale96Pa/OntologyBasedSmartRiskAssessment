@@ -107,7 +107,7 @@ public class DiscountControl {
         
         if("human".equals(layer)){edges = gc.setHumanEdges();}
         else if("network".equals(layer)){edges = gc.setNetworkEdges();}
-        //else if("access".equals(layer)){edges = gc.setAccessEdges();}
+        else if("access".equals(layer)){edges = gc.setAccessEdges();}
         for(Edge e : edges){
             double lambda = e.getLambda();
             lambdas.add(lambda);
@@ -124,8 +124,12 @@ public class DiscountControl {
             double finalDis;
                     
             for(Discount dis: discounts){
-                disInLayerPlus += dis.getDisPositive()/dis.getNumElemPositive();
-                disInLayerMinus += dis.getDisNegative()/dis.getNumElemNegative();
+                if(dis.getNumElemPositive() != 0){
+                    disInLayerPlus += dis.getDisPositive()/dis.getNumElemPositive();
+                }
+                if(dis.getNumElemNegative() != 0){
+                    disInLayerMinus += dis.getDisNegative()/dis.getNumElemNegative();
+                }
             }
             
             if(lambda <= threshold1){
@@ -302,7 +306,7 @@ public class DiscountControl {
                             disMinus = disMinus + factValid.getValue();
                             counterMinus++;
                         }
-
+                        
                         dis = new Discount(disPlus, counterPlus, disMinus, counterMinus);
 
                         f = new Factor(matchingLayerFactor.getId(), 0, "dis");
@@ -364,22 +368,25 @@ public class DiscountControl {
         double cvNetwork = normalizeWithAssessment(pathMatchingISO, factorsNetwork);
 
         edgeH = calculateLambda(disH, "human");
-        //edgeA = calculateLambda(disA, "access");
+        edgeA = calculateLambda(disA, "access");
         edgeN = calculateLambda(disN, "network");
 
         for(Edge e: edgeH){
             edgeFinalH.add(new Edge(e.getLayer(), e.getLambda()*cvHuman, e.getDescriptionId()));
         }
-        /*
+        
         for(Edge e: edgeA){
-            edgeFinalH.add(new Edge(e.getLayer(), e.getLambda()*cvAccess, e.getDescriptionId()));
+            edgeFinalA.add(new Edge(e.getLayer(), e.getLambda()*cvAccess, e.getDescriptionId()));
         }
-        */
+        
         for(Edge e: edgeN){
             edgeFinalN.add(new Edge(e.getLayer(), e.getLambda()*cvNetwork, e.getDescriptionId()));
         }
         
         for(Edge e : edgeFinalH){
+            System.out.println(e.getDescriptionId() + " discount factor: " + e.getLambda());
+        }
+        for(Edge e : edgeFinalA){
             System.out.println(e.getDescriptionId() + " discount factor: " + e.getLambda());
         }
         for(Edge e : edgeFinalN){

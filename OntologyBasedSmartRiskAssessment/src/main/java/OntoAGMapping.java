@@ -72,6 +72,10 @@ public class OntoAGMapping {
         for(Edge e : ee2){
             System.out.println(e.getLayer() + " " + e.getLambda() + " " +e.getDescriptionId());
         }
+        ArrayList<Edge> ee3 = gc.setAccessEdges();
+        for(Edge e : ee3){
+            System.out.println(e.getLayer() + " " + e.getLambda() + " " +e.getDescriptionId());
+        }
         try {
             gc.close();
         } catch (Exception ex) {

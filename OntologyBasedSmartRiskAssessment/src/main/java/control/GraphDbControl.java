@@ -357,6 +357,55 @@ public class GraphDbControl implements AutoCloseable{
         }
     }
     
+    /**
+     * This method attach to existing access graph the lambda factor in each edge,
+     * in order to be used for calculating the discount factor.
+     */
+    private void attachLambdaAccess(){
+        try (Session session = driver.session()){
+            session.writeTransaction(new TransactionWork<Void>(){
+                
+                @Override
+                public Void execute(Transaction tx){
+                    // Pick all relations in the human layer
+                    Result result = tx.run( "MATCH (h1:HUMAN)-[ww:work_with]->(h2:HUMAN)-[il:inter_layer]->(a:ACCESS) "
+                                            + "RETURN ww.vulnId" );
+                    while (result.hasNext()){
+                        Record record = result.next();
+
+                        // Parse Json dataset to retrieve info for lambda factor
+                        JSONParser parser = new JSONParser();
+                        try {
+                            Object obj = parser.parse(new FileReader(pathHumanVulnerability));
+                            JSONObject jsonObject = (JSONObject) obj;
+                            JSONArray vulnerabilityArray = (JSONArray)jsonObject.get("humanVulnerabilities");
+                            for(Object vuln : vulnerabilityArray){
+                                JSONObject vulnObj = (JSONObject) vuln;
+                                String vulnJson = (String) vulnObj.get("id");
+                                String resultMatch = record.get("ww.vulnId").asString();
+                                if(resultMatch.equals(vulnJson)){
+                                    double av = (double) vulnObj.get("accessVectorScore");
+                                    double ac = (double) vulnObj.get("attackComplexityScore");
+                                    // TODO: add R(x) value
+                                    double lambda = av*ac;
+
+                                    // Put lambda factor in the specific edge
+                                    tx.run("MATCH (h1:HUMAN)-[ww:work_with]->(h2:HUMAN)-[il:inter_layer]->(a:ACCESS) " +
+                                            "SET( " +
+                                            "CASE ww.vulnId " +
+                                            "WHEN $vulnerability THEN il " +
+                                            "END).lambda=$lambda", 
+                                            parameters("vulnerability", vulnJson, "lambda", lambda));
+                                }
+                            }
+                        } catch(IOException | ParseException e){} 
+                    }
+                    return null;
+                }
+            });
+        }
+    }
+    
     /* This method totally create the human layer also with lambda factor. */
     private void addHumanLayer(){
         
@@ -441,6 +490,8 @@ public class GraphDbControl implements AutoCloseable{
                     
                 addAccessNetworkRelation(srcN, destN);
             }
+            // Attach lambda factor in edges
+            attachLambdaAccess();
         } catch(IOException | ParseException e){} 
     }
     
@@ -570,6 +621,41 @@ public class GraphDbControl implements AutoCloseable{
                         networkEdges.add(e);                        
                     }
                     return networkEdges;
+                }
+            });
+        }
+        return edges;
+    }
+    
+    /* This method put all access edges in a list with all the information in
+    order to be accessed for the discount calculation */
+    public ArrayList<Edge> setAccessEdges(){
+        
+        final String layer = "access";
+        ArrayList<Edge> edges;
+        
+        try (Session session = driver.session()){
+            edges = session.writeTransaction(new TransactionWork<ArrayList<Edge>>(){
+                
+                @Override
+                public ArrayList<Edge> execute(Transaction tx){
+                    ArrayList<Edge> accessEdges = new ArrayList();
+                    
+                    // Pick all information of all human relations
+                    Result result = tx.run( "MATCH (a:HUMAN)-[il:inter_layer]->(b:ACCESS) "
+                            + "RETURN a.uuid, b.uuid, il.lambda" );
+                    while ( result.hasNext() ){
+                        ArrayList<String> description = new ArrayList();
+                        
+                        Record record = result.next();
+                        description.add("source:"+String.format(record.get( "a.uuid" ).asString()));
+                        description.add("destination:"+String.format(record.get( "b.uuid" ).asString()));
+                        double lambda = record.get( "il.lambda" ).asDouble();
+                        
+                        Edge e = new Edge(layer, lambda, description);
+                        accessEdges.add(e);                        
+                    }
+                    return accessEdges;
                 }
             });
         }
