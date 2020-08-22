@@ -1,8 +1,11 @@
+/**
+ * This file contains methods to manage the whole process of the alignment. AML
+ * tool provides an rdf file containing data about matching between two elements.
+ * From such a file a finale csv dataset containing all the necessary info for
+ * the calculation of discount is produced.
+ */
 package control;
 
-import com.opencsv.CSVReader;
-import com.opencsv.CSVWriter;
-import com.opencsv.exceptions.CsvException;
 import config.Config;
 import control.models.Alignment;
 import control.models.Factor;
@@ -13,48 +16,56 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import static java.lang.Float.parseFloat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import org.apache.jena.ontology.Individual;
-import org.apache.jena.ontology.OntClass;
-import org.apache.jena.ontology.OntModel;
-import org.apache.jena.query.Query;
-import org.apache.jena.query.QueryExecution;
-import org.apache.jena.query.QueryExecutionFactory;
-import org.apache.jena.query.QueryFactory;
-import org.apache.jena.query.QuerySolution;
-import org.apache.jena.query.ResultSet;
-import org.apache.jena.rdf.model.Property;
-import org.apache.jena.rdf.model.RDFNode;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class ParseAlignment {
-
     
-    public ArrayList<Alignment> parseAlignment(String alignmentPath){
-         
+    // Attributes (paths)
+    Config conf = new Config();
+    private String datasetIso = conf.getIsoCsvPath();
+    private String datasetNist = conf.getNistCsvPath();
+    
+    private String alignmentIsoAg = conf.getAlignmentIsoAgPath();
+    private String alignmentIsoManagement = conf.getAlignmentIsoManagementPath();
+    private String alignmentNistAg = conf.getAlignmentNistAgPath();
+    private String alignmentNistManagement = conf.getAlignmentNistManagementPath();
+    
+    private String assessmentIso = conf.getAssessmentIsoReal();
+    private String assessmentNist = conf.getAssessmentNistReal();
+    
+    private String outputMappingIso = conf.getAlignmentIsoFinalPath();
+    private String outputMappingNist = conf.getAlignmentNistFinalPath();
+    
+
+    /**
+     * This method gets in input the rdf file with the alignment and return the
+     * same information collected in a suitable data structure.
+     * @param alignmentPath
+     * @return 
+     */
+    private ArrayList<Alignment> parseAlignment(String alignmentPathRdf){
         ArrayList<Alignment> totalAlignment = new ArrayList();
         
         try {
-            File fXmlFile = new File(alignmentPath);
+            // Elements for scanning RDF/XML file
+            File fXmlFile = new File(alignmentPathRdf);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
-
             doc.getDocumentElement().normalize();
+            // "Cell" is the tag inside which the information to be extracted is
             NodeList nList = doc.getElementsByTagName("Cell");
             
             for (int i = 0; i < nList.getLength(); i++) {
@@ -64,26 +75,28 @@ public class ParseAlignment {
 
                     Element cellElement = (Element) nNode;
 
+                    // entity1 is the source of the matching
                     NodeList entity1Tag = cellElement.getElementsByTagName("entity1");
                     Element entitySrc = (Element) entity1Tag.item(0);
                     String entitySrcName = entitySrc.getAttribute("rdf:resource");
 
+                    // entity2 is the target of the matching
                     NodeList entity2Tag = cellElement.getElementsByTagName("entity2");
                     Element entityDest = (Element) entity2Tag.item(0);
                     String entityDestName = entityDest.getAttribute("rdf:resource");
 
+                    // measure is the value of the matching
                     String matching = cellElement.getElementsByTagName("measure").item(0).getTextContent();
                     
                     Alignment alignmet = new Alignment(entitySrcName, entityDestName, parseFloat(matching));
                     totalAlignment.add(alignmet);
-                   
                 }
             }
         } catch (Exception e) {}
-        
         return totalAlignment;
     }
     
+    /*
     public void initializeFinalMapping(){
         Config conf = new Config();
         BufferedReader br = null;
@@ -119,67 +132,34 @@ public class ParseAlignment {
             }
         }
     }
-    
-    /*
-    public void updateCSV(String fileToUpdate, String replace, int row, int col){
-
-        CSVReader reader = null;
-        try {
-            File inputFile = new File(fileToUpdate);
-            // Read existing file
-            reader = new CSVReader(new FileReader(inputFile));
-            List<String[]> csvBody = reader.readAll();
-            for(String[] s : csvBody){
-                for(String ss : s){
-                    System.out.println(ss);
-                }
-            }
-            
-            // get CSV row column  and replace with by using row and column
-            csvBody.get(row)[col] = replace;
-            reader.close();
-            // Write to CSV file which is open
-            CSVWriter writer = new CSVWriter(new FileWriter(inputFile));
-            writer.writeAll(csvBody);
-            writer.flush();
-            writer.close();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(ParseAlignment.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(ParseAlignment.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (CsvException ex) {
-            Logger.getLogger(ParseAlignment.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                reader.close();
-            } catch (IOException ex) {
-                Logger.getLogger(ParseAlignment.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        
-    }
     */
     
-    public ArrayList<Factor> buildFactor(Alignment alignment){
+    /**
+     * This method gets in input an alignment in order to extend the information
+     * inside it through an array of Factor; in this way the total information
+     * from the alignment is extracted.
+     * @param alignment
+     * @return 
+     */
+    private ArrayList<Factor> buildFactor(String pathStandardCsv, Alignment alignment){
         ArrayList<Factor> factors = new ArrayList();
-        Config conf = new Config();
         BufferedReader br = null;
+        
         try {
-            br = new BufferedReader(new FileReader(conf.getIsoCsvPath()));
+            br = new BufferedReader(new FileReader(pathStandardCsv));
             br.readLine(); // skip the first line (header)
             String line;
             
             while((line = br.readLine()) != null) {
-                //String controlId = alignment.getSourceUri().split("#")[1].split(";")[0];
                 String controlContent=alignment.getSourceUri().split(";")[1].replace("%20", " ");
                 double matchingValue=alignment.getMatchingValue();
                 String label =alignment.getTargetUri().split("#")[1].split(";")[0];
                 String controlCsvId = line.split(";")[0];
+                
                 if(line.contains(controlContent)){
                     Factor fact = new Factor(controlCsvId, matchingValue, label);
                     factors.add(fact);
                 }
-
             }
         }
         catch (FileNotFoundException e) {}
@@ -193,10 +173,18 @@ public class ParseAlignment {
         return factors;
     }
     
-    public ArrayList<Factor> writeAllFactors(ArrayList<Alignment> alignments){
+    /**
+     * This method gets in input an array of alignments in order to extend the 
+     * information inside it through an array of Factor; in this way the total 
+     * information from the alignment is extracted.
+     * @param pathStandardCsv
+     * @param alignments
+     * @return 
+     */
+    private ArrayList<Factor> writeAllFactors(String pathStandardCsv, ArrayList<Alignment> alignments){
         ArrayList<Factor> factorsAll = new ArrayList();
         for(Alignment a : alignments){
-            ArrayList<Factor> facts = buildFactor(a);
+            ArrayList<Factor> facts = buildFactor(pathStandardCsv, a);
             for(Factor f : facts){
                 factorsAll.add(f);
             }
@@ -204,42 +192,14 @@ public class ParseAlignment {
         return factorsAll;
     }
     
-    /*
-    public MappingParam setLabelToMapping(String label, double value){
-        
-        MappingParam mp = new MappingParam();
-    
-        if(null != label)switch (label) {
-            case "human":
-                mp.setHuman(value);
-                break;
-            case "access":
-                mp.setAccess(value);
-                break;
-            case "network":
-                mp.setNetwork(value);
-                break;
-            case "runtime":
-                mp.setRuntime(value);
-                break;
-            case "designtime":
-                mp.setDesigntime(value);
-                break;
-            case "operational":
-                mp.setOperational(value);
-                break;
-            case "compliance":
-                mp.setCompliance(value);
-                break;
-        }
-    }
-    */
-    
-    public Map<String, List<Factor>> collectData(ArrayList<Factor> factors){
-        //ArrayList<MappingParam> rows = new ArrayList();
-        
-        
-
+    /**
+     * This method collect data about the array of all factors in order to group
+     * the information basing on ID using an HashMap. In this way the info is
+     * better organized.
+     * @param factors
+     * @return 
+     */
+    private Map<String, List<Factor>> collectData(ArrayList<Factor> factors){
         Map<String, List<Factor>> map = new HashMap();
 
         for (Factor fact : factors) {
@@ -247,98 +207,100 @@ public class ParseAlignment {
             if(map.containsKey(key)){
                 List<Factor> list = map.get(key);
                 list.add(fact);
-
             }else{
                 List<Factor> list = new ArrayList();
                 list.add(fact);
                 map.put(key, list);
             }
-
         }
         return map;
     }
     
-    public ArrayList<MappingParam> setRows(Map<String, List<Factor>> mapFactors){
-        
-        
+    /**
+     * This method collects information from an array of mapping factor in order
+     * to set data that must be written in the same row in the final file.
+     * @param pathAssessment
+     * @param mapFactors
+     * @return 
+     */
+    private ArrayList<MappingParam> setRows(String pathAssessment, Map<String, List<Factor>> mapFactors){
         ArrayList<MappingParam> mappings = new ArrayList();
-        
-        Config conf = new Config();
         BufferedReader br = null;
-        
+
+        // Scan HashMap for getting info control by control from alignment
+        for (Map.Entry<String, List<Factor>> entry : mapFactors.entrySet()) {
+            List<Factor> list = entry.getValue();
+            MappingParam mp = new MappingParam();
+            mp.setControlID(entry.getKey());
             
+            try {
+                // Read Assessment file to get the coverage level of each control
+                br = new BufferedReader(new FileReader(pathAssessment));
+                br.readLine(); // skip the first line (header)
+                String line;
 
-                for (Map.Entry<String, List<Factor>> entry : mapFactors.entrySet()) {
-                    //System.out.println(entry.getKey());
+                while((line = br.readLine()) != null) {
+                    String[] data = line.split(";");
+                    String controlCsv = data[0];
+                    String assessment = data[1];
 
-                    List<Factor> list = entry.getValue();
-                    MappingParam mp = new MappingParam();
-                    mp.setControlID(entry.getKey());
-                    try {
-                        br = new BufferedReader(new FileReader(conf.getAssessmentIsoPC()));
-
-                        br.readLine(); // skip the first line (header)
-
-                        String line;
-                    
-                        while((line = br.readLine()) != null) {
-                            String[] data = line.split(";");
-                            String controlCsv = data[0];
-                            String assessment = data[1];
-
-                            if(entry.getKey().equals(controlCsv)){
-                                mp.setAssessment(assessment);
-                            }
-                        }
+                    if(entry.getKey().equals(controlCsv)){
+                        mp.setAssessment(assessment);
                     }
-                    catch (FileNotFoundException e) {}
-                    catch (IOException e) {}
-                    finally {
-                        if (br != null){
-                            try {br.close();}
-                            catch (IOException e) {}
-                        }
-                    }
-                    
-                    for(Factor f : list){ 
-                        String label = f.getType();
-                        switch (label) {
-                            case "human":
-                                mp.setHuman(f.getValue());
-                                break;
-                            case "access":
-                                mp.setAccess(f.getValue());
-                                break;
-                            case "network":
-                                mp.setNetwork(f.getValue());
-                                break;
-                            case "runtime":
-                                mp.setRuntime(f.getValue());
-                                break;
-                            case "designtime":
-                                mp.setDesigntime(f.getValue());
-                                break;
-                            case "operational":
-                                mp.setOperational(f.getValue());
-                                break;
-                            case "compliance":
-                                mp.setCompliance(f.getValue());
-                                break;
-                        }
-                        
-                    }
-                    
-                    mappings.add(mp);
                 }
+            }
+            catch (FileNotFoundException e) {}
+            catch (IOException e) {}
+            finally {
+                if (br != null){
+                    try {br.close();}
+                    catch (IOException e) {}
+                }
+            }
 
+            // Scan Factors for each id in order to set parameters from alignment
+            for(Factor f : list){ 
+                String label = f.getType();
+                switch (label) {
+                    case "human":
+                        mp.setHuman(f.getValue());
+                        break;
+                    case "access":
+                        mp.setAccess(f.getValue());
+                        break;
+                    case "network":
+                        mp.setNetwork(f.getValue());
+                        break;
+                    case "runtime":
+                        mp.setRuntime(f.getValue());
+                        break;
+                    case "designtime":
+                        mp.setDesigntime(f.getValue());
+                        break;
+                    case "operational":
+                        mp.setOperational(f.getValue());
+                        break;
+                    case "compliance":
+                        mp.setCompliance(f.getValue());
+                        break;
+                }
+            }
+            mappings.add(mp);
+        }
         return mappings;
     }
     
-    public void writeMapping(ArrayList<MappingParam> mappings){
+    /**
+     * This method write the output file of mapping picking information by an
+     * array of MappingParam, one for each control.
+     * @param finalMappingPath
+     * @param mappings 
+     */
+    private void writeMapping(String finalMappingPath, ArrayList<MappingParam> mappings){
         FileWriter fw = null;
         try {
-            Config conf = new Config();
-            fw = new FileWriter(conf.getAlignmentIsoFinalPath());
+            fw = new FileWriter(finalMappingPath);
+            fw.write(""); // Erase previous content
             fw.append("ID;H;A;N;Runtime;Designtime;Operational;Compliance;Assessment\n");
             
             for(MappingParam m : mappings){
@@ -357,152 +319,39 @@ public class ParseAlignment {
                 double compl = m.getCompliance();
                 String assessment = m.getAssessment();
                 fw.append(id+";"+h+";"+a+";"+n+";"+rt+";"+dt+";"+op+";"+compl+";"+assessment+"\n");
-                
             }
         } catch (IOException ex) {
             Logger.getLogger(ParseAlignment.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            try {
-                fw.close();
-            } catch (IOException ex) {
+            try {fw.close();}
+            catch (IOException ex) {
                 Logger.getLogger(ParseAlignment.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
-
+    
+    /**
+     * This method organize all above methods to write final output file
+     */
+    public void writeMappingFromAlignmentIso(){
         
-        /*
-        for(Factor f1 : factors){
-            MappingParam mp = new MappingParam();
-            String labelFirst = f1.getType();
-            if(null != labelFirst)switch (labelFirst) {
-                case "human":
-                    mp.setHuman(f1.getValue());
-                    break;
-                case "access":
-                    mp.setAccess(f1.getValue());
-                    break;
-                case "network":
-                    mp.setNetwork(f1.getValue());
-                    break;
-                case "runtime":
-                    mp.setRuntime(f1.getValue());
-                    break;
-                case "designtime":
-                    mp.setDesigntime(f1.getValue());
-                    break;
-                case "operational":
-                    mp.setOperational(f1.getValue());
-                    break;
-                case "compliance":
-                    mp.setCompliance(f1.getValue());
-                    break;
-            }
-            for(Factor f2: factors){
-                if(f1.getId().equals(f2.getId())){
-                    String label = f2.getType();
-                    if(null != label)switch (label) {
-                        case "human":
-                            mp.setHuman(f1.getValue());
-                            break;
-                        case "access":
-                            mp.setAccess(f1.getValue());
-                            break;
-                        case "network":
-                            mp.setNetwork(f1.getValue());
-                            break;
-                        case "runtime":
-                            mp.setRuntime(f1.getValue());
-                            break;
-                        case "designtime":
-                            mp.setDesigntime(f1.getValue());
-                            break;
-                        case "operational":
-                            mp.setOperational(f1.getValue());
-                            break;
-                        case "compliance":
-                            mp.setCompliance(f1.getValue());
-                            break;
-                    }
-                }
-            }
-            rows.add(mp);
-        }
+        ArrayList<Alignment> alignmentAg = parseAlignment(alignmentIsoAg);
+        ArrayList<Alignment> alignmentManagement = parseAlignment(alignmentIsoManagement);
+        ArrayList<Alignment> alignmentAll = new ArrayList();
+        ArrayList<Factor> factorsAll;
+        Map<String, List<Factor>> mappings;
+        ArrayList<MappingParam> rows;
         
-        return rows;
+        for(Alignment a : alignmentAg){alignmentAll.add(a);}
+        for(Alignment a : alignmentManagement){alignmentAll.add(a);}
+        
+        factorsAll = writeAllFactors(datasetIso, alignmentAll);
+        
+        mappings = collectData(factorsAll);
+       
+        rows = setRows(assessmentIso, mappings);
+        
+        writeMapping(outputMappingIso, rows);
     }
-        */
- 
-    /*
-    public void writeFactorInOutput(String file, Factor f){
-        Config conf = new Config();
-        int rowIndex = 0;
-        BufferedReader br = null;
-        try {
-            br = new BufferedReader(new FileReader(conf.getAlignmentIsoFinalPath()));
-            br.readLine(); // skip the first line (header)
-            String line;
-            
-            while((line = br.readLine()) != null) {
-                
-                
-                
-                String[] data = line.split(";");
-                
-                // Elements in ISO 27001:2013 dataset
-                String idCsv = data[0].replace("\"", "");
-                System.out.println(idCsv + " -- " + f.getId());
-                if(f.getId().equals(idCsv)){
-                    System.out.println("IN");
-                         
-                    String label = f.getType();
-                    Double matching = f.getValue();
-                    switch (label) {
-                        case "human":
-                            updateCSV(file, matching.toString(), rowIndex, 0);
-                            //break;
-                        case "access":
-                            updateCSV(file, matching.toString(), rowIndex, 1);
-                            //break;
-                        case "network":
-                            updateCSV(file, matching.toString(), rowIndex, 2);
-                            //break;
-                        case "runtime":
-                            updateCSV(file, matching.toString(), rowIndex, 3);
-                            //break;
-                        case "designtime":
-                            updateCSV(file, matching.toString(), rowIndex, 4);
-                            //break;
-                        case "compliance":
-                            updateCSV(file, matching.toString(), rowIndex, 5);
-                            //break;
-                        case "operational":
-                            updateCSV(file, matching.toString(), rowIndex, 6);
-                            //break;
-                                            
-                    }
-                    
-                }
-                rowIndex++;
-            }
-        }
-        catch (FileNotFoundException e) {}
-        catch (IOException e) {}
-        finally {
-            if (br != null){
-                try {br.close();}
-                catch (IOException e) {}
-            }
-        }
-        
-    }
-    */
-    
-    
-    
-    
-    
-    
-    
     
 }

@@ -1,3 +1,10 @@
+/**
+ * This file contains the calculation of the discount factors in every edge of
+ * the multi-layer attack graph. It is necessary that previous steps are completed:
+ * -) There exists a final file containing the mapping of the form:
+ * ID;H;A;N;Runtime;Designtime;Operational;Compliance;Assessment
+ * -) There exists an instance of the multi-layer attack graph in neo4j
+ */
 package control;
 
 import config.Config;
@@ -16,23 +23,25 @@ public class DiscountControl {
     
     Config conf = new Config();
     final String pathMatchingISO = conf.getAlignmentIsoFinalPath();
-            //"src\\main\\java\\dataset\\alignment\\iso\\AlignmentISOTotal.csv";
+    final String uriNeo4j = conf.getUri();
+    final String usernameNeo4j = conf.getUser();
+    final String passwordNeo4j = conf.getPassword();
     
-    /*
-    Devo parsare il file totale
-    */
-    public ArrayList<Factor> calculateMatching(){
-        
-        ArrayList<Factor> factors = new ArrayList();
-        
+    /**
+     * This file return an array of three Factors, one per each layer, with
+     * information about the mapping factor
+     * @return 
+     */
+    private ArrayList<Factor> calculateMatchingLayer(){
+        ArrayList<Factor> factors = new ArrayList(); 
         BufferedReader br = null;
+        
         try {
             br = new BufferedReader(new FileReader(pathMatchingISO));
             br.readLine(); // skip the first line (header)
             String line;
             
             while((line = br.readLine()) != null) {
-                
                 String[] data = line.split(";");
                 
                 // Elements in matching csv dataset
@@ -78,21 +87,24 @@ public class DiscountControl {
                 catch (IOException e) {}
             }
         }
-        
         return factors;
     }
     
-    /*
-    Dovrei tornare arco(src-dest-tutte info) + layer a cui appartiene + lambda
-    */
-    public ArrayList<Edge> calculateLambda(ArrayList<Discount> discounts, String layer){
+    /**
+     * This method pick information from the attack graph in order to calculate
+     * the lambda factor for the formula. It returns the list of edges with
+     * the lambda value attached.
+     * @param discounts
+     * @param layer
+     * @return 
+     */
+    private ArrayList<Edge> calculateLambda(ArrayList<Discount> discounts, String layer){
                 
         ArrayList<Edge> edgesWithDiscount = new ArrayList();
-        int counter=0;
-        
-        GraphDbControl gc = new GraphDbControl("bolt://localhost:7687", "admin", "admin");
+        GraphDbControl gc = new GraphDbControl(uriNeo4j, usernameNeo4j, passwordNeo4j);
         ArrayList<Double> lambdas = new ArrayList();
         ArrayList<Edge> edges = new ArrayList();
+        
         if("human".equals(layer)){edges = gc.setHumanEdges();}
         else if("network".equals(layer)){edges = gc.setNetworkEdges();}
         //else if("access".equals(layer)){edges = gc.setAccessEdges();}
@@ -100,6 +112,7 @@ public class DiscountControl {
             double lambda = e.getLambda();
             lambdas.add(lambda);
         }
+        
         double max = Collections.max(lambdas);
         double min = Collections.min(lambdas);
         double threshold1 = (max-min)/3;
@@ -108,7 +121,7 @@ public class DiscountControl {
         for(Edge e : edges){
             double lambda = e.getLambda();
             double disInLayerPlus = 0, disInLayerMinus = 0;
-            double finalDis=0;
+            double finalDis;
                     
             for(Discount dis: discounts){
                 disInLayerPlus += dis.getDisPositive()/dis.getNumElemPositive();
@@ -116,59 +129,51 @@ public class DiscountControl {
             }
             
             if(lambda <= threshold1){
-                //System.out.println("CASE 1");
                 double dis1 = disInLayerPlus;
                 double dis2 = (disInLayerMinus-lambda)/2;
                 finalDis = dis1 + dis2;
-
-                //System.out.println(finalDis);
             }
             else if(lambda >= threshold2){
-                //System.out.println("CASE 3");
                 double dis1 = (disInLayerPlus+lambda)/2;
                 double dis2 = disInLayerMinus;
                 finalDis = dis1 + dis2;
-
-                //System.out.println(finalDis);
             }
             else{
-                //System.out.println("CASE 2");
                 double dis1 = disInLayerPlus;
                 double dis2 = disInLayerMinus;
                 finalDis = dis1 + dis2;
-
-                //System.out.println(finalDis);
             }
             edgesWithDiscount.add(new Edge(e.getLayer(), finalDis, e.getDescriptionId()));
-            counter++;
         }
-        System.out.println("counter: " + counter);
         return edgesWithDiscount;
     }
     
-    public ArrayList<Factor> calculateManagement(){
+    /**
+     * This method return an array of factors, one per each control with the
+     * value of management and lifetime parameter attached.
+     * @param pathFinalMapping
+     * @return 
+     */
+    private ArrayList<Factor> calculateManagement(String pathFinalMapping){
         ArrayList<Factor> factors = new ArrayList();
-        
         BufferedReader br = null;
+        
         try {
-            br = new BufferedReader(new FileReader(pathMatchingISO));
+            br = new BufferedReader(new FileReader(pathFinalMapping));
             br.readLine(); // skip the first line (header)
             String line;
             
             while((line = br.readLine()) != null) {
                 
                 String[] data = line.split(";");
-                
                 // Elements in matching csv dataset
                 String controlId = data[0];
                 double runtime = Double.parseDouble(data[4]);
                 double designtime = Double.parseDouble(data[5]);
                 double operational = Double.parseDouble(data[6]);
                 double compliance = Double.parseDouble(data[7]);
-                
                 double result = 0;
-                
-               
+                      
                 if(runtime > designtime){
                     if(operational > compliance){result = 0.5;}
                     else if(operational < compliance){result = 0.25;}
@@ -179,7 +184,6 @@ public class DiscountControl {
                 }
                 
                 Factor fact = new Factor(controlId, result, "management");
-
                 factors.add(fact);
             }
         }
@@ -191,38 +195,41 @@ public class DiscountControl {
                 catch (IOException e) {}
             }
         }
-        
         return factors;
     }
     
-    /*
-    Dalla classe ValidationControl posso avere ArrayList di tipo 
-    <idControl, factorValidation>
-    */
-    public ArrayList<Factor> calculateValidation(){
+    /**
+     * This method returns the validation factors following the formula studied
+     * by the paper [1].
+     * @return 
+     */
+    private ArrayList<Factor> calculateValidation(){
         ValidationControl vc = new ValidationControl();
         ArrayList<MappingParam> mp = vc.parseValidationFile();
         return vc.caluclateValidationFactor(mp);
     }
     
-    public double normalizeWithAssessment(/*ArrayList<Edge> edges,*/ ArrayList<Factor> factorControls){
+    /**
+     * This method normalizes the formula (with form of array of Factor) with the
+     * value of coverage given by the assessment, returning the value of cv.
+     * @param mappingFilePath
+     * @param factorControls
+     * @return 
+     */
+    private double normalizeWithAssessment(String mappingFilePath, /*ArrayList<Edge> edges,*/ ArrayList<Factor> factorControls){
         double cv =0;
         int numC=0, numPC=0, numNC=0;
         
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader(pathMatchingISO));
+            br = new BufferedReader(new FileReader(mappingFilePath));
             br.readLine(); // skip the first line (header)
             String line;
             
             while((line = br.readLine()) != null) {
-                
                 String[] data = line.split(";");
-                
-                // Elements in matching csv dataset
                 String controlId = data[0];
                 String assessment = data[8];
-                
                 
                 for(Factor fact : factorControls){
                     if(controlId.equals(fact.getId())){
@@ -232,11 +239,9 @@ public class DiscountControl {
                     }
                 }
             }
-//            System.out.println("C: " + numC + " PC: " + numPC + " NC: " + numNC + "----" + (numC+numPC+numNC));
             if(numC >= numPC && numC >= numNC){cv=0.9;}
             else if(numPC > numC && numPC >= numNC){cv=0.4;}
             else{cv=0.1;}
-//            System.out.println("cv: " + cv);
         }
         catch (FileNotFoundException e) {}
         catch (IOException e) {}
@@ -249,57 +254,74 @@ public class DiscountControl {
         return cv;
     }
     
-    public Discount calculateDiscount(Factor f11, ArrayList<Factor> f2, ArrayList<Factor> f3){
+    /**
+     * This method return the positive and negative elements of Discount factor
+     * (through apposite data structure) BEFORE the calculation of lambda (this
+     * is the reason why positive and negative parts are separated).
+     * @param matchingLayerFactor
+     * @param mappingManagementFactors
+     * @param validationFactors
+     * @return 
+     */
+    public Discount calculateDiscount(Factor matchingLayerFactor, 
+        ArrayList<Factor> mappingManagementFactors, ArrayList<Factor> validationFactors){
         
         Discount dis = new Discount(0,0,0,0);
         Factor f = new Factor(null, 0, null);
         
-        for (Factor f22 : f2) {
-            if(f22.getId().equals(f11.getId())){
-                for (Factor f33 : f3) {
-                    if(f33.getId().equals(f11.getId())){
+        for (Factor factManag : mappingManagementFactors) {
+            if(factManag.getId().equals(matchingLayerFactor.getId())){
+                for (Factor factValid : validationFactors) {
+                    if(factValid.getId().equals(matchingLayerFactor.getId())){
                         double disPlus=0, disMinus = 0;
                         int counterPlus=0, counterMinus = 0;
-                        if(f11.getValue() >= 0){
-                            disPlus = disPlus + f11.getValue();
+                        
+                        // Parse matching layer part
+                        if(matchingLayerFactor.getValue() >= 0){
+                            disPlus = disPlus + matchingLayerFactor.getValue();
                             counterPlus++;
                         } else {
-                            disMinus = disMinus + f11.getValue();
+                            disMinus = disMinus + matchingLayerFactor.getValue();
                             counterMinus++;
                         }
-                        if(f22.getValue() >= 0){
-                            disPlus = disPlus + f22.getValue();
+                        
+                        // Parse matching management part
+                        if(factManag.getValue() >= 0){
+                            disPlus = disPlus + factManag.getValue();
                             counterPlus++;
                         } else {
-                            disMinus = disMinus + f22.getValue();
+                            disMinus = disMinus + factManag.getValue();
                             counterMinus++;
                         }
-                        if(f33.getValue() >= 0){
-                            disPlus = disPlus + f33.getValue();
+                        
+                        // Parse validation part
+                        if(factValid.getValue() >= 0){
+                            disPlus = disPlus + factValid.getValue();
                             counterPlus++;
                         } else {
-                            disMinus = disMinus + f33.getValue();
+                            disMinus = disMinus + factValid.getValue();
                             counterMinus++;
                         }
 
                         dis = new Discount(disPlus, counterPlus, disMinus, counterMinus);
 
-                        f = new Factor(f11.getId(), 0, "dis");
+                        f = new Factor(matchingLayerFactor.getId(), 0, "dis");
                     }
                 }
             }
         }
-        if(f.getId()!=null){
-            return dis;
-        } else {
-            return null;
-        }
+        // Return only if the matching factor exists
+        if(f.getId()!=null){return dis;}
+        else {return null;}
     }
     
+    /**
+     * Final method for calculating the discount factor also including lambda
+     */
     public void calculateFormula(){
-        ArrayList<Factor> f1 = calculateMatching();
-        ArrayList<Factor> f2 = calculateValidation();
-        ArrayList<Factor> f3 = calculateManagement();
+        ArrayList<Factor> fLayers = calculateMatchingLayer();
+        ArrayList<Factor> fValid = calculateValidation();
+        ArrayList<Factor> fManag = calculateManagement(pathMatchingISO);
         
         ArrayList<Factor> factorsHuman = new ArrayList();
         ArrayList<Factor> factorsAccess = new ArrayList();
@@ -316,56 +338,35 @@ public class DiscountControl {
         ArrayList<Edge> edgeFinalH = new ArrayList();
         ArrayList<Edge> edgeFinalA = new ArrayList();
         ArrayList<Edge> edgeFinalN = new ArrayList();
-        
-        
-        //ArrayList<Factor> result = new ArrayList();
-        
-        for (Factor f11 : f1) {
-            if("human".equals(f11.getType()) && f11.getValue()!= 0){
-                if(calculateDiscount(f11, f2, f3) != null){
-                    disH.add(calculateDiscount(f11, f2, f3));
+                 
+        for (Factor factLayer : fLayers) {
+            if("human".equals(factLayer.getType()) && factLayer.getValue()!= 0){
+                if(calculateDiscount(factLayer, fValid, fManag) != null){
+                    disH.add(calculateDiscount(factLayer, fValid, fManag));
                 }
-                factorsHuman.add(f11);
-                
+                factorsHuman.add(factLayer);
             }
-            else if ("access".equals(f11.getType()) && f11.getValue()!= 0){
-                if(calculateDiscount(f11, f2, f3) != null){
-                    disA.add(calculateDiscount(f11, f2, f3));
+            else if ("access".equals(factLayer.getType()) && factLayer.getValue()!= 0){
+                if(calculateDiscount(factLayer, fValid, fManag) != null){
+                    disA.add(calculateDiscount(factLayer, fValid, fManag));
                 }
-                factorsAccess.add(f11);
+                factorsAccess.add(factLayer);
             }
-            else if ("network".equals(f11.getType()) && f11.getValue()!= 0){
-                if(calculateDiscount(f11, f2, f3) != null){
-                    disN.add(calculateDiscount(f11, f2, f3));
+            else if ("network".equals(factLayer.getType()) && factLayer.getValue()!= 0){
+                if(calculateDiscount(factLayer, fValid, fManag) != null){
+                    disN.add(calculateDiscount(factLayer, fValid, fManag));
                 }
-                factorsNetwork.add(f11);
+                factorsNetwork.add(factLayer);
             }
-        }
-        
-        double cvHuman = normalizeWithAssessment(factorsHuman);
-        double cvAccess = normalizeWithAssessment(factorsAccess);
-        double cvNetwork = normalizeWithAssessment(factorsNetwork);
-        
-        
-        
+        }        
+        double cvHuman = normalizeWithAssessment(pathMatchingISO, factorsHuman);
+        double cvAccess = normalizeWithAssessment(pathMatchingISO, factorsAccess);
+        double cvNetwork = normalizeWithAssessment(pathMatchingISO, factorsNetwork);
+
         edgeH = calculateLambda(disH, "human");
         //edgeA = calculateLambda(disA, "access");
         edgeN = calculateLambda(disN, "network");
-        
-        /*
-        System.out.println("HUMAN---------------------------------");
-        for(Discount d : disH){
-            System.out.println(d.getDisPositive() + " " + d.getDisNegative());
-        }
-        System.out.println("ACCESS---------------------------------");
-        for(Discount d : disA){
-            System.out.println(d.getDisPositive() + " " + d.getDisNegative());
-        }
-        System.out.println("NETWORK---------------------------------");
-        for(Discount d : disN){
-            System.out.println(d.getDisPositive() + " " + d.getDisNegative());
-        }
-       */
+
         for(Edge e: edgeH){
             edgeFinalH.add(new Edge(e.getLayer(), e.getLambda()*cvHuman, e.getDescriptionId()));
         }
