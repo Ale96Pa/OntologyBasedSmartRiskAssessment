@@ -6,7 +6,6 @@
  */
 package control;
 
-import config.Config;
 import control.models.Edge;
 import java.io.FileReader;
 import java.io.IOException;
@@ -29,13 +28,6 @@ public class GraphDbControl implements AutoCloseable{
     
     // Configuration attributes
     private final Driver driver;
-    
-    Config config = new Config();
-    final String pathHumanGraph = config.getHumanGraphPath();
-    final String pathHumanVulnerability = config.getHumanVulnerabilityPath();
-    final String pathAccessGraph = config.getAccessGraphPath();
-    final String pathNetworkGraph = config.getNetworkGraphPath();
-    final String pathNetworkVulnerability = config.getNetworkVulnerabilityPath();
 
     // Constructor with driver credential
     public GraphDbControl( String uri, String user, String password) {
@@ -227,7 +219,7 @@ public class GraphDbControl implements AutoCloseable{
      * This method attach to existing human graph the lambda factor in each edge,
      * in order to be used for calculating the discount factor.
      */
-    private void attachLambdaHuman(){
+    private void attachLambdaHuman(final String pathHumanVulnerability){
         try (Session session = driver.session()){
             session.writeTransaction(new TransactionWork<Void>(){
                 
@@ -274,7 +266,7 @@ public class GraphDbControl implements AutoCloseable{
      * This method attach to existing network graph the lambda factor in each edge,
      * in order to be used for calculating the discount factor.
      */
-    private void attachLambdaNetwork(){
+    private void attachLambdaNetwork(final String pathNetworkVulnerability){
         try (Session session = driver.session()){
             session.writeTransaction(new TransactionWork<Void>(){
                 
@@ -361,7 +353,7 @@ public class GraphDbControl implements AutoCloseable{
      * This method attach to existing access graph the lambda factor in each edge,
      * in order to be used for calculating the discount factor.
      */
-    private void attachLambdaAccess(){
+    private void attachLambdaAccess(final String pathHumanVulnerability){
         try (Session session = driver.session()){
             session.writeTransaction(new TransactionWork<Void>(){
                 
@@ -407,7 +399,7 @@ public class GraphDbControl implements AutoCloseable{
     }
     
     /* This method totally create the human layer also with lambda factor. */
-    private void addHumanLayer(){
+    private void addHumanLayer(String pathHumanGraph, String pathHumanVulnerability){
         
         String uuid, emplId, privLevel;
         String src, dest, vulnId, vulnType;
@@ -446,12 +438,12 @@ public class GraphDbControl implements AutoCloseable{
                 }
             }
             // Add lambda factors in the edges
-            attachLambdaHuman();
+            attachLambdaHuman(pathHumanVulnerability);
         } catch(IOException | ParseException e){} 
     }
     
     /* This method totally create the access layer. */
-    private void addAccessLayer(){
+    private void addAccessLayer(String pathAccessGraph, String pathHumanVulnerability){
         
         String uuid, credType;
         String srcH, destH;
@@ -491,12 +483,12 @@ public class GraphDbControl implements AutoCloseable{
                 addAccessNetworkRelation(srcN, destN);
             }
             // Attach lambda factor in edges
-            attachLambdaAccess();
+            attachLambdaAccess(pathHumanVulnerability);
         } catch(IOException | ParseException e){} 
     }
     
     /* This method totally create the network layer also with lambda factor. */
-    private void addNetworkLayer(){
+    private void addNetworkLayer(String pathNetworkGraph, String pathNetworkVulnerability){
         
         String uuid, deviceId, privLevel;
         String src, dest, cve, type, protocol;
@@ -538,16 +530,17 @@ public class GraphDbControl implements AutoCloseable{
                 }
             }
             // Add lambda factor
-            attachLambdaNetwork();
+            attachLambdaNetwork(pathNetworkVulnerability);
         } catch(IOException | ParseException e){} 
     }
     
     /* This method flush the existing database and the totally create the MLAG */
-    public void buildGraph(){
+    public void buildGraph(String pathHumanGraph, String pathHumanVulnerability,
+            String pathAccessGraph, String pathNetworkGraph, String pathNetworkVulnerability){
         flushGraph();
-        addHumanLayer();
-        addNetworkLayer();
-        addAccessLayer();
+        addHumanLayer(pathHumanGraph, pathHumanVulnerability);
+        addNetworkLayer(pathAccessGraph, pathHumanVulnerability);
+        addAccessLayer(pathNetworkGraph, pathNetworkVulnerability);
     }
     
     /* This method put all human edges in a list with all the information in

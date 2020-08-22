@@ -8,7 +8,6 @@
  */
 package ontologyModels;
 
-import config.Config;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -24,16 +23,6 @@ import org.apache.jena.rdf.model.ModelFactory;
 
 public class ISO_Model {
     
-    Config conf = new Config();
-    // Source file
-    final String datasetPath = conf.getIsoCsvPath();
-    // Destination file
-    final String ontologyPath = conf.getIsoOwlPath();
-    // Format of the output file
-    String formatFile = conf.getFormatOntology(); 
-    // Local namespace for entities
-    final String uri = conf.getUriIso();
-
     /*
     The method createISOModel creates the ontology of the ISO 27001:2013 
     controls taking in input a file with the following elements:
@@ -42,7 +31,7 @@ public class ISO_Model {
     It writes the model into a file stored in the dataset package and it 
     returns the OntoModel.
     */
-    public OntModel createISOModel(){
+    public OntModel createISOModel(String datasetPath, String ontologyPath, String formatFile, String uri){
         
         // Initialize the model for the ontology
         OntModel m = ModelFactory.createOntologyModel();

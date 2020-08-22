@@ -6,7 +6,6 @@
  */
 package control;
 
-import config.Config;
 import control.models.Alignment;
 import control.models.Factor;
 import control.models.MappingParam;
@@ -31,23 +30,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class ParseAlignment {
-    
-    // Attributes (paths)
-    Config conf = new Config();
-    private String datasetIso = conf.getIsoCsvPath();
-    private String datasetNist = conf.getNistCsvPath();
-    
-    private String alignmentIsoAg = conf.getAlignmentIsoAgPath();
-    private String alignmentIsoManagement = conf.getAlignmentIsoManagementPath();
-    private String alignmentNistAg = conf.getAlignmentNistAgPath();
-    private String alignmentNistManagement = conf.getAlignmentNistManagementPath();
-    
-    private String assessmentIso = conf.getAssessmentIsoReal();
-    private String assessmentNist = conf.getAssessmentNistReal();
-    
-    private String outputMappingIso = conf.getAlignmentIsoFinalPath();
-    private String outputMappingNist = conf.getAlignmentNistFinalPath();
-    
 
     /**
      * This method gets in input the rdf file with the alignment and return the
@@ -95,44 +77,6 @@ public class ParseAlignment {
         } catch (Exception e) {}
         return totalAlignment;
     }
-    
-    /*
-    public void initializeFinalMapping(){
-        Config conf = new Config();
-        BufferedReader br = null;
-        FileWriter fw = null;
-        try {
-            br = new BufferedReader(new FileReader(conf.getIsoCsvPath()));
-            br.readLine(); // skip the first line (header)
-            String line;
-            
-            fw = new FileWriter(conf.getAlignmentIsoFinalPath());
-            fw.append("ID;H;A;N;Runtime;Designtime;Operational;Compliance;Assessment\n");
-
-            while((line = br.readLine()) != null) {
-                                
-                String[] data = line.split(";");
-                
-                String idCsv = data[0];
-                
-                fw.append(idCsv+";NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN\n");
-                
-            }
-        }
-        catch (FileNotFoundException e) {}
-        catch (IOException e) {}
-        finally {
-            if (br != null){
-                try {br.close();}
-                catch (IOException e) {}
-            }
-            if(fw != null){
-                try{fw.flush();fw.close();}
-                catch (IOException e) {}
-            }
-        }
-    }
-    */
     
     /**
      * This method gets in input an alignment in order to extend the information
@@ -331,9 +275,15 @@ public class ParseAlignment {
     }
     
     /**
-     * This method organize all above methods to write final output file
+     * This method organizes all above methods to write final output file
+     * @param datasetIso
+     * @param alignmentIsoAg
+     * @param alignmentIsoManagement
+     * @param outputMappingIso
+     * @param assessmentIso
      */
-    public void writeMappingFromAlignmentIso(){
+    public void writeMappingFromAlignmentIso(String datasetIso, String alignmentIsoAg, 
+            String alignmentIsoManagement, String assessmentIso, String outputMappingIso){
         
         ArrayList<Alignment> alignmentAg = parseAlignment(alignmentIsoAg);
         ArrayList<Alignment> alignmentManagement = parseAlignment(alignmentIsoManagement);

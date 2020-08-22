@@ -6,7 +6,6 @@
  */
 package control;
 
-import config.Config;
 import control.models.Factor;
 import control.models.MappingParam;
 import java.io.BufferedReader;
@@ -14,20 +13,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import static java.lang.Double.parseDouble;
-import static java.lang.Float.parseFloat;
 import java.util.ArrayList;
 
 public class ValidationControl {
-    
-    final String alignmentISOPath = new Config().getAlignmentIsoFinalPath();
-    
+        
     /*
     This method parse the file containing the allignment with the elements:
     ID;H;A;N;Runtime;Designtime;Operational;Compliance;Assessment
     and put such information into a list of MappingParam.
     In this way the information are accessible without reading the file everytime.
     */
-    public ArrayList<MappingParam> parseValidationFile(){
+    public ArrayList<MappingParam> parseValidationFile(String alignmentISOPath){
         
         ArrayList<MappingParam> mappings = new ArrayList();
         

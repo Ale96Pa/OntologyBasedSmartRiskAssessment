@@ -8,7 +8,6 @@
  */
 package ontologyModels;
 
-import config.Config;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -22,20 +21,8 @@ import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.rdf.model.ModelFactory;
 
-
-
 public class NIST_Model {
-    
-    Config conf = new Config();
-    // Source file
-    final String datasetPath = conf.getNistCsvPath();
-    // Destination file
-    final String ontologyPath = conf.getNistOwlPath();
-    // Format of the output file
-    String formatFile = conf.getFormatOntology(); 
-    // Local namespace for entities
-    final String uri = conf.getUriNist();
-    
+
     /*
     The method createNISTModel creates the ontology of the NIST 800-53 
     controls taking in input a file with the following elements:
@@ -43,7 +30,8 @@ public class NIST_Model {
     It writes the model into a file stored in the dataset package and it 
     returns the OntoModel.
     */
-    public OntModel createNISTModel() {
+    public OntModel createNISTModel(String datasetPath, String ontologyPath, 
+            String formatFile, String uri) {
         
         // Initialize the model for the ontology
         OntModel m = ModelFactory.createOntologyModel();

@@ -7,7 +7,6 @@
  */
 package control;
 
-import config.Config;
 import control.models.Discount;
 import control.models.MappingParam;
 import control.models.Edge;
@@ -21,18 +20,12 @@ import java.util.Collections;
 
 public class DiscountControl {
     
-    Config conf = new Config();
-    final String pathMatchingISO = conf.getAlignmentIsoFinalPath();
-    final String uriNeo4j = conf.getUri();
-    final String usernameNeo4j = conf.getUser();
-    final String passwordNeo4j = conf.getPassword();
-    
     /**
      * This file return an array of three Factors, one per each layer, with
      * information about the mapping factor
      * @return 
      */
-    private ArrayList<Factor> calculateMatchingLayer(){
+    private ArrayList<Factor> calculateMatchingLayer(String pathMatchingISO){
         ArrayList<Factor> factors = new ArrayList(); 
         BufferedReader br = null;
         
@@ -98,7 +91,8 @@ public class DiscountControl {
      * @param layer
      * @return 
      */
-    private ArrayList<Edge> calculateLambda(ArrayList<Discount> discounts, String layer){
+    private ArrayList<Edge> calculateLambda(ArrayList<Discount> discounts, String layer,
+            String uriNeo4j, String usernameNeo4j, String passwordNeo4j){
                 
         ArrayList<Edge> edgesWithDiscount = new ArrayList();
         GraphDbControl gc = new GraphDbControl(uriNeo4j, usernameNeo4j, passwordNeo4j);
@@ -207,9 +201,9 @@ public class DiscountControl {
      * by the paper [1].
      * @return 
      */
-    private ArrayList<Factor> calculateValidation(){
+    private ArrayList<Factor> calculateValidation(String alignmentISOPath){
         ValidationControl vc = new ValidationControl();
-        ArrayList<MappingParam> mp = vc.parseValidationFile();
+        ArrayList<MappingParam> mp = vc.parseValidationFile(alignmentISOPath);
         return vc.caluclateValidationFactor(mp);
     }
     
@@ -220,7 +214,7 @@ public class DiscountControl {
      * @param factorControls
      * @return 
      */
-    private double normalizeWithAssessment(String mappingFilePath, /*ArrayList<Edge> edges,*/ ArrayList<Factor> factorControls){
+    private double normalizeWithAssessment(String mappingFilePath, ArrayList<Factor> factorControls){
         double cv =0;
         int numC=0, numPC=0, numNC=0;
         
@@ -322,9 +316,10 @@ public class DiscountControl {
     /**
      * Final method for calculating the discount factor also including lambda
      */
-    public void calculateFormula(){
-        ArrayList<Factor> fLayers = calculateMatchingLayer();
-        ArrayList<Factor> fValid = calculateValidation();
+    public void calculateFormula(String pathMatchingISO, String alignmentISOPath,
+            String uriNeo4j, String usernameNeo4j, String passwordNeo4j){
+        ArrayList<Factor> fLayers = calculateMatchingLayer(pathMatchingISO);
+        ArrayList<Factor> fValid = calculateValidation(alignmentISOPath);
         ArrayList<Factor> fManag = calculateManagement(pathMatchingISO);
         
         ArrayList<Factor> factorsHuman = new ArrayList();
@@ -367,9 +362,9 @@ public class DiscountControl {
         double cvAccess = normalizeWithAssessment(pathMatchingISO, factorsAccess);
         double cvNetwork = normalizeWithAssessment(pathMatchingISO, factorsNetwork);
 
-        edgeH = calculateLambda(disH, "human");
-        edgeA = calculateLambda(disA, "access");
-        edgeN = calculateLambda(disN, "network");
+        edgeH = calculateLambda(disH, "human", uriNeo4j, usernameNeo4j, passwordNeo4j);
+        edgeA = calculateLambda(disA, "access", uriNeo4j, usernameNeo4j, passwordNeo4j);
+        edgeN = calculateLambda(disN, "network", uriNeo4j, usernameNeo4j, passwordNeo4j);
 
         for(Edge e: edgeH){
             edgeFinalH.add(new Edge(e.getLayer(), e.getLambda()*cvHuman, e.getDescriptionId()));
