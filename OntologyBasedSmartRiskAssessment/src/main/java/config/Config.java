@@ -13,6 +13,7 @@ public class Config {
     // Path of files having information to build the ontology (sources)
     private String attackGraphDataset = "src\\main\\java\\dataset\\AG\\";
     private String rootDataset = "src\\main\\java\\dataset\\";
+    private String rootOutput = "src\\main\\java\\dataset\\output\\";
     
     private String isoCsvPath = rootDataset+"ISO.csv";
     private String nistCsvPath = rootDataset+"NIST.csv";
@@ -45,11 +46,11 @@ public class Config {
     
     // Path of file having the alignment of all the ontologies
     private String alignmentDataset = "src\\main\\java\\dataset\\alignment\\";
-    private String alignmentIsoFinalPath = alignmentDataset + "iso\\MappingISOTotal.csv";
+    private String alignmentIsoFinalPath = alignmentDataset + "iso\\MappingISO";
     private String alignmentIsoAgPath = alignmentDataset +"iso\\iso-ag-alignment.rdf";
     private String alignmentIsoManagementPath = alignmentDataset + "iso\\iso-management-alignment.rdf";
     
-    private String alignmentNistFinalPath = alignmentDataset + "nist\\MappingNISTTotal.csv";
+    private String alignmentNistFinalPath = alignmentDataset + "nist\\MappingNIST";
     private String alignmentNistAgPath = alignmentDataset +"nist\\nist-ag-alignment.rdf";
     private String alignmentNistManagementPath = alignmentDataset + "nist\\nist-management-alignment.rdf";
     
@@ -65,6 +66,23 @@ public class Config {
     private String uri = "bolt://localhost:7687";
     private String user = "admin";
     private String password = "admin";
+    
+    // Wiegths for discount formula
+    private double weightMatching = 1.0;
+    private double weightLambda = 1.0;
+    private double weightManagement = 1.0;
+    private double weightValidation = 1.0;
+    
+    // Paths for output files
+    private String outputIsoC = rootOutput + "outputIsoC.csv";
+    private String outputIsoPC = rootOutput + "outputIsoPC.csv";
+    private String outputIsoNC = rootOutput + "outputIsoNC.csv";
+    private String outputIsoReal = rootOutput + "outputIsoReal.csv";
+    
+    private String outputNistC = rootOutput + "outputNistC.csv";
+    private String outputNistPC = rootOutput + "outputNistPC.csv";
+    private String outputNistNC = rootOutput + "outputNistNC.csv";
+    private String outputNistReal = rootOutput + "outputNistReal.csv";
     
     // Getter methods
     public String getHumanGraphPath() {
@@ -205,6 +223,54 @@ public class Config {
 
     public String getAssessmentNistReal() {
         return assessmentNistReal;
+    }
+
+    public double getWeightMatching() {
+        return weightMatching;
+    }
+
+    public double getWeightLambda() {
+        return weightLambda;
+    }
+
+    public double getWeightManagement() {
+        return weightManagement;
+    }
+
+    public double getWeightValidation() {
+        return weightValidation;
+    }
+
+    public String getOutputIsoC() {
+        return outputIsoC;
+    }
+
+    public String getOutputIsoPC() {
+        return outputIsoPC;
+    }
+
+    public String getOutputIsoNC() {
+        return outputIsoNC;
+    }
+
+    public String getOutputIsoReal() {
+        return outputIsoReal;
+    }
+
+    public String getOutputNistC() {
+        return outputNistC;
+    }
+
+    public String getOutputNistPC() {
+        return outputNistPC;
+    }
+
+    public String getOutputNistNC() {
+        return outputNistNC;
+    }
+
+    public String getOutputNistReal() {
+        return outputNistReal;
     }
     
     

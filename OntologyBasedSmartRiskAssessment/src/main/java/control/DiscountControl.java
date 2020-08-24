@@ -14,9 +14,12 @@ import control.models.Factor;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DiscountControl {
     
@@ -25,7 +28,7 @@ public class DiscountControl {
      * information about the mapping factor
      * @return 
      */
-    private ArrayList<Factor> calculateMatchingLayer(String pathMatchingISO){
+    private ArrayList<Factor> calculateMatchingLayer(String pathMatchingISO, double weight){
         ArrayList<Factor> factors = new ArrayList(); 
         BufferedReader br = null;
         
@@ -52,7 +55,7 @@ public class DiscountControl {
                 if(access != 0.0){valDiscountA = ((gapLayer/2) + access)/2;}
                 if(network != 0.0){valDiscountN = ((gapLayer/2) + network)/2;}
                 
-                if(gapLayer < 0.3){
+                if(gapLayer < 0.35){
                     resultH = -valDiscountH;
                     resultA = -valDiscountA;
                     resultN = -valDiscountN;
@@ -63,9 +66,9 @@ public class DiscountControl {
                     resultN = valDiscountN;
                 }
                 
-                Factor factH = new Factor(controlId, resultH, "human");
-                Factor factA = new Factor(controlId, resultA, "access");
-                Factor factN = new Factor(controlId, resultN, "network");
+                Factor factH = new Factor(controlId, weight*resultH, "human");
+                Factor factA = new Factor(controlId, weight*resultA, "access");
+                Factor factN = new Factor(controlId, weight*resultN, "network");
                 
                 factors.add(factH);
                 factors.add(factA);
@@ -92,7 +95,7 @@ public class DiscountControl {
      * @return 
      */
     private ArrayList<Edge> calculateLambda(ArrayList<Discount> discounts, String layer,
-            GraphDbControl gc){
+            GraphDbControl gc, double weight){
                 
         ArrayList<Edge> edgesWithDiscount = new ArrayList();        
         ArrayList<Double> lambdas = new ArrayList();
@@ -127,11 +130,11 @@ public class DiscountControl {
             
             if(lambda <= threshold1){
                 double dis1 = disInLayerPlus;
-                double dis2 = (disInLayerMinus-lambda)/2;
+                double dis2 = (disInLayerMinus-(weight*lambda))/2;
                 finalDis = dis1 + dis2;
             }
             else if(lambda >= threshold2){
-                double dis1 = (disInLayerPlus+lambda)/2;
+                double dis1 = (disInLayerPlus+(weight*lambda))/2;
                 double dis2 = disInLayerMinus;
                 finalDis = dis1 + dis2;
             }
@@ -151,7 +154,7 @@ public class DiscountControl {
      * @param pathFinalMapping
      * @return 
      */
-    private ArrayList<Factor> calculateManagement(String pathFinalMapping){
+    private ArrayList<Factor> calculateManagement(String pathFinalMapping, double weight){
         ArrayList<Factor> factors = new ArrayList();
         BufferedReader br = null;
         
@@ -180,7 +183,7 @@ public class DiscountControl {
                     else if(operational < compliance){result = -0.25;}
                 }
                 
-                Factor fact = new Factor(controlId, result, "management");
+                Factor fact = new Factor(controlId, weight*result, "management");
                 factors.add(fact);
             }
         }
@@ -200,10 +203,10 @@ public class DiscountControl {
      * by the paper [1].
      * @return 
      */
-    private ArrayList<Factor> calculateValidation(String alignmentISOPath){
+    private ArrayList<Factor> calculateValidation(String alignmentISOPath, double weight){
         ValidationControl vc = new ValidationControl();
         ArrayList<MappingParam> mp = vc.parseValidationFile(alignmentISOPath);
-        return vc.caluclateValidationFactor(mp);
+        return vc.caluclateValidationFactor(mp, weight);
     }
     
     /**
@@ -236,9 +239,16 @@ public class DiscountControl {
                     }
                 }
             }
+            if((numC+numPC+numNC) == 0){
+                cv = 0.1;
+            } else {
+                cv = ((0.9*numC) + (0.5*numPC) + (0.1*numNC))/(numC+numPC+numNC);
+            }
+            /*        
             if(numC >= numPC && numC >= numNC){cv=0.9;}
             else if(numPC > numC && numPC >= numNC){cv=0.4;}
             else{cv=0.1;}
+            */        
         }
         catch (FileNotFoundException e) {}
         catch (IOException e) {}
@@ -315,10 +325,11 @@ public class DiscountControl {
     /**
      * Final method for calculating the discount factor also including lambda
      */
-    public void calculateFormula(String pathMatchingISO, GraphDbControl gc){
-        ArrayList<Factor> fLayers = calculateMatchingLayer(pathMatchingISO);
-        ArrayList<Factor> fValid = calculateValidation(pathMatchingISO);
-        ArrayList<Factor> fManag = calculateManagement(pathMatchingISO);
+    public void calculateFormula(String pathMatchingISO, String outputFile, GraphDbControl gc, 
+            double weightMatch, double weightLambda, double weightManag, double weightValid){
+        ArrayList<Factor> fLayers = calculateMatchingLayer(pathMatchingISO, weightMatch);
+        ArrayList<Factor> fValid = calculateValidation(pathMatchingISO, weightValid);
+        ArrayList<Factor> fManag = calculateManagement(pathMatchingISO, weightManag);
         
         ArrayList<Factor> factorsHuman = new ArrayList();
         ArrayList<Factor> factorsAccess = new ArrayList();
@@ -360,9 +371,9 @@ public class DiscountControl {
         double cvAccess = normalizeWithAssessment(pathMatchingISO, factorsAccess);
         double cvNetwork = normalizeWithAssessment(pathMatchingISO, factorsNetwork);
 
-        edgeH = calculateLambda(disH, "human", gc);
-        edgeA = calculateLambda(disA, "access", gc);
-        edgeN = calculateLambda(disN, "network", gc);
+        edgeH = calculateLambda(disH, "human", gc, weightLambda);
+        edgeA = calculateLambda(disA, "access", gc, weightLambda);
+        edgeN = calculateLambda(disN, "network", gc, weightLambda);
 
         for(Edge e: edgeH){
             edgeFinalH.add(new Edge(e.getLayer(), e.getLambda()*cvHuman, e.getDescriptionId()));
@@ -376,14 +387,28 @@ public class DiscountControl {
             edgeFinalN.add(new Edge(e.getLayer(), e.getLambda()*cvNetwork, e.getDescriptionId()));
         }
         
-        for(Edge e : edgeFinalH){
-            System.out.println(e.getDescriptionId() + " discount factor: " + e.getLambda());
-        }
-        for(Edge e : edgeFinalA){
-            System.out.println(e.getDescriptionId() + " discount factor: " + e.getLambda());
-        }
-        for(Edge e : edgeFinalN){
-            System.out.println(e.getDescriptionId() + " discount factor: " + e.getLambda());
+        FileWriter fw = null;
+        try {
+            fw = new FileWriter(outputFile);
+            fw.write(""); // Erase previous content
+            fw.append("Layer;Edge;Discount\n");
+            
+            for(Edge e : edgeFinalH){
+                //System.out.println(e.getDescriptionId() + " discount factor: " + e.getLambda());
+                fw.append("human;"+ e.getDescriptionId() +";"+e.getLambda()+"\n");
+            }
+            for(Edge e : edgeFinalA){
+                //System.out.println(e.getDescriptionId() + " discount factor: " + e.getLambda());
+                fw.append("access;"+ e.getDescriptionId() +";"+e.getLambda()+"\n");
+            }
+            for(Edge e : edgeFinalN){
+                //System.out.println(e.getDescriptionId() + " discount factor: " + e.getLambda());
+                fw.append("network;"+ e.getDescriptionId() +";"+e.getLambda()+"\n");
+            }
+        } catch (IOException ex) {
+        } finally {
+            try {fw.close();}
+            catch (IOException ex) {}
         }
         
     }

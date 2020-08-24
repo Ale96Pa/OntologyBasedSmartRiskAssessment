@@ -102,7 +102,7 @@ public class ValidationControl {
     the formula reported in the paper.
     Moreover this factor is used for the calculation of discount factor.
     */
-    public ArrayList<Factor> caluclateValidationFactor(ArrayList<MappingParam> mappings){
+    public ArrayList<Factor> caluclateValidationFactor(ArrayList<MappingParam> mappings, double weight){
          
         ArrayList<Factor> factors = new ArrayList();
         
@@ -145,7 +145,7 @@ public class ValidationControl {
             val = (lt+ml+Prc+maxGap)/denominator;
             
             //System.out.println(id + " has validation factor: " + val);
-            Factor f = new Factor(id, val, "validation");
+            Factor f = new Factor(id, weight*val, "validation");
             factors.add(f);
         }
         return factors;

@@ -85,7 +85,7 @@ public class ParseAlignment {
      * @param alignment
      * @return 
      */
-    private ArrayList<Factor> buildFactor(String pathStandardCsv, Alignment alignment){
+    private ArrayList<Factor> buildFactor(String pathStandardCsv, Alignment alignment, String standard){
         ArrayList<Factor> factors = new ArrayList();
         BufferedReader br = null;
         
@@ -97,8 +97,17 @@ public class ParseAlignment {
             while((line = br.readLine()) != null) {
                 String controlContent=alignment.getSourceUri().split(";")[1].replace("%20", " ");
                 double matchingValue=alignment.getMatchingValue();
-                String label =alignment.getTargetUri().split("#")[1].split(";")[0];
-                String controlCsvId = line.split(";")[0];
+                String label = alignment.getTargetUri().split("#")[1].split(";")[0];
+                
+                String controlCsvId = "";
+                switch (standard) {
+                    case "iso":
+                        controlCsvId = line.split(";")[0];
+                        break;
+                    case "nist":
+                        controlCsvId = line.split(";")[1];
+                        break;
+                }
                 
                 if(line.contains(controlContent)){
                     Factor fact = new Factor(controlCsvId, matchingValue, label);
@@ -125,10 +134,11 @@ public class ParseAlignment {
      * @param alignments
      * @return 
      */
-    private ArrayList<Factor> writeAllFactors(String pathStandardCsv, ArrayList<Alignment> alignments){
+    private ArrayList<Factor> writeAllFactors(String pathStandardCsv, 
+            ArrayList<Alignment> alignments, String standard){
         ArrayList<Factor> factorsAll = new ArrayList();
         for(Alignment a : alignments){
-            ArrayList<Factor> facts = buildFactor(pathStandardCsv, a);
+            ArrayList<Factor> facts = buildFactor(pathStandardCsv, a, standard);
             for(Factor f : facts){
                 factorsAll.add(f);
             }
@@ -257,7 +267,7 @@ public class ParseAlignment {
                 double h = m.getHuman();
                 double a = m.getAccess();
                 double n = m.getNetwork();
-                double rt =m.getRuntime() ;
+                double rt = m.getRuntime() ;
                 double dt = m.getDesigntime();
                 double op = m.getOperational();
                 double compl = m.getCompliance();
@@ -281,9 +291,10 @@ public class ParseAlignment {
      * @param alignmentWithManagement
      * @param outputMapping
      * @param assessment
+     * @param standard: iso or nist
      */
     public void writeMappingFromAlignment(String datasetCsv, String alignmentWithAg, 
-            String alignmentWithManagement, String assessment, String outputMapping){
+            String alignmentWithManagement, String assessment, String outputMapping, String standard){
         
         ArrayList<Alignment> alignmentAg = parseAlignment(alignmentWithAg);
         ArrayList<Alignment> alignmentManagement = parseAlignment(alignmentWithManagement);
@@ -295,7 +306,7 @@ public class ParseAlignment {
         for(Alignment a : alignmentAg){alignmentAll.add(a);}
         for(Alignment a : alignmentManagement){alignmentAll.add(a);}
         
-        factorsAll = writeAllFactors(datasetCsv, alignmentAll);
+        factorsAll = writeAllFactors(datasetCsv, alignmentAll, standard);
         
         mappings = collectData(factorsAll);
        

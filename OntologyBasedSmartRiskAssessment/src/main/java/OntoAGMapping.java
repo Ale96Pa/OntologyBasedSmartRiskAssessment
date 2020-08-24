@@ -65,9 +65,26 @@ public class OntoAGMapping {
     private static String user = conf.getUser();
     private static String password = conf.getPassword();
     
+    // Wiegths for discount formula
+    private static double weightMatching = conf.getWeightMatching();
+    private static double weightLambda = conf.getWeightLambda();
+    private static double weightManagement = conf.getWeightManagement();
+    private static double weightValidation = conf.getWeightValidation();
+    
+    // Paths for output files
+    private static String outputIsoC = conf.getOutputIsoC();
+    private static String outputIsoPC = conf.getOutputIsoPC();
+    private static String outputIsoNC = conf.getOutputIsoNC();
+    private static String outputIsoReal = conf.getOutputIsoReal();
+    
+    private static String outputNistC = conf.getOutputNistC();
+    private static String outputNistPC = conf.getOutputNistPC();
+    private static String outputNistNC = conf.getOutputNistNC();
+    private static String outputNistReal = conf.getOutputNistReal();
+    
     public static void main(String[] args){
         
-        // 1 - Build the ontologies
+/*        // 1 - Build the ontologies
         ISO_Model IsoOnto = new ISO_Model();
         OntModel modelIso = IsoOnto.createISOModel(isoCsvPath,isoOwlPath,formatOntology,uriIso);
 
@@ -87,25 +104,25 @@ public class OntoAGMapping {
         ParseAlignment pa = new ParseAlignment();
             //3.1: ISO all C
         pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
-                alignmentIsoManagementPath, assessmentIsoC, alignmentIsoFinalPath+"C.csv");
+                alignmentIsoManagementPath, assessmentIsoC, alignmentIsoFinalPath+"C.csv", "iso");
             //3.2: ISO all PC
         pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
-                alignmentIsoManagementPath, assessmentIsoPC, alignmentIsoFinalPath+"PC.csv");
+                alignmentIsoManagementPath, assessmentIsoPC, alignmentIsoFinalPath+"PC.csv", "iso");
             //3.3: ISO all NC
         pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
-                alignmentIsoManagementPath, assessmentIsoNC, alignmentIsoFinalPath+"NC.csv");
-        /*
+                alignmentIsoManagementPath, assessmentIsoNC, alignmentIsoFinalPath+"NC.csv", "iso");
+/*      
             //3.4: NIST all C
         pa.writeMappingFromAlignment(nistCsvPath, alignmentNistAgPath, 
-                alignmentNistManagementPath, assessmentNistC, alignmentNistFinalPath+"C.csv");
+                alignmentNistManagementPath, assessmentNistC, alignmentNistFinalPath+"C.csv", "nist");
             //3.5: NIST all PC
         pa.writeMappingFromAlignment(nistCsvPath, alignmentNistAgPath, 
-                alignmentNistManagementPath, assessmentNistPC, alignmentNistFinalPath+"PC.csv");
+                alignmentNistManagementPath, assessmentNistPC, alignmentNistFinalPath+"PC.csv", "nist");
             //3.6: NIST all NC
         pa.writeMappingFromAlignment(nistCsvPath, alignmentNistAgPath, 
-                alignmentNistManagementPath, assessmentNistNC, alignmentNistFinalPath+"NC.csv");
-        */
-        
+                alignmentNistManagementPath, assessmentNistNC, alignmentNistFinalPath+"NC.csv", "nist");
+*/       
+       
         // 4 - Build the graph with lambda factors
         GraphDbControl gc = new GraphDbControl(uri, user, password);
         gc.buildGraph(humanGraphPath, humanVulnerabilityPath, accessGraphPath, 
@@ -113,23 +130,21 @@ public class OntoAGMapping {
         
         // 5 - Evaluate discount formula
         DiscountControl dc = new DiscountControl();
-        
             //5.1: ISO all C
-        dc.calculateFormula(alignmentIsoFinalPath+"C.csv", gc);
+        dc.calculateFormula(alignmentIsoFinalPath+"C.csv", outputIsoC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
             //5.2: ISO all PC
-        dc.calculateFormula(alignmentIsoFinalPath+"PC.csv", gc);
+        dc.calculateFormula(alignmentIsoFinalPath+"PC.csv", outputIsoPC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
             //5.3: ISO all NC
-        dc.calculateFormula(alignmentIsoFinalPath+"NC.csv", gc);
-        
-        /*
-            //5.1: ISO all C
-        dc.calculateFormula(alignmentNistFinalPath+"C.csv", uri, user, password);
-            //5.2: ISO all PC
-        dc.calculateFormula(alignmentNistFinalPath+"PC.csv", uri, user, password);
-            //5.3: ISO all NC
-        dc.calculateFormula(alignmentNistFinalPath+"NC.csv", uri, user, password);
-        */
-        
+        dc.calculateFormula(alignmentIsoFinalPath+"NC.csv", outputIsoNC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
+
+/*            //5.1: NIST all C
+        dc.calculateFormula(alignmentNistFinalPath+"C.csv", outputNistC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
+            //5.2: NIST all PC
+        dc.calculateFormula(alignmentNistFinalPath+"PC.csv", outputNistPC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
+            //5.3: NIST all NC
+        dc.calculateFormula(alignmentNistFinalPath+"NC.csv", outputNistNC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
+*/
+        // Close connection
         gc.close(); // Close neo4j connection
         
     }
