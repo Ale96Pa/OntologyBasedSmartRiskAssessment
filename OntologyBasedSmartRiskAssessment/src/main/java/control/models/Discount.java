@@ -7,33 +7,60 @@ package control.models;
 public class Discount {
     
     //Attributes
-    double disPositive;
-    int numElemPositive;
-    double disNegative;
-    int numElemNegative;
+    double mappingFactor;
+    double managementFactor;
+    double validationFactor;
+    double lambdaFactor;
     
     //Constructor
-    public Discount(double disPositive, int numElemPositive, double disNegative, int numElemNegative) {
-        this.disPositive = disPositive;
-        this.numElemPositive = numElemPositive;
-        this.disNegative = disNegative;
-        this.numElemNegative = numElemNegative;
+    public Discount(double mappingFactor, double managementFactor, double validationFactor) {
+        this.mappingFactor = mappingFactor;
+        this.managementFactor = managementFactor;
+        this.validationFactor = validationFactor;
     }
 
+    public Discount(double mappingFactor, double managementFactor, double validationFactor, double lambdaFactor) {
+        this.mappingFactor = mappingFactor;
+        this.managementFactor = managementFactor;
+        this.validationFactor = validationFactor;
+        this.lambdaFactor = lambdaFactor;
+    }
+    
+
+    
     // Methods
-    public double getDisPositive() {return disPositive;}
 
-    public void setDisPositive(double disPositive) {this.disPositive = disPositive;}
+    public double getMappingFactor() {
+        return mappingFactor;
+    }
 
-    public double getDisNegative() {return disNegative;}
+    public void setMappingFactor(double mappingFactor) {
+        this.mappingFactor = mappingFactor;
+    }
 
-    public void setDisNegative(double disNegative) {this.disNegative = disNegative;}
+    public double getManagementFactor() {
+        return managementFactor;
+    }
 
-    public int getNumElemPositive() {return numElemPositive;}
+    public void setManagementFactor(double managementFactor) {
+        this.managementFactor = managementFactor;
+    }
 
-    public void setNumElemPositive(int numElemPositive) {this.numElemPositive = numElemPositive;}
+    public double getValidationFactor() {
+        return validationFactor;
+    }
 
-    public int getNumElemNegative() {return numElemNegative;}
+    public void setValidationFactor(double validationFactor) {
+        this.validationFactor = validationFactor;
+    }
 
-    public void setNumElemNegative(int numElemNegative) {this.numElemNegative = numElemNegative;}
+    public double getLambdaFactor() {
+        return lambdaFactor;
+    }
+
+    public void setLambdaFactor(double lambdaFactor) {
+        this.lambdaFactor = lambdaFactor;
+    }
+    
+
 }

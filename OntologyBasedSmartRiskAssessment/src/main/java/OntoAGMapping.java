@@ -84,7 +84,7 @@ public class OntoAGMapping {
     
     public static void main(String[] args){
         
-/*        // 1 - Build the ontologies
+        // 1 - Build the ontologies
         ISO_Model IsoOnto = new ISO_Model();
         OntModel modelIso = IsoOnto.createISOModel(isoCsvPath,isoOwlPath,formatOntology,uriIso);
 
