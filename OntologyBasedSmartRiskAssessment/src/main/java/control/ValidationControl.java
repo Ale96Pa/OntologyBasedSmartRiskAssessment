@@ -23,13 +23,13 @@ public class ValidationControl {
     and put such information into a list of MappingParam.
     In this way the information are accessible without reading the file everytime.
     */
-    public ArrayList<MappingParam> parseValidationFile(String alignmentISOPath){
+    public ArrayList<MappingParam> parseValidationFile(String alignmentStandardPath){
         
         ArrayList<MappingParam> mappings = new ArrayList();
         
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader(alignmentISOPath));
+            br = new BufferedReader(new FileReader(alignmentStandardPath));
             br.readLine(); // skip the first line (header)
             String line;
             
@@ -78,10 +78,10 @@ public class ValidationControl {
     mentioned in the description of this file).
     */
     public int rescalePercentageToFour(double percentage){
-        if(percentage > 20 && percentage <=40){return 1;}
-        else if(percentage > 40 && percentage <=60){return 2;}
-        else if(percentage > 60 && percentage <=80){return 3;}
-        else if(percentage > 80){return 4;}
+        if(percentage > 0.2 && percentage <=0.4){return 1;}
+        else if(percentage > 0.4 && percentage <=0.6){return 2;}
+        else if(percentage > 0.6 && percentage <=0.8){return 3;}
+        else if(percentage > 0.8){return 4;}
         else {return 0;}
     }
     
@@ -91,8 +91,8 @@ public class ValidationControl {
     mentioned in the description of this file).
     */
     public int rescalePercentageToTwo(double percentage){
-        if(percentage > 20 && percentage <= 60){return 1;}
-        else if(percentage > 60){return 2;}
+        if(percentage > 0.2 && percentage <= 0.6){return 1;}
+        else if(percentage > 0.6){return 2;}
         else {return 0;}
     }
     

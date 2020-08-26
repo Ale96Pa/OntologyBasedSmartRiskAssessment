@@ -111,7 +111,7 @@ public class OntoAGMapping {
             //3.3: ISO all NC
         pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
                 alignmentIsoManagementPath, assessmentIsoNC, alignmentIsoFinalPath+"NC.csv", "iso");
-/*      
+      
             //3.4: NIST all C
         pa.writeMappingFromAlignment(nistCsvPath, alignmentNistAgPath, 
                 alignmentNistManagementPath, assessmentNistC, alignmentNistFinalPath+"C.csv", "nist");
@@ -121,7 +121,13 @@ public class OntoAGMapping {
             //3.6: NIST all NC
         pa.writeMappingFromAlignment(nistCsvPath, alignmentNistAgPath, 
                 alignmentNistManagementPath, assessmentNistNC, alignmentNistFinalPath+"NC.csv", "nist");
-*/       
+        
+            // 3.7 & 3.8: ISO and NIST "real"/mixed assessment
+        pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
+                alignmentIsoManagementPath, assessmentIsoReal, alignmentIsoFinalPath+"Real.csv", "iso");
+        pa.writeMappingFromAlignment(nistCsvPath, alignmentNistAgPath, 
+                alignmentNistManagementPath, assessmentNistReal, alignmentNistFinalPath+"Real.csv", "nist");
+       
        
         // 4 - Build the graph with lambda factors
         GraphDbControl gc = new GraphDbControl(uri, user, password);
@@ -131,19 +137,31 @@ public class OntoAGMapping {
         // 5 - Evaluate discount formula
         DiscountControl dc = new DiscountControl();
             //5.1: ISO all C
-        dc.calculateFormula(alignmentIsoFinalPath+"C.csv", outputIsoC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
+        dc.calculateFormula(alignmentIsoFinalPath+"C.csv", outputIsoC, gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
             //5.2: ISO all PC
-        dc.calculateFormula(alignmentIsoFinalPath+"PC.csv", outputIsoPC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
+        dc.calculateFormula(alignmentIsoFinalPath+"PC.csv", outputIsoPC, gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
             //5.3: ISO all NC
-        dc.calculateFormula(alignmentIsoFinalPath+"NC.csv", outputIsoNC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
+        dc.calculateFormula(alignmentIsoFinalPath+"NC.csv", outputIsoNC, gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
 
-/*            //5.1: NIST all C
-        dc.calculateFormula(alignmentNistFinalPath+"C.csv", outputNistC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
-            //5.2: NIST all PC
-        dc.calculateFormula(alignmentNistFinalPath+"PC.csv", outputNistPC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
-            //5.3: NIST all NC
-        dc.calculateFormula(alignmentNistFinalPath+"NC.csv", outputNistNC, gc, weightMatching, weightLambda, weightManagement, weightValidation);
-*/
+            //5.4: NIST all C
+        dc.calculateFormula(alignmentNistFinalPath+"C.csv", outputNistC, gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
+            //5.5: NIST all PC
+        dc.calculateFormula(alignmentNistFinalPath+"PC.csv", outputNistPC, gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
+            //5.6: NIST all NC
+        dc.calculateFormula(alignmentNistFinalPath+"NC.csv", outputNistNC, gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
+
+            // 5.7 & 5.8: ISO and NIST "real"/mixed assessment
+        dc.calculateFormula(alignmentIsoFinalPath+"Real.csv", outputIsoReal, gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
+        dc.calculateFormula(alignmentNistFinalPath+"Real.csv", outputNistReal, gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
+            
         // Close connection
         gc.close(); // Close neo4j connection
         

@@ -1,81 +1,81 @@
 Layer;Edge;Discount
-human;[source:OWN@doctor1, destination:OWN@resident1, vulnId:unprotected_credential, explType:PROXIMITY];0.027553749913119138
-human;[source:OWN@resident1, destination:USE@doctor1, vulnId:no_logout, explType:PROXIMITY];0.041578749913119134
-human;[source:OWN@resident1, destination:OWN@doctor1, vulnId:sharing_credential, explType:COWORKING];0.03272374991311913
-human;[source:OWN@INTERNAL_ATTACKER, destination:OWN@itoperator1, vulnId:unprotected_credential, explType:PROXIMITY];0.027553749913119138
-human;[source:OWN@INTERNAL_ATTACKER, destination:USE@doctor1, vulnId:no_logout, explType:PROXIMITY];0.041578749913119134
-human;[source:OWN@INTERNAL_ATTACKER, destination:OWN@resident1, vulnId:unprotected_credential, explType:PROXIMITY];0.027553749913119138
-access;[source:OWN@doctor1, destination:cred1];0.032168660672846294
-access;[source:OWN@doctor1, destination:cred4];0.032168660672846294
-access;[source:OWN@resident1, destination:cred2];0.0269986606728463
-access;[source:USE@doctor1, destination:cred1];0.041023660672846296
-access;[source:OWN@itoperator1, destination:cred3];0.0269986606728463
-network;[source:USER@n1, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:USER@n1, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:USER@n1, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:ROOT@n1, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n1, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n1, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:ROOT@n2, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n2, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n2, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:ROOT@n6, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.035291031768681515
-network;[source:ROOT@n6, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n6, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n6, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:USER@n2, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:USER@n2, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:USER@n2, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:USER@n3, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:USER@n3, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:USER@n3, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:ROOT@n3, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n3, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n3, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:USER@n4, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:USER@n4, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:USER@n4, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n4, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n4, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:ROOT@n4, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:USER@n5, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:USER@n5, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:USER@n5, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n5, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n5, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n5, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:USER@n6, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:USER@n6, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:USER@n6, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.035291031768681515
-network;[source:USER@n6, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.035291031768681515
-network;[source:ROOT@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.035291031768681515
-network;[source:ROOT@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.035291031768681515
-network;[source:USER@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.035291031768681515
-network;[source:USER@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.035291031768681515
-network;[source:USER@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.035291031768681515
-network;[source:NONE@n8, destination:USER@n8, cve:CVE-2010-1883, type:local, port:0, protocol:];0.028491031768681514
-network;[source:USER@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.035291031768681515
-network;[source:USER@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.035291031768681515
-network;[source:USER@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.035291031768681515
-network;[source:ROOT@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.035291031768681515
-network;[source:ROOT@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.035291031768681515
-network;[source:ROOT@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.035291031768681515
-network;[source:USER@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.035291031768681515
-network;[source:USER@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.035291031768681515
-network;[source:USER@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.035291031768681515
-network;[source:ROOT@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.035291031768681515
-network;[source:ROOT@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.035291031768681515
-network;[source:ROOT@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.035291031768681515
-network;[source:USER@n10, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:USER@n10, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:USER@n10, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n10, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n10, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n10, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:USER@n11, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:USER@n11, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
-network;[source:USER@n11, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n11, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n11, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.0025660317686815115
-network;[source:ROOT@n11, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.004766031768681512
+human;[source:OWN@doctor1, destination:OWN@resident1, vulnId:unprotected_credential, explType:PROXIMITY];0.03367619889271097
+human;[source:OWN@resident1, destination:USE@doctor1, vulnId:no_logout, explType:PROXIMITY];0.047701198892710975
+human;[source:OWN@resident1, destination:OWN@doctor1, vulnId:sharing_credential, explType:COWORKING];0.03884619889271097
+human;[source:OWN@INTERNAL_ATTACKER, destination:OWN@itoperator1, vulnId:unprotected_credential, explType:PROXIMITY];0.03367619889271097
+human;[source:OWN@INTERNAL_ATTACKER, destination:USE@doctor1, vulnId:no_logout, explType:PROXIMITY];0.047701198892710975
+human;[source:OWN@INTERNAL_ATTACKER, destination:OWN@resident1, vulnId:unprotected_credential, explType:PROXIMITY];0.03367619889271097
+access;[source:OWN@doctor1, destination:cred1];0.0396516538701252
+access;[source:OWN@doctor1, destination:cred4];0.0396516538701252
+access;[source:OWN@resident1, destination:cred2];0.03448165387012521
+access;[source:USE@doctor1, destination:cred1];0.048506653870125205
+access;[source:OWN@itoperator1, destination:cred3];0.03448165387012521
+network;[source:USER@n1, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:USER@n1, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:USER@n1, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:ROOT@n1, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n1, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n1, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:ROOT@n2, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n2, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n2, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:ROOT@n6, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.04124341272106247
+network;[source:ROOT@n6, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n6, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n6, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:USER@n2, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:USER@n2, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:USER@n2, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:USER@n3, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:USER@n3, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:USER@n3, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:ROOT@n3, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n3, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n3, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:USER@n4, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:USER@n4, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:USER@n4, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n4, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n4, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:ROOT@n4, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:USER@n5, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:USER@n5, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:USER@n5, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n5, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n5, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n5, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:USER@n6, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:USER@n6, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:USER@n6, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.04124341272106247
+network;[source:USER@n6, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.04124341272106247
+network;[source:ROOT@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.04124341272106247
+network;[source:ROOT@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.04124341272106247
+network;[source:USER@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.04124341272106247
+network;[source:USER@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.04124341272106247
+network;[source:USER@n7, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.04124341272106247
+network;[source:NONE@n8, destination:USER@n8, cve:CVE-2010-1883, type:local, port:0, protocol:];0.034443412721062466
+network;[source:USER@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.04124341272106247
+network;[source:USER@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.04124341272106247
+network;[source:USER@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.04124341272106247
+network;[source:ROOT@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.04124341272106247
+network;[source:ROOT@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.04124341272106247
+network;[source:ROOT@n8, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.04124341272106247
+network;[source:USER@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.04124341272106247
+network;[source:USER@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.04124341272106247
+network;[source:USER@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.04124341272106247
+network;[source:ROOT@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5556, protocol:TCP];0.04124341272106247
+network;[source:ROOT@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5555, protocol:TCP];0.04124341272106247
+network;[source:ROOT@n9, destination:ROOT@n7, cve:CVE-2018-4846, type:network, port:5557, protocol:TCP];0.04124341272106247
+network;[source:USER@n10, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:USER@n10, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:USER@n10, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n10, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n10, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n10, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:USER@n11, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:USER@n11, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
+network;[source:USER@n11, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n11, destination:ROOT@n6, cve:CVE-2009-2412, type:network, port:443, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n11, destination:ROOT@n2, cve:CVE-2009-2412, type:network, port:5556, protocol:TCP];0.008518412721062464
+network;[source:ROOT@n11, destination:ROOT@n1, cve:CVE-2018-3110, type:network, port:7778, protocol:TCP];0.010718412721062465
