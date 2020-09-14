@@ -2,11 +2,13 @@ import config.Config;
 import control.DiscountControl;
 import control.GraphDbControl;
 import control.ParseAlignment;
+import java.io.File;
 import ontologyModels.AG_Model;
 import ontologyModels.ISO_Model;
 import ontologyModels.ManagementLifetime_Model;
 import ontologyModels.NIST_Model;
 import org.apache.jena.ontology.OntModel;
+import test.RandomErrorAssessment;
 
 /**
  * This is the main class managing the entire work-flow of the project, all done
@@ -82,10 +84,14 @@ public class OntoAGMapping {
     private static String outputNistNC = conf.getOutputNistNC();
     private static String outputNistReal = conf.getOutputNistReal();
     
+    private static String testDataset = "D:\\projects\\TESI_project\\OBSRA\\OntologyBasedSmartRiskAssessment\\OntologyBasedSmartRiskAssessment\\src\\main\\java\\test\\dataset\\";
+    private static String testDatasetMapping = "D:\\projects\\TESI_project\\OBSRA\\OntologyBasedSmartRiskAssessment\\OntologyBasedSmartRiskAssessment\\src\\main\\java\\test\\dataset\\outputMapping\\";
+    private static String testDatasetOutput = "D:\\projects\\TESI_project\\OBSRA\\OntologyBasedSmartRiskAssessment\\OntologyBasedSmartRiskAssessment\\src\\main\\java\\test\\dataset\\output\\";
+
     public static void main(String[] args){
         
         // 1 - Build the ontologies
-        ISO_Model IsoOnto = new ISO_Model();
+/*        ISO_Model IsoOnto = new ISO_Model();
         OntModel modelIso = IsoOnto.createISOModel(isoCsvPath,isoOwlPath,formatOntology,uriIso);
 
         NIST_Model nistOnto = new NIST_Model();
@@ -103,7 +109,7 @@ public class OntoAGMapping {
         // 3 - Parse alignment files for creating the mapping output
         ParseAlignment pa = new ParseAlignment();
             //3.1: ISO all C
-        pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
+/*        pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
                 alignmentIsoManagementPath, assessmentIsoC, alignmentIsoFinalPath+"C.csv", "iso");
             //3.2: ISO all PC
         pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
@@ -121,15 +127,8 @@ public class OntoAGMapping {
             //3.6: NIST all NC
         pa.writeMappingFromAlignment(nistCsvPath, alignmentNistAgPath, 
                 alignmentNistManagementPath, assessmentNistNC, alignmentNistFinalPath+"NC.csv", "nist");
-        
-            // 3.7 & 3.8: ISO and NIST "real"/mixed assessment
-        pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
-                alignmentIsoManagementPath, assessmentIsoReal, alignmentIsoFinalPath+"Real.csv", "iso");
-        pa.writeMappingFromAlignment(nistCsvPath, alignmentNistAgPath, 
-                alignmentNistManagementPath, assessmentNistReal, alignmentNistFinalPath+"Real.csv", "nist");
+ */      
        
-       
-        // 4 - Build the graph with lambda factors
         GraphDbControl gc = new GraphDbControl(uri, user, password);
         gc.buildGraph(humanGraphPath, humanVulnerabilityPath, accessGraphPath, 
                 networkGraphPath, networkVulnerabilityPath);
@@ -137,7 +136,7 @@ public class OntoAGMapping {
         // 5 - Evaluate discount formula
         DiscountControl dc = new DiscountControl();
             //5.1: ISO all C
-        dc.calculateFormula(alignmentIsoFinalPath+"C.csv", outputIsoC, gc, 
+/*        dc.calculateFormula(alignmentIsoFinalPath+"C.csv", outputIsoC, gc, 
                 weightMatching, weightLambda, weightManagement, weightValidation);
             //5.2: ISO all PC
         dc.calculateFormula(alignmentIsoFinalPath+"PC.csv", outputIsoPC, gc, 
@@ -161,9 +160,53 @@ public class OntoAGMapping {
                 weightMatching, weightLambda, weightManagement, weightValidation);
         dc.calculateFormula(alignmentNistFinalPath+"Real.csv", outputNistReal, gc, 
                 weightMatching, weightLambda, weightManagement, weightValidation);
-            
+ */           
+        // Real case study
+ /* todo       pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
+                alignmentIsoManagementPath, assessmentIsoReal+"11.csv", alignmentIsoFinalPath+"Real11.csv", "iso");
+        pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
+                alignmentIsoManagementPath, assessmentIsoReal+"22.csv", alignmentIsoFinalPath+"Real22.csv", "iso");
+        pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
+                alignmentIsoManagementPath, assessmentIsoReal+"33.csv", alignmentIsoFinalPath+"Real33.csv", "iso");
+        
+        dc.calculateFormula(alignmentIsoFinalPath+"Real11.csv", outputIsoReal+"11.csv", gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
+        dc.calculateFormula(alignmentIsoFinalPath+"Real22.csv", outputIsoReal+"22.csv", gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
+        dc.calculateFormula(alignmentIsoFinalPath+"Real33.csv", outputIsoReal+"33.csv", gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
+        
         // Close connection
         gc.close(); // Close neo4j connection
+todo */        
         
+        // Tesing with systematic random errors
+/*        RandomErrorAssessment rea = new RandomErrorAssessment();
+        for(int i=0; i<7; i++){
+            rea.buildRandomErrorAssessment(15.0, assessmentIsoReal+"11.csv", testDataset+"15_"+i+".csv");
+        }
+        for(int i=0; i<7; i++){
+            rea.buildRandomErrorAssessment(45.0, assessmentIsoReal+"11.csv", testDataset+"45_"+i+".csv");
+        }
+        for(int i=0; i<7; i++){
+            rea.buildRandomErrorAssessment(65.0, assessmentIsoReal+"11.csv", testDataset+"65_"+i+".csv");
+        }
+        for(int i=0; i<7; i++){
+            rea.buildRandomErrorAssessment(90.0, assessmentIsoReal+"11.csv", testDataset+"90_"+i+".csv");
+        }
+ */      
+        File directoryPath = new File(testDataset);
+        File filesList[] = directoryPath.listFiles(); // get all files of dataset
+        for(File file : filesList) {
+            String filename = file.getName();
+            if(filename.contains("90")){
+            pa.writeMappingFromAlignment(isoCsvPath, alignmentIsoAgPath, 
+                alignmentIsoManagementPath, testDataset+filename, testDatasetMapping+filename, "iso");
+            dc.calculateFormula(testDatasetMapping+filename, testDatasetOutput+filename, gc, 
+                weightMatching, weightLambda, weightManagement, weightValidation);
+            }
+        }
+       
+       gc.close();
     }
 }

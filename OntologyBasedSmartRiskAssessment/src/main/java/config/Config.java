@@ -37,7 +37,7 @@ public class Config {
     private String assessmentIsoC = rootDataset + "AssessmentIsoC.csv";
     private String assessmentIsoPC = rootDataset + "AssessmentIsoPC.csv";
     private String assessmentIsoNC = rootDataset + "AssessmentIsoNC.csv";
-    private String assessmentIsoReal = rootDataset + "AssessmentIsoReal.csv";
+    private String assessmentIsoReal = rootDataset + "AssessmentIsoReal";
     
     private String assessmentNistC = rootDataset + "AssessmentNistC.csv";
     private String assessmentNistPC = rootDataset + "AssessmentNistPC.csv";
@@ -77,7 +77,7 @@ public class Config {
     private String outputIsoC = rootOutput + "outputIsoC.csv";
     private String outputIsoPC = rootOutput + "outputIsoPC.csv";
     private String outputIsoNC = rootOutput + "outputIsoNC.csv";
-    private String outputIsoReal = rootOutput + "outputIsoReal.csv";
+    private String outputIsoReal = rootOutput + "outputIsoReal";
     
     private String outputNistC = rootOutput + "outputNistC.csv";
     private String outputNistPC = rootOutput + "outputNistPC.csv";
